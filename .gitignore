@@ -1,0 +1,7 @@
+/toponyms/
+/env/
+.ipynb_checkpoints/
+*.ipynb
+t.py
+__pycache__/
+*.py[cod]
