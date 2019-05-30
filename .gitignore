@@ -1,6 +1,8 @@
 /toponyms/
 /env/
 .ipynb_checkpoints/
+toponym.egg-info/
+
 *.ipynb
 t.py
 __pycache__/
