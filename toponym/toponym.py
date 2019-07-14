@@ -16,27 +16,38 @@ class Toponym(case.Case):
     def build(self):
 
         if isinstance(self.word, list):
-            for _ in self.word:
-                break
+            for w in self.word:
+                self.recipe = self.topodict[
+                    self._get_longest_word_ending(w)
+                ]
 
+                self.topo = dict()
+
+                for case in self.recipe:
+                    self.topo[case] = self._constructor(
+                        w,
+                        self.recipe,
+                        case
+                    )
         else:
             self.recipe = self.topodict[
-                self._get_longest_word_ending()
+                self._get_longest_word_ending(self.word)
             ]
 
             self.topo = dict()
-            for case in self.recipe:
 
+            for case in self.recipe:
                 self.topo[case] = self._constructor(
                     self.word,
                     self.recipe,
                     case
                 )
 
-    def _get_longest_word_ending(self):
+    def _get_longest_word_ending(self, word):
         """
         """
-        possible_endings = [self.word[i:] for i in range(len(self.word))]
+        # TODO: write TIL about max(list, key=len)
+        possible_endings = [word[i:] for i in range(len(word))]
         matching_endings = [x for x in possible_endings if x in self.topodict._dict.keys()]
 
         return max(matching_endings, key=len)
