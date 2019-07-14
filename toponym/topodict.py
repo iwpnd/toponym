@@ -9,23 +9,23 @@ class Topodict:
     """
     """
 
-    def __init__(self, language, fp=False):
+    def __init__(self, language, file=False):
         self.language = language
-        self.fp = fp
+        self.file = file
         self._loaded = False
 
     def __repr__(self):
         if self._loaded:
-            return "Topodict(language='{language}', filepath='{fp}', loaded={i}, word_endings={we})".format(
+            return "Topodict(language='{language}', filepath='{file}', loaded={i}, word_endings={we})".format(
                 language=self.language,
-                fp=self.fp,
+                file=self.file,
                 i=self._loaded,
                 we=list(self._dict.keys())
             )
         else:
-            return "Topodict(language='{language}', filepath='{fp}', loaded={i})".format(
+            return "Topodict(language='{language}', filepath='{file}', loaded={i})".format(
                 language=self.language,
-                fp=self.fp,
+                file=self.file,
                 i=self._loaded
             )
 
@@ -38,18 +38,24 @@ class Topodict:
             raise KeyError("{we} not in {language} topodict".format(
                 we=word_ending,
                 language=self.language
-            )
+                )
             )
 
     def load(self):
-        if not self.fp:
-            _language_code = get_language_code(self.language)
-            self._dict = load_topodict(_language_code)
-
+        if not self.file:
+            self._language_code = get_language_code(self.language)
+            self._dict = load_topodict(self._language_code)
             self._loaded = True
         
         else:
-            with open(self.fp, 'r') as f:
-                self._dict = json.loads(f.read())
+            if isinstance(self.file, dict):
+                self._dict = self.file
+                self._loaded = True
+            
+            elif os.path.isfile(self.file):
+                with open(self.file, 'r') as f:
+                    self._dict = json.loads(f.read())
+                    self._loaded = True
 
-            self._loaded = True
+            else:
+                raise TypeError("Input file can either be filepath or dictionary")
