@@ -21,7 +21,7 @@ class Toponym(case.Case):
 
         else:
             self.recipe = self.topodict[
-                self._get_biggest_word_ending()
+                self._get_longest_word_ending()
             ]
 
             self.topo = dict()
@@ -33,7 +33,7 @@ class Toponym(case.Case):
                     case
                 )
 
-    def _get_biggest_word_ending(self):
+    def _get_longest_word_ending(self):
         deepest_word_ending = ""
         reversed_text = "".join([x for x in reversed(self.word)])
 
