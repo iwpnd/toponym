@@ -34,21 +34,9 @@ class Toponym(case.Case):
                 )
 
     def _get_longest_word_ending(self):
-        deepest_word_ending = ""
-        reversed_text = "".join([x for x in reversed(self.word)])
+        """
+        """
+        possible_endings = [self.word[i:] for i in range(len(self.word))]
+        matching_endings = [x for x in possible_endings if x in self.topodict._dict.keys()]
 
-        if reversed_text[0] in self.topodict._dict.keys():
-            deepest_word_ending = deepest_word_ending + reversed_text[0]
-
-        x = True
-        while x == True:
-                for x in reversed_text[1:]:
-                    if deepest_word_ending in self.topodict._dict.keys():
-                        if x + deepest_word_ending in self.topodict._dict.keys():
-                            deepest_word_ending = x + deepest_word_ending
-                        else:
-                            break
-                    else:
-                        break
-
-        return deepest_word_ending
+        return max(matching_endings, key=len)
