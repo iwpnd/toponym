@@ -1,5 +1,6 @@
 from toponym import case
 
+
 class Toponym(case.Case):
 
     def __init__(self, input_term, topodict):
@@ -13,7 +14,24 @@ class Toponym(case.Case):
         self.topo_recipe = False
 
     def build(self):
-        self._get_biggest_word_ending()
+
+        if isinstance(self.word, list):
+            for _ in self.word:
+                break
+
+        else:
+            self.recipe = self.topodict[
+                self._get_biggest_word_ending()
+            ]
+
+            self.topo = dict()
+            for case in self.recipe:
+
+                self.topo[case] = self._constructor(
+                    self.word,
+                    self.recipe,
+                    case
+                )
 
     def _get_biggest_word_ending(self):
         deepest_word_ending = ""
@@ -33,5 +51,4 @@ class Toponym(case.Case):
                     else:
                         break
 
-        print(deepest_word_ending)
         return deepest_word_ending

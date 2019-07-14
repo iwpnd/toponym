@@ -7,3 +7,6 @@ toponym.egg-info/
 t.py
 __pycache__/
 *.py[cod]
+/.vscode/
+/.pytest_cache/
+/.cache/
