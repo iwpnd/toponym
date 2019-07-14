@@ -1,4 +1,5 @@
 from toponym import case
+from collections import defaultdict
 
 
 class Toponym(case.Case):
@@ -16,19 +17,22 @@ class Toponym(case.Case):
     def build(self):
 
         if isinstance(self.word, list):
-            for w in self.word:
+
+            self.topo = list()
+
+            for _, w in enumerate(self.word):
                 self.recipe = self.topodict[
                     self._get_longest_word_ending(w)
                 ]
 
-                self.topo = dict()
-
+                temp = dict()
                 for case in self.recipe:
-                    self.topo[case] = self._constructor(
-                        w,
-                        self.recipe,
-                        case
-                    )
+                    temp[case] = self._constructor(w, self.recipe, case)
+
+                self.topo.append(temp)
+
+            self.topo = self.concat_case_dictionaries(self.topo)
+
         else:
             self.recipe = self.topodict[
                 self._get_longest_word_ending(self.word)
@@ -48,6 +52,22 @@ class Toponym(case.Case):
         """
         # TODO: write TIL about max(list, key=len)
         possible_endings = [word[i:] for i in range(len(word))]
-        matching_endings = [x for x in possible_endings if x in self.topodict._dict.keys()]
+        matching_endings = [
+            x for x in possible_endings if x in self.topodict._dict.keys()]
 
         return max(matching_endings, key=len)
+
+
+    def concat_case_dictionaries(self, list_of_dictionaries):
+        """ Concate list of dictionaries
+        """
+        dd = defaultdict(list)
+
+        for dictionary in list_of_dictionaries:
+            for key, val in dictionary.items():
+                dd[key].append(val)
+
+        for k, v in dd.items():
+            dd[k] = " ".join([x for x in dd[k]])
+
+        return dd
