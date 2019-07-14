@@ -32,11 +32,25 @@ class Case(object):
             return tmpWordList
 
     def _constructor(self, word, topo_recipe, case):
+        """
+        """
+        if isinstance(word, str):
+            word = self._build_case(
+                word,
+                ending=topo_recipe[case][0],
+                cutending=topo_recipe[case][1]
+            )
+            return word
 
-        word = self._build_case(
-            word,
-            ending=topo_recipe[case][0],
-            cutending=topo_recipe[case][1]
-        )
+        elif isinstance(word, list):
+            words = []
+            for w in word:
+                word = self._build_case(
+                    word,
+                    ending=topo_recipe[case][0],
+                    cutending=topo_recipe[case][1]
+                )
+                words.append(word)
 
-        return word
+                return words
+
