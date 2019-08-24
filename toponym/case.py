@@ -42,11 +42,11 @@ class Case(object):
             )
             return word
 
-        elif isinstance(word, list):
+        elif isinstance(word, list) and len(topo_recipe[case][0]) == 1:
             words = []
             for w in word:
                 word = self._build_case(
-                    word,
+                    w,
                     ending=topo_recipe[case][0],
                     cutending=topo_recipe[case][1]
                 )
@@ -54,3 +54,17 @@ class Case(object):
 
                 return words
 
+        elif isinstance(word, list) and len(topo_recipe[case][0]) > 1:
+            words = []
+            for ending in topo_recipe[case][0]:
+                for w in word:
+                
+                    word = self._build_case(
+                        w,
+                        ending=ending,
+                        cutending=topo_recipe[case][1]
+                    )
+                    words.append(word)
+                
+                return words
+        

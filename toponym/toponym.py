@@ -1,5 +1,6 @@
 from toponym import case
 from collections import defaultdict
+import itertools
 
 
 class Toponym(case.Case):
@@ -30,7 +31,7 @@ class Toponym(case.Case):
                     temp[case] = self._constructor(w, self.recipe, case)
 
                 self.topo.append(temp)
-
+            
             self.topo = self.concat_case_dictionaries(self.topo)
 
         else:
@@ -68,6 +69,12 @@ class Toponym(case.Case):
                 dd[key].append(val)
 
         for k, v in dd.items():
-            dd[k] = " ".join([x for x in dd[k]])
+            if isinstance(v[0], str):
+                dd[k] = " ".join([x for x in dd[k]])
+    
+            if isinstance(v[0], list):
+                prd = list(itertools.product(*v))
+                perm = [" ".join([y for y in x]) for x in prd]
+                dd[k] = perm
 
         return dd
