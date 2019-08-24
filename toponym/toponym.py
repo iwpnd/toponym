@@ -63,16 +63,20 @@ class Toponym(case.Case):
         """ Concate list of dictionaries
         """
         dd = defaultdict(list)
-
         for dictionary in list_of_dictionaries:
             for key, val in dictionary.items():
                 dd[key].append(val)
 
         for k, v in dd.items():
-            if isinstance(v[0], str):
+            # if isinstance(v[0], str):
+            #     dd[k] = " ".join([x for x in dd[k]])
+
+            if all([isinstance(x, str) for x in v]):
                 dd[k] = " ".join([x for x in dd[k]])
     
-            if isinstance(v[0], list):
+            elif any([isinstance(x, list) for x in v]):
+                v = [[element] if not isinstance(
+                    element, list) else element for element in v]
                 prd = list(itertools.product(*v))
                 perm = [" ".join([y for y in x]) for x in prd]
                 dd[k] = perm
