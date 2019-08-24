@@ -62,3 +62,9 @@ def test_get_multi_word_toponym_multi_ending():
     assert set(tn.topo['genitive']) == set(['Testo Testo', 'Testa Testa', 'Testa Testo', 'Testo Testa'])
 
 
+def test_get_multi_word_toponym_multi_ending_single_ending():
+    tn = toponym.Toponym("Testi Teto", td)
+    tn.build()
+    assert tn.topo['nominative'] == 'Testi Teto'
+    assert set(tn.topo['genitive']) == set(
+        ['Testo Teta', 'Testa Teta'])
