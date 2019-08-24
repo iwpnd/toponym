@@ -63,7 +63,6 @@ class Toponym(case.Case):
         """ Concate list of dictionaries
         """
         dd = defaultdict(list)
-        print(list_of_dictionaries)
         for dictionary in list_of_dictionaries:
             for key, val in dictionary.items():
                 dd[key].append(val)
@@ -73,11 +72,9 @@ class Toponym(case.Case):
             #     dd[k] = " ".join([x for x in dd[k]])
 
             if all([isinstance(x, str) for x in v]):
-                print('all strings')
                 dd[k] = " ".join([x for x in dd[k]])
     
             elif any([isinstance(x, list) for x in v]):
-                print('list present')
                 v = [[element] if not isinstance(
                     element, list) else element for element in v]
                 prd = list(itertools.product(*v))
