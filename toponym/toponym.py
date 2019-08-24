@@ -69,10 +69,15 @@ class Toponym(case.Case):
                 dd[key].append(val)
 
         for k, v in dd.items():
-            if isinstance(v[0], str):
+            # if isinstance(v[0], str):
+            #     dd[k] = " ".join([x for x in dd[k]])
+
+            if all([isinstance(x, str) for x in v]):
+                print('all strings')
                 dd[k] = " ".join([x for x in dd[k]])
     
-            if isinstance(v[0], list):
+            elif any([isinstance(x, list) for x in v]):
+                print('list present')
                 v = [[element] if not isinstance(
                     element, list) else element for element in v]
                 prd = list(itertools.product(*v))
