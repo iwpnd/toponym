@@ -1,11 +1,23 @@
 from setuptools import setup
 
-setup(name='toponym',
-      version='0.1',
+packages = [
+    'toponym',
+]
+
+setup(
+      name='toponym',
+      version='0.2',
       description='build grammatical cases for words in slavic languages',
       url='http://github.com/iwpnd/toponym',
       author='Benjamin Ramser',
       author_email='ahoi@iwpnd.pw',
       license='MIT',
-      packages=[''],
-      zip_safe=False)
+      include_package_data=True,
+      install_requires=[],
+      zip_safe=False,
+      classifiers=[
+            'Programming Language :: Python :: 3',
+            'Natural Language :: Slavic',
+            'Intended Audience :: Developers',
+      ],
+      )
