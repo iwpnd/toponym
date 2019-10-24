@@ -1,6 +1,11 @@
 from toponym import case
 from collections import defaultdict
 import itertools
+import logging
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class Toponym(case.Case):
@@ -14,6 +19,7 @@ class Toponym(case.Case):
             self.word = input_term.split()
 
         self.topo_recipe = False
+
 
     def build(self):
 
@@ -48,6 +54,7 @@ class Toponym(case.Case):
                     case
                 )
 
+
     def _get_longest_word_ending(self, word):
         """
         """
@@ -56,7 +63,17 @@ class Toponym(case.Case):
         matching_endings = [
             x for x in possible_endings if x in self.topodict._dict.keys()]
 
-        return max(matching_endings, key=len)
+        if matching_endings:
+            return max(matching_endings, key=len)
+        else:
+            return ""        
+
+
+    def _create_default_toponym(self, word):
+        """
+        """
+        topo = {'nominative': word}
+        return topo
 
 
     def concat_case_dictionaries(self, list_of_dictionaries):
@@ -68,8 +85,6 @@ class Toponym(case.Case):
                 dd[key].append(val)
 
         for k, v in dd.items():
-            # if isinstance(v[0], str):
-            #     dd[k] = " ".join([x for x in dd[k]])
 
             if all([isinstance(x, str) for x in v]):
                 dd[k] = " ".join([x for x in dd[k]])

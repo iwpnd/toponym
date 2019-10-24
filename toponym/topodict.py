@@ -1,8 +1,16 @@
 import os
 import json
-
 from . import settings
-from .utils import (get_available_language_codes, print_available_languages, get_language_code, load_topodict)
+from .utils import (
+    get_available_language_codes, 
+    print_available_languages, 
+    get_language_code, 
+    load_topodict
+    )
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class Topodict:
@@ -35,11 +43,18 @@ class Topodict:
         elif word_ending in self._dict.keys():
             return self._dict[word_ending]
         else:
-            raise KeyError("{we} not in {language} topodict".format(
-                we=word_ending,
+            logger.warning("{word_ending} not in {language} topodict".format(
+                word_ending=word_ending,
                 language=self.language
-                )
-            )
+            ))
+            return self._default_recipe()
+    
+    def _default_recipe(self):
+        """Create default recipe in case there is no ending in actual recipe for word
+        """
+        return {
+            "nominative": ["", 0]
+        }
 
     def load(self):
         if not self.file:
