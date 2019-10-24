@@ -85,8 +85,6 @@ class Toponym(case.Case):
                 dd[key].append(val)
 
         for k, v in dd.items():
-            # if isinstance(v[0], str):
-            #     dd[k] = " ".join([x for x in dd[k]])
 
             if all([isinstance(x, str) for x in v]):
                 dd[k] = " ".join([x for x in dd[k]])
