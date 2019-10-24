@@ -3,6 +3,9 @@ import json
 import logging
 
 from . import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def get_available_language_codes():
