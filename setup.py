@@ -13,7 +13,7 @@ setup(
       author_email='ahoi@iwpnd.pw',
       license='MIT',
       include_package_data=True,
-      install_requires='toponym',
+      install_requires=[],
       packages=packages,
       zip_safe=False,
       classifiers=[
