@@ -14,6 +14,7 @@ setup(
       license='MIT',
       include_package_data=True,
       install_requires=[],
+      packages=packages,
       zip_safe=False,
       classifiers=[
             'Programming Language :: Python :: 3',
