@@ -22,22 +22,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-
+for usage:
 ```
 pip install git+https://github.com/iwpnd/toponym.git
 ```
 
-or
-
+for development:
 ```
 git clone https://github.com/iwpnd/toponym.git
-pip install -e ./toponym
+pip install -e toponym/
 ```
 
 ## Running the tests
 
 ```
-pytest toponym/test/unit
+python -m pytest toponym/tests/unit
 ```
 
 ## Usage
