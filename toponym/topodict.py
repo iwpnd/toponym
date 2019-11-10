@@ -42,35 +42,35 @@ class Topodict:
             raise NameError("load topodict first")
         elif word_ending in self._dict.keys():
             return self._dict[word_ending]
-        else:
-            logger.warning("{word_ending} not in {language} topodict".format(
-                word_ending=word_ending,
-                language=self.language
-            ))
-            return self._default_recipe()
-    
-    def _default_recipe(self):
-        """Create default recipe in case there is no ending in actual recipe for word
-        """
-        return {
-            "nominative": ["", 0]
-        }
+        elif not word_ending:
+            logger.warning("No word_ending found. Using _default")
+            return self._dict["_default"]
+
 
     def load(self):
         if not self.file:
             self._language_code = get_language_code(self.language)
             self._dict = load_topodict(self._language_code)
             self._loaded = True
+            logger.info("Topodictionary loaded for {}".format(self.language))
         
         else:
             if isinstance(self.file, dict):
                 self._dict = self.file
                 self._loaded = True
+                logger.info("Topodictionary loaded from dictionary for language {}".format(
+                    self.language))
             
-            elif os.path.isfile(self.file):
-                with open(self.file, 'r') as f:
-                    self._dict = json.loads(f.read())
-                    self._loaded = True
+            elif isinstance(self.file, str):
+                try:
+                    with open(self.file, 'r') as f:
+                        self._dict = json.loads(f.read())
+                        self._loaded = True
+                        logger.info("Topodictionary loaded from file ({}) for language {}".format(
+                            self.file,
+                            self.language))
+                except FileNotFoundError:
+                    raise FileNotFoundError("File not found or not in os.getcwd()")
 
             else:
                 raise TypeError("Input file can either be filepath or dictionary")

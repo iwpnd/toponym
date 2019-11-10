@@ -39,10 +39,17 @@ def test_topodict_load_with_input_filepath_fails():
         t = topodict.Topodict(language='test', file=123)
         t.load()
 
-    with pytest.raises(TypeError):
+    with pytest.raises(FileNotFoundError):
         t = topodict.Topodict(language='test', file="test")
         t.load()
 
     with pytest.raises(TypeError):
         t = topodict.Topodict(language='test', file=[1,2,3])
         t.load()
+
+
+def test_topodict_load_file():
+    t = topodict.Topodict(language='test', file='./toponym/resources/_test.json')
+    t.load()
+
+    assert t._loaded

@@ -12,9 +12,10 @@ def get_available_language_codes():
     """Returns a list of available languages and their 2 char input codes
     """
     topodict_files = os.listdir(os.path.join(settings.TOPODICT_DIR))
-    two_dig_codes = [f.split('.')[0] for f in topodict_files]
+    two_dig_codes = [f.split('.')[0] for f in topodict_files if f.endswith(".json")]
     for d in two_dig_codes:
-        assert len(d) == 2
+        if not d == "_test":
+            assert len(d) == 2
     two_dig_codes.sort()
     return two_dig_codes
 
