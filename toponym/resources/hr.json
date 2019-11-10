@@ -1,4 +1,12 @@
 {
+    "_default": {
+        "nominative": ["", 0],
+        "genitive": ["", 0],
+        "dative": ["", 0],
+        "accusative": ["", 0],
+        "locative": ["", 0],
+        "instrumental": ["", 0]
+    },
     "a": {
         "nominative": ["", 0],
         "genitive": ["e", 1],

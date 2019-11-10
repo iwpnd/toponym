@@ -1,4 +1,12 @@
 {
+    "_default": {
+        "nominative": ["", 0],
+        "genitive": ["", 0],
+        "dative": ["", 0],
+        "accusative": ["", 0],
+        "instrumental": ["", 0],
+        "prepositional": ["", 0]
+        },
     "й": {
         "nominative": ["", 0],
         "genitive": [["а","я"], 1],
