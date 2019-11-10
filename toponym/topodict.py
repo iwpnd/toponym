@@ -52,16 +52,25 @@ class Topodict:
             self._language_code = get_language_code(self.language)
             self._dict = load_topodict(self._language_code)
             self._loaded = True
+            logger.info("Topodictionary loaded for {}".format(self.language))
         
         else:
             if isinstance(self.file, dict):
                 self._dict = self.file
                 self._loaded = True
+                logger.info("Topodictionary loaded from dictionary for language {}".format(
+                    self.language))
             
-            elif os.path.isfile(self.file):
-                with open(self.file, 'r') as f:
-                    self._dict = json.loads(f.read())
-                    self._loaded = True
+            elif isinstance(self.file, str):
+                try:
+                    with open(self.file, 'r') as f:
+                        self._dict = json.loads(f.read())
+                        self._loaded = True
+                        logger.info("Topodictionary loaded from file ({}) for language {}".format(
+                            self.file,
+                            self.language))
+                except FileNotFoundError:
+                    raise FileNotFoundError("File not found or not in os.getcwd()")
 
             else:
                 raise TypeError("Input file can either be filepath or dictionary")
