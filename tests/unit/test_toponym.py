@@ -1,6 +1,10 @@
 from toponym import toponym, topodict
 
 td = {
+    "_default": {
+        "nominative": ["", 0],
+        "genitive": ["", 0]
+    },
     "i": {
         "nominative": ["", 0],
         "genitive": ["o", 1]
@@ -87,3 +91,11 @@ def test_toponym_for_unknown_ending():
     tn = toponym.Toponym(word, td)
     tn.build()
     assert tn.topo['nominative'] == ""
+
+
+def test_toponym_multiword_unknown_ending_known_ending():
+    word = "Testa Tesi"
+
+    tn = toponym.Toponym(word, td)
+    tn.build()
+    assert tn.topo['genitive'] == "Testa Teso"
