@@ -38,7 +38,7 @@ class Toponym(case.Case):
 
                 self.topo.append(temp)
             
-            self.topo = self.concat_case_dictionaries(self.topo)
+            self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
             self.recipe = self.topodict[
@@ -53,6 +53,20 @@ class Toponym(case.Case):
                     self.recipe,
                     case
                 )
+            
+    def list_toponyms(self):
+        """ Put all created toponyms in a list
+        """
+
+        if self.topo:
+            all_toponyms_all_cases = list(map(self.topo.__getitem__, self.topo.keys()))
+            return list(
+                set(itertools.chain.from_iterable(all_toponyms_all_cases)
+                )
+            )
+        
+        else:
+            raise Exception(".build() first")
 
 
     def _get_longest_word_ending(self, word):
@@ -69,7 +83,7 @@ class Toponym(case.Case):
             return ""        
 
 
-    def concat_case_dictionaries(self, list_of_dictionaries):
+    def _concat_case_dictionaries(self, list_of_dictionaries):
         """ Concate list of dictionaries
         """
         dd = defaultdict(list)

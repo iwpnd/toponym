@@ -100,3 +100,17 @@ def test_toponym_multiword_unknown_ending_known_ending():
     tn = toponym.Toponym(word, td)
     tn.build()
     assert tn.topo['genitive'] == ["Testa Teso"]
+
+
+def test_toponym_list_toponyms_multiword():
+    word = "Testa Tesi"
+    tn = toponym.Toponym(word, td)
+    tn.build()
+    assert isinstance(tn.list_toponyms(), list)
+
+
+def test_toponym_list_toponyms_singleword():
+    word = "Tesi"
+    tn = toponym.Toponym(word, td)
+    tn.build()
+    assert isinstance(tn.list_toponyms(), list)
