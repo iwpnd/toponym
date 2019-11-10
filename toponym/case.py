@@ -7,6 +7,8 @@ class Case(object):
         pass
 
     def _build_case(self, word, ending, cutending=0):
+        """ Modify a word given an ending and a cutending parameter
+        """
         is_str = isinstance(ending, str)
         is_list = isinstance(ending, list)
 
@@ -36,7 +38,7 @@ class Case(object):
             return tmpWordList
 
     def _constructor(self, word, topo_recipe, case):
-        """
+        """Depending on the recipe and input, execute build_case accordingly
         """
         if isinstance(word, str):
             word = self._build_case(
