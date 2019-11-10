@@ -42,19 +42,10 @@ class Topodict:
             raise NameError("load topodict first")
         elif word_ending in self._dict.keys():
             return self._dict[word_ending]
-        else:
-            logger.warning("{word_ending} not in {language} topodict".format(
-                word_ending=word_ending,
-                language=self.language
-            ))
-            return self._default_recipe()
-    
-    def _default_recipe(self):
-        """Create default recipe in case there is no ending in actual recipe for word
-        """
-        return {
-            "nominative": ["", 0]
-        }
+        elif not word_ending:
+            logger.warning("No word_ending found. Using _default")
+            return self._dict["_default"]
+
 
     def load(self):
         if not self.file:
