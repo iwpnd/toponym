@@ -69,31 +69,25 @@ class Toponym(case.Case):
             return ""        
 
 
-    def _create_default_toponym(self, word):
-        """
-        """
-        topo = {'nominative': word}
-        return topo
-
-
     def concat_case_dictionaries(self, list_of_dictionaries):
         """ Concate list of dictionaries
         """
         dd = defaultdict(list)
+
         for dictionary in list_of_dictionaries:
-            for key, val in dictionary.items():
-                dd[key].append(val)
+            for key, value in dictionary.items():
+                dd[key].append(value)
 
-        for k, v in dd.items():
+        for key, value in dd.items():
 
-            if all([isinstance(x, str) for x in v]):
-                dd[k] = " ".join([x for x in dd[k]])
+            if all([isinstance(x, str) for x in value]):
+                dd[key] = " ".join([x for x in dd[key]])
     
-            elif any([isinstance(x, list) for x in v]):
-                v = [[element] if not isinstance(
-                    element, list) else element for element in v]
-                prd = list(itertools.product(*v))
-                perm = [" ".join([y for y in x]) for x in prd]
-                dd[k] = perm
+            elif any([isinstance(x, list) for x in value]):
+                value = [[element] if not isinstance(
+                    element, list) else element for element in value]
+                product = list(itertools.product(*value))
+                permutation = [" ".join([y for y in x]) for x in product]
+                dd[key] = permutation
 
         return dd
