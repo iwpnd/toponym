@@ -1,14 +1,14 @@
 {
     "_default": {
-        "nominative": ["", 0],
-        "genitive": ["", 0],
-        "dative": ["", 0],
-        "accusative": ["", 0],
-        "instrumental": ["", 0],
-        "prepositional": ["", 0]
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [[""], 0],
+        "accusative": [[""], 0],
+        "instrumental": [[""], 0],
+        "prepositional": [[""], 0]
         },
     "й": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["а","я"], 1],
         "dative": [["ю","у"], 1],
         "accusative": [["а","я"], 1],
@@ -16,7 +16,7 @@
         "prepositional": [["е"], 1]
         },
     "б": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ба","бя"], 1],
         "dative": [["бю","бу"], 1],
         "accusative": [["ба","бя"], 1],
@@ -24,7 +24,7 @@
         "prepositional": [["бе"], 1]
         },
     "в": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ва","вя"], 1],
         "dative": [["вю","ву"], 1],
         "accusative": [["ва","вя"], 1],
@@ -32,7 +32,7 @@
         "prepositional": [["ве"], 1]
         },
     "г": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["га","гя"], 1],
         "dative": [["гю","гу"], 1],
         "accusative": [["га","гя"], 1],
@@ -40,7 +40,7 @@
         "prepositional": [["ге"], 1]
         },
     "д": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["да","дя"], 1],
         "dative": [["дю","ду"], 1],
         "accusative": [["да","дя"], 1],
@@ -48,7 +48,7 @@
         "prepositional": [["де"], 1]
         },
     "ж": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["жа","жя"], 1],
         "dative": [["жю","жу"], 1],
         "accusative": [["жа","жя"], 1],
@@ -56,7 +56,7 @@
         "prepositional": [["же"], 1]
         },
     "з": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["за","зя"], 1],
         "dative": [["зю","зу"], 1],
         "accusative": [["за","зя"], 1],
@@ -64,7 +64,7 @@
         "prepositional": [["зе"], 1]
         },
     "к": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ка","кя"], 1],
         "dative": [["кю","ку"], 1],
         "accusative": [["ка","кя"], 1],
@@ -72,7 +72,7 @@
         "prepositional": [["ке"], 1]
         },
     "л": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ла","ля"], 1],
         "dative": [["лю","лу"], 1],
         "accusative": [["ла","ля"], 1],
@@ -80,7 +80,7 @@
         "prepositional": [["ле"], 1]
         },
     "м": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ма","мя"], 1],
         "dative": [["мю","му"], 1],
         "accusative": [["ма","мя"], 1],
@@ -88,7 +88,7 @@
         "prepositional": [["ме"], 1]
         },
     "н": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["на","ня"], 1],
         "dative": [["ню","ну"], 1],
         "accusative": [["на","ня"], 1],
@@ -96,7 +96,7 @@
         "prepositional": [["не"], 1]
         },
     "п": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["па","пя"], 1],
         "dative": [["пю","пу"], 1],
         "accusative": [["па","пя"], 1],
@@ -104,7 +104,7 @@
         "prepositional": [["пе"], 1]
         },
     "р": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ра","ря"], 1],
         "dative": [["рю","ру"], 1],
         "accusative": [["ра","ря"], 1],
@@ -112,7 +112,7 @@
         "prepositional": [["ре"], 1]
         },
     "с": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["са","ся"], 1],
         "dative": [["сю","су"], 1],
         "accusative": [["са","ся"], 1],
@@ -120,7 +120,7 @@
         "prepositional": [["се"], 1]
         },
     "т": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["та","тя"], 1],
         "dative": [["тю","ту"], 1],
         "accusative": [["та","тя"], 1],
@@ -128,7 +128,7 @@
         "prepositional": [["те"], 1]
         },
     "ф": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["фа","фя"], 1],
         "dative": [["фю","фу"], 1],
         "accusative": [["фа","фя"], 1],
@@ -136,7 +136,7 @@
         "prepositional": [["фе"], 1]
         },
     "х": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ха","хя"], 1],
         "dative": [["хю","ху"], 1],
         "accusative": [["ха","хя"], 1],
@@ -144,7 +144,7 @@
         "prepositional": [["хе"], 1]
         },
     "ц": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ца","ця"], 1],
         "dative": [["цю","цу"], 1],
         "accusative": [["ца","ця"], 1],
@@ -152,7 +152,7 @@
         "prepositional": [["це"], 1]
         },
     "ч": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ча","чя"], 1],
         "dative": [["чю","чу"], 1],
         "accusative": [["ча","чя"], 1],
@@ -160,7 +160,7 @@
         "prepositional": [["че"], 1]
         },
     "ш": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ша","шя"], 1],
         "dative": [["шю","шу"], 1],
         "accusative": [["ша","шя"], 1],
@@ -168,7 +168,7 @@
         "prepositional": [["ше"], 1]
         },
     "щ": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ща","щя"], 1],
         "dative": [["щю","щу"], 1],
         "accusative": [["ща","щя"], 1],
@@ -176,7 +176,7 @@
         "prepositional": [["ще"], 1]
         },
     "а": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ы","и"], 1],
         "dative": [["е"], 1],
         "accusative": [["у"], 1],
@@ -184,7 +184,7 @@
         "prepositional": [["е"], 1]
         },
     "иа": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["иа"], 2],
         "dative": [["иа"], 2],
         "accusative": [["иа"], 2],
@@ -192,7 +192,7 @@
         "prepositional": [["иа"], 2]
         },
     "я": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["и"], 1],
         "dative": [["е"], 1],
         "accusative": [["ю"], 1],
@@ -200,7 +200,7 @@
         "prepositional": [["е"], 1]
         },
     "ья": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ьи"], 2],
         "dative": [["ье"], 2],
         "accusative": [["ью"], 2],
@@ -208,7 +208,7 @@
         "prepositional": [["ьей"], 2]
         },
     "ия": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ии"], 2],
         "dative": [["ии"], 2],
         "accusative": [["ию"], 2],
@@ -216,7 +216,7 @@
         "prepositional": [["ии"], 2]
         },
     "ея": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["еи"], 2],
         "dative": [["ее"], 2],
         "accusative": [["ею"], 2],
@@ -224,7 +224,7 @@
         "prepositional": [["ее"], 2]
         },
     "ь": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["и"], 1],
         "dative": [["и"], 1],
         "accusative": [["ь"], 1],
@@ -232,7 +232,7 @@
         "prepositional": [["и"], 1]
         },
     "ая": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ой"], 2],
         "dative": [["ей"], 2],
         "accusative": [["ую","юю"], 2],
@@ -248,7 +248,7 @@
         "prepositional": [["ей"], 2]
         },
     "ой": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ого","его"], 2],
         "dative": [["ому","ему"], 2],
         "accusative": [["ого","его","ой","ый","ий"], 2],
@@ -256,7 +256,7 @@
         "prepositional": [["ом","ем"], 2]
         },
     "ый": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ого","его"], 2],
         "dative": [["ому","ему"], 2],
         "accusative": [["ого","его","ой","ый","ий"], 2],
@@ -264,7 +264,7 @@
         "prepositional": [["ом","ем"], 2]
         },
     "ий": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ого","его"], 2],
         "dative": [["ому","ему"], 2],
         "accusative": [["ого","его","ой","ый","ий"], 2],
@@ -272,7 +272,7 @@
         "prepositional": [["ом","ем"], 2]
         },
     "ое": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ого","его"], 2],
         "dative": [["ому","ему"], 2],
         "accusative": [["ое","ее"], 2],
@@ -280,7 +280,7 @@
         "prepositional": [["ом","ем"], 2]
         },
     "ее": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ого","его"], 2],
         "dative": [["ому","ему"], 2],
         "accusative": [["ое","ее"], 2],
@@ -288,7 +288,7 @@
         "prepositional": [["ом","ем"], 2]
         },
     "ые": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ых","их"], 2],
         "dative": [["ым","им"], 2],
         "accusative": [["ых","их","ые","ие"], 2],
@@ -296,7 +296,7 @@
         "prepositional": [["ых","их"], 2]
         },
     "ие": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["ых","их"], 2],
         "dative": [["ым","им"], 2],
         "accusative": [["ых","их","ые","ие"], 2],
@@ -304,7 +304,7 @@
         "prepositional": [["ых","их"], 2]
         },
     "о": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["а","я"], 1],
         "dative": [["у","ю"], 1],
         "accusative": [["о","е","а","я"], 1],
@@ -312,7 +312,7 @@
         "prepositional": [["е"], 1]
         },
     "е": {
-        "nominative": ["", 0],
+        "nominative": [[""], 0],
         "genitive": [["а","я"], 1],
         "dative": [["у","ю"], 1],
         "accusative": [["о","е","а","я"], 1],
