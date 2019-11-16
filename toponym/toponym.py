@@ -70,7 +70,7 @@ class Toponym(case.Case):
 
 
     def _get_longest_word_ending(self, word):
-        """
+        """Disect word into differnet size shifs
         """
         # TODO: write TIL about max(list, key=len)
         possible_endings = [word[i:] for i in range(len(word))]
@@ -80,6 +80,7 @@ class Toponym(case.Case):
         if matching_endings:
             return max(matching_endings, key=len)
         else:
+            logger.debug("No word ending found for: {word}".format(word=word))
             return ""        
 
 
