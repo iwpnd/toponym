@@ -41,6 +41,16 @@ def test_topodict_load_success_romanian():
     assert tp._loaded
 
 
+def test_topodict_load_success_latvian():
+    """test load
+    """
+
+    tp = topodict.Topodict('latvian')
+    tp.load()
+
+    assert tp._loaded
+
+
 def test_topodict_load_failed_language_not_supported():
     """test load
     """
