@@ -8,5 +8,6 @@ LANGUAGE_DICT = {
     "russian": "ru",
     "ukrainian": "uk",
     "romanian": "ro",
-    "latvian": "lv"
+    "latvian": "lv",
+    "hungarian": "hu",
 }
