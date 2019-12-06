@@ -31,6 +31,16 @@ def test_topodict_load_success_ukrainian():
     assert tp._loaded
 
 
+def test_topodict_load_success_romanian():
+    """test load
+    """
+
+    tp = topodict.Topodict('romanian')
+    tp.load()
+
+    assert tp._loaded
+
+
 def test_topodict_load_failed_language_not_supported():
     """test load
     """
@@ -44,8 +54,8 @@ def test_topodict_load_with_input_dictionary():
     
     td = {
         "_default": {
-        "nominative": [[""], 0],
-        "genitive": [[""], 0]
+            "nominative": [[""], 0],
+            "genitive": [[""], 0]
         },
         "i": {
             "nominative": ["", 0],

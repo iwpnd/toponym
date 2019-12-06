@@ -1,0 +1,114 @@
+{
+    "_default": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [[""], 0],
+        "accusative": [[""], 0],
+        "locative": [[""], 0]	
+    },
+	"a": {
+        "nominative": [[""], 0],
+        "genitive": [["ei","ii"], 1],
+        "dative": [["ei"], 1],
+        "accusative": [[""], 0],
+        "locative": [[""], 0]	
+    },
+	"i": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"d": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"u": {
+        "nominative": [["l"], 0],
+        "genitive": [["lui"], 0],
+        "dative": [["lui"], 0],
+        "accusative": [["l"], 0],
+        "locative": [[""], 0]    
+    },
+	"ș": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"e": {
+        "nominative": [["a"], 0],
+        "genitive": [["ei","elui","ii"], 1],
+        "dative": [["ei","elui","ii"], 1],
+        "accusative": [["a"], 0],
+        "locative": [[""], 0] 
+    },
+	"n": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"ț": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"j": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"c": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"t": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"g": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"l": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"v": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    },
+	"s": {
+        "nominative": [["ul"], 0],
+        "genitive": [["ului"], 0],
+        "dative": [["ului"], 0],
+        "accusative": [["ul"], 0],
+        "locative": [[""], 0]
+    }
+}
