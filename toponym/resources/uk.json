@@ -1,0 +1,839 @@
+{
+    "_default": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [[""], 0],
+        "accusative": [[""], 0],
+        "instrumental": [[""], 0],
+        "prepositional": [[""], 0],
+		"vocative": [[""], 0]
+        },
+	"оле": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [[""], 0],
+        "accusative": [[""], 0],
+        "instrumental": [[""], 0],
+        "prepositional": [[""], 0],
+		"vocative": [[""], 0]
+        },
+	"іг": {
+        "nominative": [[""], 0],
+        "genitive": [["огу"], 2],
+        "dative": [["огу","огові"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["гом"], 2],
+        "prepositional": [["зі","зі"], 2],
+		"vocative": [["огу"], 2]
+        },
+	"ес": {
+        "nominative": [[""], 0],
+        "genitive": [["есу"], 2],
+        "dative": [["есу","есові"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["сом"], 2],
+        "prepositional": [["сі","су"], 2],
+		"vocative": [["се"], 2]
+        },
+    "ба": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["о"], 1]
+        },
+    "са": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["о"], 1]
+        },
+    "ла": {
+        "nominative": [[""], 0],
+        "genitive": [["ої","и"], 1],
+        "dative": [["ій","і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["ій","і"], 1],
+		"vocative": [["о"], 1]
+        },
+    "ва": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["о"], 1]
+        },
+    "ча": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ею"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+    "та": {
+        "nominative": [[""], 0],
+        "genitive": [["и","і","ої"], 1],
+        "dative": [["і","ій"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою","ею"], 1],
+        "prepositional": [["і","ій"], 1],
+		"vocative": [["о","е","а"], 1]
+        },
+    "ша": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ею"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+    "ща": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ею"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+    "ха": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["сі"], 2],
+        "accusative": [["ху"], 2],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["сі"], 2],
+		"vocative": [["о"], 1]
+        },
+    "фа": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["фі"], 2],
+        "accusative": [["фу"], 2],
+        "instrumental": [["фою"], 2],
+        "prepositional": [["фі"], 2],
+		"vocative": [["о"], 1]
+        },
+    "ще": {
+        "nominative": [[""], 0],
+        "genitive": [["а"], 1],
+        "dative": [["у"], 1],
+        "accusative": [["е"], 1],
+        "instrumental": [["ем"], 1],
+        "prepositional": [["у","і"], 1],
+		"vocative": [["о"], 1]
+        },
+    "ач": {
+        "nominative": [[""], 0],
+        "genitive": [["ача"], 2],
+        "dative": [["ачу","ачеві"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["ачем"], 2],
+        "prepositional": [["ачі","ачу"], 2],
+		"vocative": [["ачу"], 2]
+        },
+    "ич": {
+        "nominative": [[""], 0],
+        "genitive": [["чі","ча"], 1],
+        "dative": [["чі","чу","чеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["чю","чем"], 1],
+        "prepositional": [["чі","чу"], 1],
+		"vocative": [["че","чу"], 1]
+        },
+    "ка": {
+        "nominative": [[""], 0],
+        "genitive": [["и","ої"], 1],
+        "dative": [["ці","кій"], 2],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["ці","кій"], 2],
+		"vocative": [["о","а"], 1]
+        },
+    "ко": {
+        "nominative": [[""], 0],
+        "genitive": [["а"], 1],
+        "dative": [["а","ові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ом"], 1],
+        "prepositional": [["у"], 1],
+		"vocative": [["о"], 1]
+        },
+    "ке": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },
+    "ки": {
+        "nominative": [[""], 0],
+        "genitive": [["ків","ок"], 2],
+        "dative": [["ам"], 1],
+        "accusative": [["ки","ків"], 2],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+    "ти": {
+        "nominative": [[""], 0],
+        "genitive": [["ів"], 1],
+        "dative": [["ам"], 1],
+        "accusative": [["и"], 1],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+    "те": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },
+    "на": {
+        "nominative": [[""], 0],
+        "genitive": [["ої","и"], 1],
+        "dative": [["ій","і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["ій","і"], 1],
+		"vocative": [["а","о"], 1]
+        },
+    "ня": {
+        "nominative": [[""], 0],
+        "genitive": [["ьої","і"], 1],
+        "dative": [["ій","і"], 1],
+        "accusative": [["ю"], 1],
+        "instrumental": [["ьою","ею"], 1],
+        "prepositional": [["ій","і"], 1],
+		"vocative": [["е","я"], 1]
+        },			
+    "ни": {
+        "nominative": [[""], 0],
+        "genitive": [["н","ен"], 2],
+        "dative": [["ам"], 1],
+        "accusative": [["и"], 1],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+    "ні": {
+        "nominative": [[""], 0],
+        "genitive": [["нів","ні"], 2],
+        "dative": [["ям","і"], 1],
+        "accusative": [["і"], 1],
+        "instrumental": [["ями","і"], 1],
+        "prepositional": [["ях","і"], 1],
+		"vocative": [[""], 0]
+        },
+    "нь": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["ь"], 1],
+        "instrumental": [["ню"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+    "не": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },
+    "но": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },			
+    "ля": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [["ю"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["лям"], 2],
+        "prepositional": [["лі","лю"], 2],
+		"vocative": [[""], 0]
+        },	
+    "ль": {
+        "nominative": [[""], 0],
+        "genitive": [["я"], 1],
+        "dative": [["і","ю","еві"], 1],
+        "accusative": [["ь"], 1],
+        "instrumental": [["ем"], 1],
+        "prepositional": [["і","ю"], 1],
+		"vocative": [["ю"], 1]
+        },	
+    "ле": {
+        "nominative": [[""], 0],
+        "genitive": [["я"], 1],
+        "dative": [["ю"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ем"], 1],
+        "prepositional": [["і","ю"], 1],
+		"vocative": [[""], 0]
+        },
+	"ок": {
+        "nominative": [[""], 0],
+        "genitive": [["ка"], 2],
+        "dative": [["ку","кові"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["ком"], 2],
+        "prepositional": [["ку","кові"], 2],
+		"vocative": [["ку"], 2]
+        },	
+	"оп": {
+        "nominative": [[""], 0],
+        "genitive": [["па"], 1],
+        "dative": [["пу","пові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["пом"], 1],
+        "prepositional": [["пі","пу"], 1],
+		"vocative": [["пе"], 1]
+        },
+	"ри": {
+        "nominative": [[""], 0],
+        "genitive": [["ів"], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+	"ди": {
+        "nominative": [[""], 0],
+        "genitive": [["ів",""], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+	"ги": {
+        "nominative": [[""], 0],
+        "genitive": [["ів",""], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+	"си": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+	"ми": {
+        "nominative": [[""], 0],
+        "genitive": [["ів",""], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },		
+    "дь": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["дю"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+    "ть": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["тю"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+	"лз": {
+        "nominative": [[""], 0],
+        "genitive": [["за"], 1],
+        "dative": [["зу","зові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["зом"], 1],
+        "prepositional": [["зі","зу"], 1],
+		"vocative": [["зе"], 1]
+        },	
+	"їл": {
+        "nominative": [[""], 0],
+        "genitive": [["їла"], 2],
+        "dative": [["їлу","їлові"], 2],
+        "accusative": [["їла"], 2],
+        "instrumental": [["їлом"], 2],
+        "prepositional": [["їлові","їлі"], 2],
+		"vocative": [["їле"], 2]
+        },	
+	"іл": {
+        "nominative": [[""], 0],
+        "genitive": [["іла"], 2],
+        "dative": [["ілу","ілові"], 2],
+        "accusative": [["іла"], 2],
+        "instrumental": [["ілом"], 2],
+        "prepositional": [["ілові","ілі"], 2],
+		"vocative": [["іле"], 2]
+        },		
+	"їв": {
+        "nominative": [[""], 0],
+        "genitive": [["єва"], 2],
+        "dative": [["єву"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["євом"], 2],
+        "prepositional": [["єві","єву"], 2],
+		"vocative": [["єве"], 2]
+        },
+	"ів": {
+        "nominative": [[""], 0],
+        "genitive": [["ева", "ова"], 2],
+        "dative": [["еву", "ову"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["евом", "овом"], 2],
+        "prepositional": [["еві","еву","ові","ову"], 2],
+		"vocative": [["еве","ове"], 2]
+        },
+	"ія": {
+        "nominative": [[""], 0],
+        "genitive": [["ї"], 1],
+        "dative": [["ї"], 1],
+        "accusative": [["ю"], 1],
+        "instrumental": [["єю"], 1],
+        "prepositional": [["ї"], 1],
+		"vocative": [["є"], 1]
+        },
+	"'я": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [["ю"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ям"], 1],
+        "prepositional": [["ї","ю","і"], 1],
+		"vocative": [["я"], 1]
+        },			
+	"ит": {
+        "nominative": [[""], 0],
+        "genitive": [["та"], 1],
+        "dative": [["ту", "тові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["том"], 1],
+        "prepositional": [["ті","ту"], 1],
+		"vocative": [["те"], 1]
+        },
+	"ик": {
+        "nominative": [[""], 0],
+        "genitive": [["ка"], 1],
+        "dative": [["ку","кові"], 1],
+        "accusative": [["ка"], 1],
+        "instrumental": [["ком"], 1],
+        "prepositional": [["кові","ку"], 1],
+		"vocative": [[""], 0]
+        },
+	"ин": {
+        "nominative": [[""], 0],
+        "genitive": [["на"], 1],
+        "dative": [["ну"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ном"], 1],
+        "prepositional": [["ні","ну"], 1],
+		"vocative": [["не"], 1]
+        },
+	"он": {
+        "nominative": [[""], 0],
+        "genitive": [["на"], 1],
+        "dative": [["ну","нові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ном"], 1],
+        "prepositional": [["ні","ну"], 1],
+		"vocative": [["не"], 1]
+        },
+	"ан": {
+        "nominative": [[""], 0],
+        "genitive": [["ну"], 1],
+        "dative": [["ну","нові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ном"], 1],
+        "prepositional": [["ні","ну"], 1],
+		"vocative": [["не"], 1]
+        },
+	"из": {
+        "nominative": [[""], 0],
+        "genitive": [["за"], 1],
+        "dative": [["зу", "зові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["зом"], 1],
+        "prepositional": [["зі","зу"], 1],
+		"vocative": [["зе"], 1]
+        },
+	"яч": {
+        "nominative": [[""], 0],
+        "genitive": [["чa"], 1],
+        "dative": [["чу", "чеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["чем"], 1],
+        "prepositional": [["чі","чу"], 1],
+		"vocative": [["чу"], 1]
+        },	
+	"уш": {
+        "nominative": [[""], 0],
+        "genitive": [["шa"], 1],
+        "dative": [["шу", "шеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["шем"], 1],
+        "prepositional": [["ші","шу"], 1],
+		"vocative": [["шу"], 1]
+        },
+	"аш": {
+        "nominative": [[""], 0],
+        "genitive": [["шa"], 1],
+        "dative": [["шу", "шеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["шем"], 1],
+        "prepositional": [["ші","шу"], 1],
+		"vocative": [["шу"], 1]
+        },
+	"аж": {
+        "nominative": [[""], 0],
+        "genitive": [["жa"], 1],
+        "dative": [["жу", "жеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["жем"], 1],
+        "prepositional": [["жі","жу"], 1],
+		"vocative": [["жу","же"], 1]
+        },		
+	"ай": {
+        "nominative": [[""], 0],
+        "genitive": [["я"], 1],
+        "dative": [["ю", "єві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["єм"], 1],
+        "prepositional": [["ї","ю"], 1],
+		"vocative": [["ю"], 1]
+        },	
+	"ий": {
+        "nominative": [[""], 0],
+        "genitive": [["ого","ию"], 2],
+        "dative": [["ому","ию","єві"], 2],
+        "accusative": [[""], 0],
+        "instrumental": [["им","иєм"], 2],
+        "prepositional": [["ому","ім","иї","ию"], 2],
+		"vocative": [["ий","ию"], 2]
+        },			
+	"ут": {
+        "nominative": [[""], 0],
+        "genitive": [["та"], 1],
+        "dative": [["та", "тові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["том"], 1],
+        "prepositional": [["ті","ту"], 1],
+		"vocative": [["те"], 1]
+        },	
+	"уг": {
+        "nominative": [[""], 0],
+        "genitive": [["га"], 1],
+        "dative": [["гу", "гові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["гом"], 1],
+        "prepositional": [["зі","гу"], 1],
+		"vocative": [["гу"], 1]
+        },		
+	"ве": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },	
+	"ца": {
+        "nominative": [[""], 0],
+        "genitive": [["и"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["о"], 1]
+        },
+	"ць": {
+        "nominative": [[""], 0],
+        "genitive": [["я"], 1],
+        "dative": [["ю","еві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ем"], 1],
+        "prepositional": [["і","ю"], 1],
+		"vocative": [["о"], 1]
+        },	
+	"ця": {
+        "nominative": [[""], 0],
+        "genitive": [["i"], 1],
+        "dative": [["і"], 1],
+        "accusative": [["ю"], 1],
+        "instrumental": [["ею"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },		
+    "ці": {
+        "nominative": [[""], 0],
+        "genitive": [["ів"], 1],
+        "dative": [["ям"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ями"], 1],
+        "prepositional": [["ях"], 1],
+		"vocative": [[""], 0]
+        },	
+    "чі": {
+        "nominative": [[""], 0],
+        "genitive": [["ів"], 1],
+        "dative": [["aм"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["aми"], 1],
+        "prepositional": [["aх"], 1],
+		"vocative": [[""], 0]
+        },	
+    "ой": {
+        "nominative": [[""], 0],
+        "genitive": [["я"], 1],
+        "dative": [["ю","єві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["єм"], 1],
+        "prepositional": [["ї","ю"], 1],
+		"vocative": [["ю"], 1]
+        },
+    "жя": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "dative": [["ю"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["жям"], 2],
+        "prepositional": [["жі","жю"], 2],
+		"vocative": [[""], 0]
+        },			
+	"юм": {
+        "nominative": [[""], 0],
+        "genitive": [["му"], 1],
+        "dative": [["му", "мові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["мом"], 1],
+        "prepositional": [["мі","му"], 1],
+		"vocative": [["ме"], 1]
+        },
+	"а": {
+        "nominative": [[""], 0],
+        "genitive": [["и","ої"], 1],
+        "dative": [["і","ій"], 1],
+        "accusative": [["у"], 1],
+        "instrumental": [["ою"], 1],
+        "prepositional": [["і","ій"], 1],
+		"vocative": [["о","а"], 1]
+        },
+	"в": {
+        "nominative": [[""], 0],
+        "genitive": [["ва","ву"], 1],
+        "dative": [["ву","вові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["вом"], 1],
+        "prepositional": [["ву","ві"], 1],
+		"vocative": [["ве"], 1]
+        },		
+	"г": {
+        "nominative": [[""], 0],
+        "genitive": [["гу","га"], 1],
+        "dative": [["гу", "гові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["гом"], 1],
+        "prepositional": [["зі","гу","гі"], 1],
+		"vocative": [["гу","ге"], 1]
+        },
+	"д": {
+        "nominative": [[""], 0],
+        "genitive": [["да"], 1],
+        "dative": [["ду","дові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["дом"], 1],
+        "prepositional": [["ді","ду"], 1],
+		"vocative": [["де"], 1]
+        },	
+    "е": {
+        "nominative": [[""], 0],
+        "genitive": [["ого"], 1],
+        "dative": [["ому"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["им"], 1],
+        "prepositional": [["ому"], 1],
+		"vocative": [[""], 0]
+        },
+	"ж": {
+        "nominative": [[""], 0],
+        "genitive": [["жa"], 1],
+        "dative": [["жу", "жеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["жем"], 1],
+        "prepositional": [["жі","жу"], 1],
+		"vocative": [["жу"], 1]
+        },	
+	"з": {
+        "nominative": [[""], 0],
+        "genitive": [["за"], 1],
+        "dative": [["зу","зові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["зом"], 1],
+        "prepositional": [["зі","зу"], 1],
+		"vocative": [["зе"], 1]
+        },	
+	"и": {
+        "nominative": [[""], 0],
+        "genitive": [["ів"], 1],
+        "dative": [["ам"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ами"], 1],
+        "prepositional": [["ах"], 1],
+		"vocative": [[""], 0]
+        },
+    "і": {
+        "nominative": [[""], 0],
+        "genitive": [["ів","і"], 1],
+        "dative": [["ям","і"], 1],
+        "accusative": [["і"], 1],
+        "instrumental": [["ями","і"], 1],
+        "prepositional": [["ях","і"], 1],
+		"vocative": [[""], 0]
+        },		
+	"к": {
+        "nominative": [[""], 0],
+        "genitive": [["ка","ку"], 1],
+        "dative": [["ку","кові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ком"], 1],
+        "prepositional": [["ку","кі"], 1],
+		"vocative": [["ку","ке"], 1]
+        },
+	"л": {
+        "nominative": [[""], 0],
+        "genitive": [["ла","лу"], 1],
+        "dative": [["лу","лові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["лом"], 1],
+        "prepositional": [["лу","лі"], 1],
+		"vocative": [["ле"], 1]
+        },
+	"м": {
+        "nominative": [[""], 0],
+        "genitive": [["ма","му"], 1],
+        "dative": [["му","мові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["мом"], 1],
+        "prepositional": [["му","мі"], 1],
+		"vocative": [["ме"], 1]
+        },
+	"о": {
+        "nominative": [[""], 0],
+        "genitive": [["а"], 1],
+        "dative": [["у","ові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ом"], 1],
+        "prepositional": [["і","у"], 1],
+		"vocative": [["е"], 1]
+        },	
+	"п": {
+        "nominative": [[""], 0],
+        "genitive": [["па"], 1],
+        "dative": [["пу","пові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["пом"], 1],
+        "prepositional": [["пі","пу"], 1],
+		"vocative": [["пе"], 1]
+        },
+	"р": {
+        "nominative": [[""], 0],
+        "genitive": [["ра"], 1],
+        "dative": [["ру","рові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ром"], 1],
+        "prepositional": [["рі","ру"], 1],
+		"vocative": [["ре"], 1]
+        },
+	"с": {
+        "nominative": [[""], 0],
+        "genitive": [["са","су"], 1],
+        "dative": [["су","сові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["сом"], 1],
+        "prepositional": [["су","сі"], 1],
+		"vocative": [["се","су"], 1]
+        },
+	"т": {
+        "nominative": [[""], 0],
+        "genitive": [["та","ту"], 1],
+        "dative": [["ту","тові"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["том"], 1],
+        "prepositional": [["ту","ті"], 1],
+		"vocative": [["те","ту"], 1]
+        },
+    "ч": {
+        "nominative": [[""], 0],
+        "genitive": [["чі","ча"], 1],
+        "dative": [["чі","чу","чеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["чю","чем"], 1],
+        "prepositional": [["чі","чу"], 1],
+		"vocative": [["че","чу"], 1]
+        },
+	"ш": {
+        "nominative": [[""], 0],
+        "genitive": [["шa"], 1],
+        "dative": [["шу", "шеві"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["шем"], 1],
+        "prepositional": [["ші","шу"], 1],
+		"vocative": [["шу"], 1]
+        },	
+    "ь": {
+        "nominative": [[""], 0],
+        "genitive": [["і"], 1],
+        "dative": [["і"], 1],
+        "accusative": [[""], 0],
+        "instrumental": [["ю"], 1],
+        "prepositional": [["і"], 1],
+		"vocative": [["е"], 1]
+        },
+	"я": {
+        "nominative": [[""], 0],
+        "genitive": [["я","і"], 1],
+        "dative": [["ю","і"], 1],
+        "accusative": [["я","ю"], 1],
+        "instrumental": [["ям","ею"], 1],
+        "prepositional": [["ї","ю","і"], 1],
+		"vocative": [["я","е"], 1]
+        }	
+}

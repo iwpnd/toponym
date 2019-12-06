@@ -1,7 +1,7 @@
 from toponym import topodict
 import pytest
 
-def test_topodict_load_success():
+def test_topodict_load_success_russian():
     """test load
     """
 
@@ -9,6 +9,27 @@ def test_topodict_load_success():
     tp.load()
 
     assert tp._loaded
+
+
+def test_topodict_load_success_croatian():
+    """test load
+    """
+
+    tp = topodict.Topodict('croatian')
+    tp.load()
+
+    assert tp._loaded
+
+
+def test_topodict_load_success_ukrainian():
+    """test load
+    """
+
+    tp = topodict.Topodict('ukrainian')
+    tp.load()
+
+    assert tp._loaded
+
 
 def test_topodict_load_failed_language_not_supported():
     """test load
@@ -22,6 +43,10 @@ def test_topodict_load_failed_language_not_supported():
 def test_topodict_load_with_input_dictionary():
     
     td = {
+        "_default": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0]
+        },
         "i": {
             "nominative": ["", 0],
             "genitive": ["o", 1]
@@ -39,9 +64,11 @@ def test_topodict_load_with_input_filepath_fails():
         t = topodict.Topodict(language='test', file=123)
         t.load()
 
+
     with pytest.raises(FileNotFoundError):
         t = topodict.Topodict(language='test', file="test")
         t.load()
+
 
     with pytest.raises(TypeError):
         t = topodict.Topodict(language='test', file=[1,2,3])
