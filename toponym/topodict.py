@@ -22,7 +22,6 @@ class Topodict:
         self.file = file
         self._loaded = False
 
-
     def __repr__(self):
         if self._loaded:
             return "Topodict(language='{language}', filepath='{file}', loaded={i}, word_endings={we})".format(
@@ -38,7 +37,6 @@ class Topodict:
                 i=self._loaded
             )
 
-
     def __getitem__(self, word_ending):
         if not self._loaded:
             raise NameError("load topodict first")
@@ -47,7 +45,6 @@ class Topodict:
         elif not word_ending:
             logger.warning("No word_ending found. Using _default")
             return self._dict["_default"]
-
 
     def load(self):
         if not self.file:

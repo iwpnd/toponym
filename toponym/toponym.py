@@ -20,7 +20,6 @@ class Toponym(case.Case):
 
         self.topo_recipe = False
 
-
     def build(self):
 
         if isinstance(self.word, list):
@@ -37,7 +36,7 @@ class Toponym(case.Case):
                     temp[case] = self._constructor(w, self.recipe, case)
 
                 self.topo.append(temp)
-            
+
             self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
@@ -53,21 +52,21 @@ class Toponym(case.Case):
                     self.recipe,
                     case
                 )
-            
+
     def list_toponyms(self):
         """ Put all created toponyms in a list
         """
 
         if self.topo:
-            all_toponyms_all_cases = list(map(self.topo.__getitem__, self.topo.keys()))
+            all_toponyms_all_cases = list(
+                map(self.topo.__getitem__, self.topo.keys()))
             return list(
                 set(itertools.chain.from_iterable(all_toponyms_all_cases)
-                )
+                    )
             )
-        
+
         else:
             raise Exception(".build() first")
-
 
     def _get_longest_word_ending(self, word):
         """Disect word into differnet size shifs
@@ -81,8 +80,7 @@ class Toponym(case.Case):
             return max(matching_endings, key=len)
         else:
             logger.debug("No word ending found for: {word}".format(word=word))
-            return ""        
-
+            return ""
 
     def _concat_case_dictionaries(self, list_of_dictionaries):
         """ Concate list of dictionaries
@@ -97,7 +95,7 @@ class Toponym(case.Case):
 
             if all([isinstance(x, str) for x in value]):
                 dd[key] = " ".join([x for x in dd[key]])
-    
+
             elif any([isinstance(x, list) for x in value]):
                 value = [[element] if not isinstance(
                     element, list) else element for element in value]

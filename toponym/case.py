@@ -2,6 +2,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class Case(object):
     def __init__(self):
         pass
@@ -64,13 +65,12 @@ class Case(object):
             words = []
             for ending in topo_recipe[case][0]:
                 for w in word:
-                
+
                     word = self._build_case(
                         w,
                         ending=ending,
                         cutending=topo_recipe[case][1]
                     )
                     words.append(word)
-                
+
                 return words
-        
