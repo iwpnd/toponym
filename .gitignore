@@ -2,7 +2,7 @@
 /env/
 .ipynb_checkpoints/
 toponym.egg-info/
-
+.python-version
 *.ipynb
 t.py
 __pycache__/
