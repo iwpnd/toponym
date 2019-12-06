@@ -10,4 +10,5 @@ LANGUAGE_DICT = {
     "romanian": "ro",
     "latvian": "lv",
     "hungarian": "hu",
+    "greek": "el"
 }

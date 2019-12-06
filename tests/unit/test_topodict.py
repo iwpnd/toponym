@@ -61,6 +61,16 @@ def test_topodict_load_success_hungarian():
     assert tp._loaded
 
 
+def test_topodict_load_success_greek():
+    """test load
+    """
+
+    tp = topodict.Topodict('greek')
+    tp.load()
+
+    assert tp._loaded
+
+
 def test_topodict_load_failed_language_not_supported():
     """test load
     """
