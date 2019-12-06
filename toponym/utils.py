@@ -34,14 +34,10 @@ def print_available_languages():
     """Prints available languages with their full names
     """
 
-    codes = get_available_language_codes()
-    print('\nYour available languages are:')
-    print('\ninput code\t\tfull name')
-    for code in codes:
-        print('  {}\t\t\t  {}'.format(
-            code, 
-            [key for key in settings.LANGUAGE_DICT.keys() if code in settings.LANGUAGE_DICT[key]][0]
-            ))
+    print("\nYour available languages are:")
+    print("\nfull name\t\tiso code")
+    for item in settings.LANGUAGE_DICT.items():
+        print("  {}\t\t{}".format(item[0],item[1]))
     print()
 
 

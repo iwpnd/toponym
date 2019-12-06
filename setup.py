@@ -6,7 +6,7 @@ packages = [
 
 setup(
       name='toponym',
-      version='0.2',
+      version='0.3',
       description='build grammatical cases for words in slavic languages',
       url='http://github.com/iwpnd/toponym',
       author='Benjamin Ramser',
