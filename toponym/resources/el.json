@@ -1,200 +1,881 @@
 {
     "_default": {
-        "nominative": [[""], 0],
-        "genitive": [[""], 0],
-        "accusative":[[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                ""
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ας": {
-        "nominative": [[""], 0],
-        "genitive": [["α","ος","ατος"], 2],
-        "accusative":[["α","αν"], 2],
-        "vocative": [["α","αν"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "α",
+                "ος",
+                "ατος"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "α",
+                "αν"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "α",
+                "αν"
+            ],
+            2
+        ]
     },
     "ές": {
-        "nominative": [[""], 0],
-        "genitive": [["ών","έ"], 2],
-        "accusative": [["ές","έ"], 2],
-        "vocative": [["ές","έ"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ών",
+                "έ"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ές",
+                "έ"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "ές",
+                "έ"
+            ],
+            2
+        ]
     },
     "ες": {
-        "nominative": [[""], 0],
-        "genitive": [["ων","ών"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ων",
+                "ών"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ης": {
-        "nominative": [[""], 0],
-        "genitive": [["η"], 2],
-        "accusative": [["η"], 2],
-        "vocative": [["η"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "η"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "η"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "η"
+            ],
+            2
+        ]
     },
     "ής": {
-        "nominative": [[""], 0],
-        "genitive": [["ή"], 2],
-        "accusative": [["ή"], 2],
-        "vocative": [["ή"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ή"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ή"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "ή"
+            ],
+            2
+        ]
     },
     "ος": {
-        "nominative": [[""], 0],
-        "genitive": [["ου","ους"], 2],
-        "accusative": [["ος","ο"], 2],
-        "vocative": [["ε","ος"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ου",
+                "ους"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ος",
+                "ο"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "ε",
+                "ος"
+            ],
+            2
+        ]
     },
     "ός": {
-        "nominative": [[""], 0],
-        "genitive": [["ού"], 2],
-        "accusative": [["ό"], 2],
-        "vocative": [["έ"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ού"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ό"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "έ"
+            ],
+            2
+        ]
     },
     "οι": {
-        "nominative": [[""], 0],
-        "genitive": [["ων"], 2],
-        "accusative": [["ους"], 2],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ων"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ους"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "οί": {
-        "nominative": [[""], 0],
-        "genitive": [["ών"], 2],
-        "accusative": [["ούς"], 2],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ών"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ούς"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "είς": {
-        "nominative": [[""], 0],
-        "genitive": [["έων"], 3],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "έων"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "εις": {
-        "nominative": [[""], 0],
-        "genitive": [["εων"], 3],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "εων"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ια": {
-        "nominative": [[""], 0],
-        "genitive": [["'ιας","ιών"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "'ιας",
+                "ιών"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ιά": {
-        "nominative": [[""], 0],
-        "genitive": [["ιάς","ιών"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ιάς",
+                "ιών"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ία": {
-        "nominative": [[""], 0],
-        "genitive": [["ίας"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ίας"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "η": {
-        "nominative": [[""], 0],
-        "genitive": [["εως","ών","ης"],1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "εως",
+                "ών",
+                "ης"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ή": {
-        "nominative": [[""], 0],
-        "genitive": [["ής"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ής"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ά": {
-        "nominative": [[""], 0],
-        "genitive": [["ών"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ών"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "α": {
-        "nominative": [[""], 0],
-        "genitive": [["ων","ατος","ός","ας","άς"],1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ων",
+                "ατος",
+                "ός",
+                "ας",
+                "άς"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ώ": {
-        "nominative": [[""], 0],
-        "genitive": [["ούς"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ούς"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ω": {
-        "nominative": [[""], 0],
-        "genitive": [["ως"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ως"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ό": {
-        "nominative": [[""], 0],
-        "genitive": [["ού"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ού"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ο": {
-        "nominative": [[""], 0],
-        "genitive": [["ου","ατος"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ου",
+                "ατος"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ί": {
-        "nominative": [[""], 0],
-        "genitive": [["ιού"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ιού"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ι": {
-        "nominative": [[""], 0],
-        "genitive": [["ιού"], 1],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ιού"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ώς": {
-        "nominative": [[""], 0],
-        "genitive": [["ώτος"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ώτος"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ύες": {
-        "nominative": [[""], 0],
-        "genitive": [["υών"], 3],
-        "accusative": [["υ"], 0],
-        "vocative": [["υ"], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "υών"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                "υ"
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                "υ"
+            ],
+            0
+        ]
     },
     "υς": {
-        "nominative": [[""], 0],
-        "genitive": [["υός","υών"], 2],
-        "accusative": [["υ"], 2],
-        "vocative": [["υ"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "υός",
+                "υών"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "υ"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "υ"
+            ],
+            2
+        ]
     },
     "ού": {
-        "nominative": [[""], 0],
-        "genitive": [["ούς"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ούς"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "ήεν": {
-        "nominative": [[""], 0],
-        "genitive": [["ήεντος"], 3],
-        "accusative": [["υ"], 2],
-        "vocative": [["υ"], 2]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ήεντος"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                "υ"
+            ],
+            2
+        ],
+        "vocative": [
+            [
+                "υ"
+            ],
+            2
+        ]
     },
     "εντα": {
-        "nominative": [[""], 0],
-        "genitive": [["έντων"], 4],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "έντων"
+            ],
+            4
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "αρ": {
-        "nominative": [[""], 0],
-        "genitive": [["ατος"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ατος"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     },
     "υρ": {
-        "nominative": [[""], 0],
-        "genitive": [["υρός"], 2],
-        "accusative": [[""], 0],
-        "vocative": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "υρός"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "vocative": [
+            [
+                ""
+            ],
+            0
+        ]
     }
 }

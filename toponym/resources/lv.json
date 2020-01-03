@@ -1,79 +1,360 @@
 {
         "_default": {
-                "nominative": [[""], 0],
-                "genitive": [[""], 0],
-                "dative": [[""], 0],
-                "accusative": [[""], 0],
-                "locative": [[""], 0]	
-                },
-	"a": {
-        "nominative": [[""], 0],
-        "genitive": [["as"], 1],
-        "dative": [["ai"], 1],
-        "accusative": [["u"], 1],
-        "locative": [["ā"], 1]	
-        },	
-	"e": {
-        "nominative": [[""], 0],
-        "genitive": [["es"], 1],
-        "dative": [["ei"], 1],
-        "accusative": [["i"], 1],
-        "locative": [["ē"], 1]    
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "dative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "locative": [
+                        [
+                                ""
+                        ],
+                        0
+                ]
         },
-	"s": {
-        "nominative": [[""], 0],
-        "genitive": [["a","s"], 1],
-        "dative": [["am","ij"], 2],
-        "accusative": [["u","i"], 1],
-        "locative": [["ā", "ī"], 1] 
+        "a": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "as"
+                        ],
+                        1
+                ],
+                "dative": [
+                        [
+                                "ai"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                "u"
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ā"
+                        ],
+                        1
+                ]
         },
-	"is": {
-        "nominative": [[""], 0],
-        "genitive": [["a", "u"], 2],
-        "dative": [["m"], 1],
-        "accusative": [[""], 1],
-        "locative": [["ī", "īs"], 2]       
+        "e": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "es"
+                        ],
+                        1
+                ],
+                "dative": [
+                        [
+                                "ei"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                "i"
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ē"
+                        ],
+                        1
+                ]
         },
-	"us": {
-        "nominative": [[""], 0],
-        "genitive": [[""], 0],
-        "dative": [["m"], 1],
-        "accusative": [[""], 1],
-        "locative": [["ū"], 2]
+        "s": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "a",
+                                "s"
+                        ],
+                        1
+                ],
+                "dative": [
+                        [
+                                "am",
+                                "ij"
+                        ],
+                        2
+                ],
+                "accusative": [
+                        [
+                                "u",
+                                "i"
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ā",
+                                "ī"
+                        ],
+                        1
+                ]
         },
-	"cis": {
-        "nominative": [[""], 0],
-        "genitive": [["ča"], 3],
-        "dative": [["m"], 1],
-        "accusative": [[""], 1],
-        "locative": [["ī"], 2]       
+        "is": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "a",
+                                "u"
+                        ],
+                        2
+                ],
+                "dative": [
+                        [
+                                "m"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ī",
+                                "īs"
+                        ],
+                        2
+                ]
         },
-	"š": {
-        "nominative": [[""], 0],
-        "genitive": [["a"], 1],
-        "dative": [["am"], 2],
-        "accusative": [["u"], 1],
-        "locative": [["ā"], 1]
-	},
-	"i": {
-        "nominative": [[""], 0],
-        "genitive": [["u"], 1],
-        "dative": [["iem"], 1],
-        "accusative": [["us"], 1],
-        "locative": [["os"], 1]
-	},
-	"as": {
-        "nominative": [[""], 0],
-        "genitive": [["u"], 2],
-        "dative": [["ām"], 2],
-        "accusative": [[""], 0],
-        "locative": [["ās"], 2]
-	},
-	"es": {
-        "nominative": [[""], 0],
-        "genitive": [["u"], 2],
-        "dative": [["ēm"], 2],
-        "accusative": [[""], 0],
-        "locative": [["ēs"], 2]
-	}
+        "us": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "dative": [
+                        [
+                                "m"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ū"
+                        ],
+                        2
+                ]
+        },
+        "cis": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "ča"
+                        ],
+                        3
+                ],
+                "dative": [
+                        [
+                                "m"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ī"
+                        ],
+                        2
+                ]
+        },
+        "š": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "a"
+                        ],
+                        1
+                ],
+                "dative": [
+                        [
+                                "am"
+                        ],
+                        2
+                ],
+                "accusative": [
+                        [
+                                "u"
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "ā"
+                        ],
+                        1
+                ]
+        },
+        "i": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "u"
+                        ],
+                        1
+                ],
+                "dative": [
+                        [
+                                "iem"
+                        ],
+                        1
+                ],
+                "accusative": [
+                        [
+                                "us"
+                        ],
+                        1
+                ],
+                "locative": [
+                        [
+                                "os"
+                        ],
+                        1
+                ]
+        },
+        "as": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "u"
+                        ],
+                        2
+                ],
+                "dative": [
+                        [
+                                "ām"
+                        ],
+                        2
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "locative": [
+                        [
+                                "ās"
+                        ],
+                        2
+                ]
+        },
+        "es": {
+                "nominative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "genitive": [
+                        [
+                                "u"
+                        ],
+                        2
+                ],
+                "dative": [
+                        [
+                                "ēm"
+                        ],
+                        2
+                ],
+                "accusative": [
+                        [
+                                ""
+                        ],
+                        0
+                ],
+                "locative": [
+                        [
+                                "ēs"
+                        ],
+                        2
+                ]
+        }
 }

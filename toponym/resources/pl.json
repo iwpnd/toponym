@@ -1,0 +1,4225 @@
+{
+    "a": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "i",
+                "ej",
+                "ów"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "i",
+                "ie",
+                "ej",
+                "om"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "a",
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą",
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "i",
+                "ie",
+                "y",
+                "ej",
+                "ach"
+            ],
+            1
+        ]
+    },
+    "ła": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ły",
+                "eł",
+                "łej",
+                "ła"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "łom",
+                "łej",
+                "lej",
+                "le"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "a",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "lą",
+                "łą",
+                "łami"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "łej",
+                "łach",
+                "le"
+            ],
+            2
+        ]
+    },
+    "ac": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ak": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "iem"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "am": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "as": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "esie",
+                "asie"
+            ],
+            2
+        ]
+    },
+    "at": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi",
+                "u"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ecie",
+                "acie"
+            ],
+            2
+        ]
+    },
+    "azd": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "eździe"
+            ],
+            3
+        ]
+    },
+    "ąb": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ębu",
+                "ęba"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "ębowi",
+                "ąbowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ębem",
+                "ąbem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ębie",
+                "ąbiu",
+                "ębiu"
+            ],
+            2
+        ]
+    },
+    "ąc": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ąg": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ąga",
+                "ągu",
+                "ęgu"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "ęgowi",
+                "ągowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ęgiem",
+                "ągiem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ągu",
+                "ęgu"
+            ],
+            2
+        ]
+    },
+    "b": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u",
+                "a",
+                "ia"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em",
+                "iem"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "ba": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ie"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ie"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ą"
+            ],
+            1
+        ]
+    },
+    "Białystok": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "egostoku"
+            ],
+            5
+        ],
+        "dative": [
+            [
+                "emustokowi"
+            ],
+            5
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "mstokiem"
+            ],
+            4
+        ],
+        "locative": [
+            [
+                "mstoku"
+            ],
+            4
+        ]
+    },
+    "c": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ca": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ]
+    },
+    "ce": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "c",
+                "cy",
+                "ców"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "com"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cami"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "cach"
+            ],
+            2
+        ]
+    },
+    "ch": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "cha": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "chej",
+                "sze"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                "ą",
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "chej",
+                "sze"
+            ],
+            3
+        ]
+    },
+    "cki": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ów",
+                "iego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "om",
+                "iemu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami",
+                "im"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach",
+                "im"
+            ],
+            1
+        ]
+    },
+    "cz": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "y"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "y",
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ą",
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "y",
+                "u"
+            ],
+            0
+        ]
+    },
+    "cza": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "y",
+                "ej"
+            ],
+            1
+        ]
+    },
+    "cze": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "a",
+                ""
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u",
+                "om",
+                "emu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami",
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "u",
+                "ach"
+            ],
+            1
+        ]
+    },
+    "ć": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ci",
+                "cia"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ci",
+                "ciowi"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ciem",
+                "cią"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ciu",
+                "ci"
+            ],
+            1
+        ]
+    },
+    "d": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "zie"
+            ],
+            0
+        ]
+    },
+    "da": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "zie"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "zie"
+            ],
+            1
+        ]
+    },
+    "e": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ych",
+                "ego",
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ym",
+                "emu",
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ymi",
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ych",
+                "em",
+                "u"
+            ],
+            1
+        ]
+    },
+    "ec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca",
+                "cu"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "cowi",
+                "cu"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "cu"
+            ],
+            2
+        ]
+    },
+    "ek": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ku",
+                "ka"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "kowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "kiem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ku"
+            ],
+            2
+        ]
+    },
+    "el": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "la"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "lowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "lem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "lu"
+            ],
+            2
+        ]
+    },
+    "em": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "",
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "",
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "",
+                "ie"
+            ],
+            0
+        ]
+    },
+    "ezno": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "źnie"
+            ],
+            3
+        ]
+    },
+    "f": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "g": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "iem"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ga": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i",
+                "iej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "i",
+                "iej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ą",
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "dze",
+                "giej"
+            ],
+            2
+        ]
+    },
+    "i": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ów",
+                "iego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "om",
+                "iemu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami",
+                "im"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach",
+                "im"
+            ],
+            1
+        ]
+    },
+    "ia": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i",
+                "",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "i",
+                "",
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "i",
+                "",
+                "ej"
+            ],
+            1
+        ]
+    },
+    "ic": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ice": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ic"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "om"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach"
+            ],
+            1
+        ]
+    },
+    "ie": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ch",
+                "a",
+                "ego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "m",
+                "u",
+                "emu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "mi",
+                "em",
+                "m"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ch",
+                "u",
+                "m"
+            ],
+            1
+        ]
+    },
+    "iec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "cowi"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "cu"
+            ],
+            3
+        ]
+    },
+    "iki": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ów"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "om"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach"
+            ],
+            1
+        ]
+    },
+    "j": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ja": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i",
+                "ji"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "i",
+                "ji"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "i",
+                "ji"
+            ],
+            2
+        ]
+    },
+    "jec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "cowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "cu"
+            ],
+            2
+        ]
+    },
+    "k": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "iem",
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ka": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i",
+                "iej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ce",
+                "kiej"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ce",
+                "kiej"
+            ],
+            2
+        ]
+    },
+    "ki": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ków",
+                "ek"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "om"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach"
+            ],
+            1
+        ]
+    },
+    "l": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ł": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "le"
+            ],
+            1
+        ]
+    },
+    "łe": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ych",
+                "",
+                "ego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "emu",
+                "ym"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ymi",
+                "ym",
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ych",
+                "em",
+                "ym"
+            ],
+            1
+        ]
+    },
+    "ło": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "le"
+            ],
+            2
+        ]
+    },
+    "m": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "",
+                "ia"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "",
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "",
+                "em",
+                "iem"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "",
+                "iu",
+                "ie"
+            ],
+            0
+        ]
+    },
+    "n": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "na": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ien",
+                "ny",
+                "nej"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "om",
+                "ej",
+                "ie"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "",
+                "ną",
+                "nę"
+            ],
+            2
+        ],
+        "instrumental": [
+            [
+                "ami",
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach",
+                "ej",
+                "ie"
+            ],
+            1
+        ]
+    },
+    "ne": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ych",
+                "ego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ym",
+                "emu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ym",
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ych",
+                "em"
+            ],
+            1
+        ]
+    },
+    "nia": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "",
+                "i",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "",
+                "i",
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę",
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ę",
+                "i",
+                "",
+                "ej"
+            ],
+            1
+        ]
+    },
+    "nie": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "nia",
+                "ni",
+                "nich",
+                "ni",
+                "ń",
+                "niów"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "om",
+                "u",
+                "m",
+                "owi"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em",
+                "mi",
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "",
+                "u",
+                "ach"
+            ],
+            1
+        ]
+    },
+    "niec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ńca"
+            ],
+            4
+        ],
+        "dative": [
+            [
+                "ńcowi"
+            ],
+            4
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ńcem"
+            ],
+            4
+        ],
+        "locative": [
+            [
+                "ńcu"
+            ],
+            4
+        ]
+    },
+    "ń": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "nia",
+                "ni"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "niowi",
+                "ni"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "niem",
+                "nią"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "niu",
+                "ni"
+            ],
+            1
+        ]
+    },
+    "o": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "iem",
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            1
+        ]
+    },
+    "oc": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "y"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "u",
+                "y"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em",
+                "ą"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u",
+                "y"
+            ],
+            0
+        ]
+    },
+    "ol": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "ole": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "m"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u",
+                "em"
+            ],
+            1
+        ]
+    },
+    "owa": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ej"
+            ],
+            1
+        ]
+    },
+    "ódź": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "odzi"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "odzi"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "odzią"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "odzi"
+            ],
+            3
+        ]
+    },
+    "óg": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ogu",
+                "oga"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "ogowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ogiem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ogu"
+            ],
+            2
+        ]
+    },
+    "ój": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "oju",
+                ""
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "ojowi",
+                ""
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ojem",
+                ""
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "oju",
+                ""
+            ],
+            2
+        ]
+    },
+    "ól": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "oli"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "owi",
+                "oli"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "olą",
+                "olem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "oli",
+                "ólu"
+            ],
+            2
+        ]
+    },
+    "ół": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ołu",
+                "oła"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "ołowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ołem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ole"
+            ],
+            2
+        ]
+    },
+    "ór": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "oru",
+                "ora"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "orowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "orem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "orze"
+            ],
+            2
+        ]
+    },
+    "ów": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "owa"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "owie"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "owem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "owie"
+            ],
+            2
+        ]
+    },
+    "ówka": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ce"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ce"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "ce"
+            ],
+            2
+        ]
+    },
+    "p": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "r": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ze"
+            ],
+            0
+        ]
+    },
+    "ra": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "e",
+                "y",
+                "ej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ze",
+                "ej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ze",
+                "ej"
+            ],
+            1
+        ]
+    },
+    "ro": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ze"
+            ],
+            1
+        ]
+    },
+    "rzec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca",
+                "zca"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "zcowi",
+                "cowi"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem",
+                "zcem"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "cu",
+                "zcu"
+            ],
+            3
+        ]
+    },
+    "s": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            0
+        ]
+    },
+    "siec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "śca"
+            ],
+            4
+        ],
+        "dative": [
+            [
+                "ścowi"
+            ],
+            4
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ścem"
+            ],
+            4
+        ],
+        "locative": [
+            [
+                "ścu"
+            ],
+            4
+        ]
+    },
+    "ska": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "iej"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "iej"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "iej"
+            ],
+            1
+        ]
+    },
+    "ski": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ego"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "emu"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "m"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "m"
+            ],
+            0
+        ]
+    },
+    "sła": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "śle"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "śle"
+            ],
+            3
+        ]
+    },
+    "sno": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "śnie"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "śnie"
+            ],
+            3
+        ]
+    },
+    "st": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "ście"
+            ],
+            2
+        ]
+    },
+    "ś": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "sia"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "siowi"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "siem"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "siu"
+            ],
+            1
+        ]
+    },
+    "śl": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u"
+            ],
+            0
+        ]
+    },
+    "t": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "u",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "cie"
+            ],
+            1
+        ]
+    },
+    "tka": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "i"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ce"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ce"
+            ],
+            1
+        ]
+    },
+    "u": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                ""
+            ],
+            0
+        ],
+        "dative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                ""
+            ],
+            0
+        ],
+        "locative": [
+            [
+                ""
+            ],
+            0
+        ]
+    },
+    "w": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ia",
+                "u",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "iowi",
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "iem",
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "iu",
+                "ie"
+            ],
+            0
+        ]
+    },
+    "we": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ych",
+                "ego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ym",
+                "emu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ym",
+                "em",
+                "ymi"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "em",
+                "ym"
+            ],
+            1
+        ]
+    },
+    "wie": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "m"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u",
+                ""
+            ],
+            1
+        ]
+    },
+    "wiec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "cu",
+                "cowi"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "cu"
+            ],
+            3
+        ]
+    },
+    "Wieś": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "si"
+            ],
+            3
+        ],
+        "dative": [
+            [
+                "si"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "sią"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "si"
+            ],
+            3
+        ]
+    },
+    "wo": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ie"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em",
+                "iem"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ie"
+            ],
+            1
+        ]
+    },
+    "y": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "",
+                "ów",
+                "ego"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "om",
+                "emu"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ami",
+                "ym"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ach",
+                "ym"
+            ],
+            1
+        ]
+    },
+    "z": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a",
+                "u"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "u",
+                "ie"
+            ],
+            0
+        ]
+    },
+    "ziec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "źca"
+            ],
+            4
+        ],
+        "dative": [
+            [
+                "źcowi"
+            ],
+            4
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "źcem"
+            ],
+            4
+        ],
+        "locative": [
+            [
+                "źcu"
+            ],
+            4
+        ]
+    },
+    "zna": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "źnie"
+            ],
+            3
+        ],
+        "accusative": [
+            [
+                "znę"
+            ],
+            3
+        ],
+        "instrumental": [
+            [
+                "zną"
+            ],
+            3
+        ],
+        "locative": [
+            [
+                "źnie"
+            ],
+            3
+        ]
+    },
+    "ź": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "zi"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "zi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "zią"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "zi"
+            ],
+            0
+        ]
+    },
+    "ż": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y",
+                "a"
+            ],
+            0
+        ],
+        "dative": [
+            [
+                "y",
+                "owi"
+            ],
+            0
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ą",
+                "em"
+            ],
+            0
+        ],
+        "locative": [
+            [
+                "y",
+                "u"
+            ],
+            0
+        ]
+    },
+    "ża": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "y"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                "ę"
+            ],
+            1
+        ],
+        "instrumental": [
+            [
+                "ą"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "y"
+            ],
+            1
+        ]
+    },
+    "że": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ych",
+                "a",
+                "ach",
+                "y"
+            ],
+            1
+        ],
+        "dative": [
+            [
+                "ym",
+                "om",
+                "u"
+            ],
+            1
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "ymi",
+                "em",
+                "ami"
+            ],
+            1
+        ],
+        "locative": [
+            [
+                "ych",
+                "ach",
+                "u"
+            ],
+            1
+        ]
+    },
+    "żec": {
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "ca"
+            ],
+            2
+        ],
+        "dative": [
+            [
+                "cowi"
+            ],
+            2
+        ],
+        "accusative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "instrumental": [
+            [
+                "cem"
+            ],
+            2
+        ],
+        "locative": [
+            [
+                "cu"
+            ],
+            2
+        ]
+    }
+}

@@ -1,23 +1,73 @@
 {
     "_default": {
-        "nominative": [[""], 0],
-        "genitive": [[""], 0]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                ""
+            ],
+            0
+        ]
     },
-    
     "i": {
-        "nominative": [[""], 0],
-        "genitive": [["o"], 1]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "o"
+            ],
+            1
+        ]
     },
     "o": {
-        "nominative": [[""], 0],
-        "genitive": [["a"], 1]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "a"
+            ],
+            1
+        ]
     },
     "ti": {
-        "nominative": [[""], 0],
-        "genitive": [["o"], 1]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "o"
+            ],
+            1
+        ]
     },
     "esti": {
-        "nominative": [[""], 0],
-        "genitive": [["o", "a"], 1]
+        "nominative": [
+            [
+                ""
+            ],
+            0
+        ],
+        "genitive": [
+            [
+                "o",
+                "a"
+            ],
+            1
+        ]
     }
 }

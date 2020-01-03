@@ -1,7 +1,7 @@
 import os
 
 PARENT_DIRECTORY = os.path.dirname(os.path.abspath(__file__))
-TOPODICT_DIR = os.path.join(PARENT_DIRECTORY, 'resources')
+TOPODICT_DIR = os.path.join(PARENT_DIRECTORY, "resources")
 
 LANGUAGE_DICT = {
     "croatian": "hr",
@@ -10,5 +10,6 @@ LANGUAGE_DICT = {
     "romanian": "ro",
     "latvian": "lv",
     "hungarian": "hu",
-    "greek": "el"
+    "greek": "el",
+    "polish": "pl",
 }
