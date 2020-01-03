@@ -52,7 +52,6 @@ class Toponym(case.Case):
             all_toponyms_all_cases = list(map(self.topo.__getitem__, self.topo.keys()))
             return list(set(itertools.chain.from_iterable(all_toponyms_all_cases)))
 
-
         else:
             raise Exception(".build() first")
 
