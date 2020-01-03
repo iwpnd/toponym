@@ -120,7 +120,7 @@ def test_topodict_load_file():
 def test_topodict_consistency():
     list_dir = os.listdir(settings.PARENT_DIRECTORY + "/resources")
     filepaths = [
-        settings.PARENT_DIRECTORY + "/resources" + f"/{x}"
+        settings.PARENT_DIRECTORY + "/resources" + "/{}".format(x)
         for x in list_dir
         if x.endswith(".json")
     ]
