@@ -15,8 +15,7 @@ class Case(object):
 
         if not (is_str or is_list):
             raise TypeError(
-                type(ending),
-                '- is not supported. Either provide str or list of str'
+                type(ending), "- is not supported. Either provide str or list of str"
             )
 
         if is_str:
@@ -43,9 +42,7 @@ class Case(object):
         """
         if isinstance(word, str):
             word = self._build_case(
-                word,
-                ending=topo_recipe[case][0],
-                cutending=topo_recipe[case][1]
+                word, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
             )
             return word
 
@@ -53,9 +50,7 @@ class Case(object):
             words = []
             for w in word:
                 word = self._build_case(
-                    w,
-                    ending=topo_recipe[case][0],
-                    cutending=topo_recipe[case][1]
+                    w, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
                 )
                 words.append(word)
 
@@ -67,9 +62,7 @@ class Case(object):
                 for w in word:
 
                     word = self._build_case(
-                        w,
-                        ending=ending,
-                        cutending=topo_recipe[case][1]
+                        w, ending=ending, cutending=topo_recipe[case][1]
                     )
                     words.append(word)
 
