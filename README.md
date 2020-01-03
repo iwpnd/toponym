@@ -2,9 +2,24 @@
 
 Build grammatical cases for words in slavic languages from pre-defined recipes.
 
-# Description 
+### supported languages:
 
-In slavic languages a word can change, depending on how and where it is used within a sentence. The city Moscow (`Москва`) changes to `Москве` when used prepositional. 
+```
+full name		iso code
+  croatian		hr
+  russian		ru
+  ukrainian		uk
+  romanian		ro
+  latvian		lv
+  hungarian		hu
+  greek		    el
+  polish		pl
+```
+
+# Description
+
+## Problem
+In slavic languages a word can change, depending on how and where it is used within a sentence. The city Moscow (`Москва`) changes to `Москве` when used prepositional.
 So when you want to eg. know if:
 
 ```python
@@ -13,25 +28,29 @@ So when you want to eg. know if:
 >> False
 ```
 
+## Solution
 This is where Toponym comes in. Utilizing pre-defined recipes (topodictionaries) it naivly creates grammatical cases depending on the ending of the input word that the user wants to create Toponyms from. The recipe looks as follows:
 
+### Recipe
 ```python
 recipe = {
-    "а": {
-        "nominative": [[""], 0],
-        "genitive": [["ы","и"], 1],
-        "dative": [["е"], 1],
-        "accusative": [["у"], 1],
-        "instrumental": [["ой"], 1],
-        "prepositional": [["е"], 1]
-        }
+    "а": { # ending of the input-word
+        "nominative": [
+            [""], 0
+            ],
+        "genitive": [ # case that we need
+            ["ы","и"], # ending of the output-word
+            1 # chars to be deleted, before ending of output is added
+            ],
+        "dative": [
+            ["е"], 1
+            ],
+        "accusative": [
+            ["у"], 1
+            ],
+        "instrumental": [...]
 }
 ```
-
-`recipe.keys()`: are the supported word-endings. Possible cases that a word case change into, are found a level below.   
-`recipe["а"]["prepositional"]`: The value defined contains the actual build-instructions.   
-`recipe["а"]["prepositional"][0]`: indicates the ending/s the word will receive.   
-`recipe["а"]["prepositional"][1]`: tells how many characters are cut from the input-word before the ending is added to the remaining characters.  
 
 If multiple endings are given, multiple toponyms with that ending will be created. Some of those created toponyms do not make sense, or are not used in the wild. If you have an idea on how to remove those that are unreal please contact me.
 
@@ -87,10 +106,10 @@ At first you instantiate the topodictionary. You can either use one of our pre-b
 topodictionary = topodict.Topodict(language='russian')
 print(topodictionary)
 >> Topodict(
-    language='russian', 
-    filepath='False', 
-    loaded=True, 
-    word_endings=['_default', 'й', 'б', 'в', 'г', 'д', 'ж', 'з', 'к', 'л', 'м', 'н', 'п', 'р', 'с', 'т', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'а', 'иа', 'я', 'ья', 'ия', 'ея', 'ь', 'ая', 'яя', 'ой', 'ый', 'ий', 'ое', 'ее', 'ые', 'ие', 'о', 'е']
+    language='russian',
+    filepath='False',
+    loaded=True,
+    word_endings=['_default', 'й', 'б', 'в', 'г', 'д', ...]
     )
 ```
 
@@ -104,16 +123,16 @@ _dictionary = {
         "nominative": [[""], 0],
         "genitive": [[""], 0],
         "your_case": [[""], 0]
-        } 
+        }
     }
 
 topodictionary = topodict.Topodict(language='your_language', file=_dictionary)
 print(topodictionary)
 
 >> Topodict(
-    language='your_language', 
-    filepath='True', 
-    loaded=True, 
+    language='your_language',
+    filepath='True',
+    loaded=True,
     word_endings=['_default']
     )
 ```
@@ -127,7 +146,7 @@ print(topodictionary)
         "nominative": [[""], 0],
         "genitive": [[""], 0],
         "your_case": [[""], 0]
-        } 
+        }
     }
 ```
 
@@ -136,9 +155,9 @@ topodictionary = topodict.Topodict(language='your_language', file="path/to/your_
 print(topodictionary)
 
 >> Topodict(
-    language='your_language', 
-    filepath='path/to/your_file.json', 
-    loaded=True, 
+    language='your_language',
+    filepath='path/to/your_file.json',
+    loaded=True,
     word_endings=['_default']
     )
 ```
@@ -182,12 +201,34 @@ tn.build()
 print(tn.topo)
 
 {
-    'nominative': ['Москва Ломоносовский'], 
-    'genitive': ['Москвы Ломоносовского', 'Москвы Ломоносовскего', 'Москви Ломоносовского', 'Москви Ломоносовскего'], 
-    'dative': ['Москве Ломоносовскому', 'Москве Ломоносовскему'], 
-    'accusative': ['Москву Ломоносовского', 'Москву Ломоносовскего', 'Москву Ломоносовской', 'Москву Ломоносовскый', 'Москву Ломоносовский'], 
-    'instrumental': ['Москвой Ломоносовскым', 'Москвой Ломоносовским'], 
-    'prepositional': ['Москве Ломоносовском', 'Москве Ломоносовскем']
+    'nominative': [
+        'Москва Ломоносовский'
+        ],
+    'genitive': [
+        'Москвы Ломоносовского',
+        'Москвы Ломоносовскего',
+        'Москви Ломоносовского',
+        'Москви Ломоносовскего'
+        ],
+    'dative': [
+        'Москве Ломоносовскому',
+        'Москве Ломоносовскему'
+        ],
+    'accusative': [
+        'Москву Ломоносовского',
+        'Москву Ломоносовскего',
+        'Москву Ломоносовской',
+        'Москву Ломоносовскый',
+        'Москву Ломоносовский'
+        ],
+    'instrumental': [
+        'Москвой Ломоносовскым',
+        'Москвой Ломоносовским'
+        ],
+    'prepositional': [
+        'Москве Ломоносовском',
+        'Москве Ломоносовскем'
+        ]
 }
 ```
 
@@ -206,4 +247,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
