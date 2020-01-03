@@ -13,11 +13,3 @@ repos:
         rev: 19.3b0
         hooks:
         -   id: black
-    -   repo: local
-        hooks:
-        -   id: tests
-            name: run tests
-            entry: pytest -v
-            language: system
-            types: [python]
-            stages: [push]
