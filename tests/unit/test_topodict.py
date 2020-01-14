@@ -4,6 +4,14 @@ import json
 import os
 
 
+def is_json(myjson):
+    try:
+        json_object = json.loads(myjson)
+    except ValueError as e:
+        return False
+    return True
+
+
 def test_topodict_load_success_russian():
     """test load
     """
@@ -145,3 +153,31 @@ def test_topodict_consistency():
             return False
 
     assert all([_is_consistent_topodict(tdict) for tdict in filepaths])
+
+
+def test_topodict_valid_json():
+    list_dir = os.listdir(settings.PARENT_DIRECTORY + "/resources")
+    filepaths = [
+        settings.PARENT_DIRECTORY + "/resources" + "/{}".format(x)
+        for x in list_dir
+        if x.endswith(".json")
+    ]
+
+    for filepath in filepaths:
+        with open(filepath, "r", encoding="utf8") as f:
+            assert is_json(f.read())
+
+
+def test_topodict_default_in_json():
+    list_dir = os.listdir(settings.PARENT_DIRECTORY + "/resources")
+    filepaths = [
+        settings.PARENT_DIRECTORY + "/resources" + "/{}".format(x)
+        for x in list_dir
+        if x.endswith(".json")
+    ]
+
+    for filepath in filepaths:
+        with open(filepath, "r", encoding="utf8") as f:
+            topodict_check = json.loads(f.read())
+            assert isinstance(topodict_check, dict)
+            assert "_default" in topodict_check
