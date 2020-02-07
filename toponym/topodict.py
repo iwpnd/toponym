@@ -1,14 +1,9 @@
-import os
 import json
-from . import settings
-from .utils import (
-    get_available_language_codes,
-    print_available_languages,
-    get_language_code,
-    load_topodict,
-)
-
 import logging
+
+from .utils import get_language_code
+from .utils import load_topodict
+
 
 logger = logging.getLogger(__name__)
 
@@ -17,12 +12,12 @@ class Topodict:
     """Loads and provides access to recipes
     """
 
-    def __init__(self, language, file=False):
+    def __init__(self, language: str, file=False) -> None:
         self.language = language
         self.file = file
         self._loaded = False
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         if self._loaded:
             return "Topodict(language='{language}', filepath='{file}', loaded={i}, word_endings={we})".format(
                 language=self.language,
@@ -35,7 +30,7 @@ class Topodict:
                 language=self.language, file=self.file, i=self._loaded
             )
 
-    def __getitem__(self, word_ending):
+    def __getitem__(self, word_ending: str) -> str:
         if not self._loaded:
             raise NameError("load topodict first")
         elif word_ending in self._dict.keys():
@@ -44,7 +39,7 @@ class Topodict:
             logger.warning("No word_ending found. Using _default")
             return self._dict["_default"]
 
-    def load(self):
+    def load(self) -> None:
         if not self.file:
             self._language_code = get_language_code(self.language)
             self._dict = load_topodict(self._language_code)
