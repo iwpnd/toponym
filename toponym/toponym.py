@@ -1,15 +1,15 @@
-from toponym import case
-from collections import defaultdict
 import itertools
 import logging
+from collections import defaultdict
 
-import logging
+from toponym import case
+from toponym.topodict import Topodict
 
 logger = logging.getLogger(__name__)
 
 
 class Toponym(case.Case):
-    def __init__(self, input_term, topodict):
+    def __init__(self, input_term: str, topodict: Topodict) -> None:
 
         self.word = input_term
         self.topodict = topodict
@@ -19,7 +19,7 @@ class Toponym(case.Case):
 
         self.topo_recipe = False
 
-    def build(self):
+    def build(self) -> None:
 
         if isinstance(self.word, list):
 
@@ -29,8 +29,10 @@ class Toponym(case.Case):
                 self.recipe = self.topodict[self._get_longest_word_ending(w)]
 
                 temp = dict()
-                for case in self.recipe:
-                    temp[case] = self._constructor(w, self.recipe, case)
+                for grammatical_case in self.recipe:
+                    temp[grammatical_case] = self._constructor(
+                        w, self.recipe, grammatical_case
+                    )
 
                 self.topo.append(temp)
 
@@ -41,10 +43,12 @@ class Toponym(case.Case):
 
             self.topo = dict()
 
-            for case in self.recipe:
-                self.topo[case] = self._constructor(self.word, self.recipe, case)
+            for grammatical_case in self.recipe:
+                self.topo[grammatical_case] = self._constructor(
+                    self.word, self.recipe, grammatical_case
+                )
 
-    def list_toponyms(self):
+    def list_toponyms(self) -> list:
         """ Put all created toponyms in a list
         """
 
@@ -55,7 +59,7 @@ class Toponym(case.Case):
         else:
             raise Exception(".build() first")
 
-    def _get_longest_word_ending(self, word):
+    def _get_longest_word_ending(self, word: str) -> str:
         """Disect word into differnet size shifs
         """
         # TODO: write TIL about max(list, key=len)
@@ -70,7 +74,7 @@ class Toponym(case.Case):
             logger.debug("No word ending found for: {word}".format(word=word))
             return ""
 
-    def _concat_case_dictionaries(self, list_of_dictionaries):
+    def _concat_case_dictionaries(self, list_of_dictionaries: list) -> dict:
         """ Concate list of dictionaries
         """
         dd = defaultdict(list)

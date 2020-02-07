@@ -1,14 +1,10 @@
-import os
 import json
-import logging
+import os
 
 from . import settings
-import logging
-
-logger = logging.getLogger(__name__)
 
 
-def get_available_language_codes():
+def get_available_language_codes() -> str:
     """Returns a list of available languages and their 2 char input codes
     """
     topodict_files = os.listdir(os.path.join(settings.TOPODICT_DIR))
@@ -21,7 +17,7 @@ def get_available_language_codes():
     return two_dig_codes
 
 
-def get_language_code(language):
+def get_language_code(language: str) -> str:
 
     try:
         return settings.LANGUAGE_DICT[language]
@@ -31,7 +27,7 @@ def get_language_code(language):
         )
 
 
-def print_available_languages():
+def print_available_languages() -> None:
     """Prints available languages with their full names
     """
 
@@ -42,7 +38,7 @@ def print_available_languages():
     print()
 
 
-def load_topodict(language_code):
+def load_topodict(language_code: str) -> dict:
     """
     Loads language-specific stopwords for keyword selection
     """

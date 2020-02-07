@@ -1,4 +1,5 @@
 import logging
+from typing import Union
 
 logger = logging.getLogger(__name__)
 
@@ -7,7 +8,9 @@ class Case(object):
     def __init__(self):
         pass
 
-    def _build_case(self, word, ending, cutending=0):
+    def _build_case(
+        self, word: str, ending: str, cutending: int = 0
+    ) -> Union[list, str]:
         """ Modify a word given an ending and a cutending parameter
         """
         is_str = isinstance(ending, str)
@@ -19,7 +22,7 @@ class Case(object):
             )
 
         if is_str:
-            if cutending is not 0:
+            if cutending != 0:
                 tmpWord = word[:-cutending] + ending
             else:
                 tmpWord = word + ending
@@ -29,7 +32,7 @@ class Case(object):
             tmpWordList = list()
 
             for end in ending:
-                if cutending is not 0:
+                if cutending != 0:
                     tmpWord = word[:-cutending] + end
                     tmpWordList.append(tmpWord)
                 else:
@@ -37,7 +40,7 @@ class Case(object):
                     tmpWordList.append(tmpWord)
             return tmpWordList
 
-    def _constructor(self, word, topo_recipe, case):
+    def _constructor(self, word: str, topo_recipe: dict, case: str) -> Union[list, str]:
         """Depending on the recipe and input, execute build_case accordingly
         """
         if isinstance(word, str):
