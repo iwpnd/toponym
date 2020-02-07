@@ -1,72 +1,101 @@
-import logging
 from typing import Union
 
-logger = logging.getLogger(__name__)
+
+class DeclineConfig:
+    """A configuration to handle declinsion
+
+    Attributes:
+    input_word: Input word/words
+    recipe: topodictionary recipe by grammatical_case
+    """
+
+    input_word = Union[list, str]
+    recipe: dict
+
+
+class CaseConfig(DeclineConfig):
+    """A configuration for the case
+
+    Attributes:
+    input_word: Input word/words
+    new_word_ending: word ending or multiple
+    cut_ending_by: amount of characters cut from input_word before new_word_ending is added
+    """
+
+    new_word_ending: Union[list, str]
+    cut_ending_by: int
 
 
 class Case(object):
-    def __init__(self):
-        pass
-
-    def _build_case(
-        self, word: str, ending: str, cutending: int = 0
-    ) -> Union[list, str]:
-        """ Modify a word given an ending and a cutending parameter
+    def decline(self, decline_config: DeclineConfig) -> Union[list, str]:
+        """Declines a word based on
         """
-        is_str = isinstance(ending, str)
-        is_list = isinstance(ending, list)
 
-        if not (is_str or is_list):
-            raise TypeError(
-                type(ending), "- is not supported. Either provide str or list of str"
-            )
+        case_config = CaseConfig()
+        case_config.cut_ending_by = decline_config.recipe[1]
 
-        if is_str:
-            if cutending != 0:
-                tmpWord = word[:-cutending] + ending
+        if (
+            isinstance(decline_config.input_word, str)
+            and len(decline_config.recipe[0]) == 1
+        ):
+            case_config.input_word = decline_config.input_word
+            case_config.new_word_ending = decline_config.recipe[0][0]
+
+            output_word = build_case_from_string(config=case_config)
+            return [output_word]
+
+        elif (
+            isinstance(decline_config.input_word, str)
+            and len(decline_config.recipe[0]) > 1
+        ):
+            case_config.input_word = decline_config.input_word
+
+            output_words = []
+
+            for new_word_ending in decline_config.recipe[0]:
+                case_config.new_word_ending = new_word_ending
+                output_word = build_case_from_string(config=case_config)
+                output_words.append(output_word)
+
+            return output_words
+
+        elif (
+            isinstance(decline_config.input_word, list)
+            and len(decline_config.recipe[0]) > 1
+        ):
+
+            case_config.input_word = decline_config.input_word
+            case_config.new_word_ending = decline_config.recipe[0]
+
+            list_of_output_words = build_cases_from_list(case_config)
+
+            return list_of_output_words
+
+
+def build_cases_from_list(config: CaseConfig) -> str:
+    list_of_output_words = []
+
+    for input_word in config.input_word:
+        output_words = []
+        for ending in config.new_word_ending:
+            if config.cut_ending_by != 0:
+                output_word = input_word[: -config.cut_ending_by] + ending
+                output_words.append(output_word)
             else:
-                tmpWord = word + ending
-            return tmpWord
+                output_word = input_word + ending
+                output_words.append(output_word)
 
-        if is_list:
-            tmpWordList = list()
+        list_of_output_words.append(output_words)
 
-            for end in ending:
-                if cutending != 0:
-                    tmpWord = word[:-cutending] + end
-                    tmpWordList.append(tmpWord)
-                else:
-                    tmpWord = word + end
-                    tmpWordList.append(tmpWord)
-            return tmpWordList
+    return list_of_output_words
 
-    def _constructor(self, word: str, topo_recipe: dict, case: str) -> Union[list, str]:
-        """Depending on the recipe and input, execute build_case accordingly
-        """
-        if isinstance(word, str):
-            word = self._build_case(
-                word, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
-            )
-            return word
 
-        elif isinstance(word, list) and len(topo_recipe[case][0]) == 1:
-            words = []
-            for w in word:
-                word = self._build_case(
-                    w, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
-                )
-                words.append(word)
+def build_case_from_string(config: CaseConfig) -> str:
+    if config.cut_ending_by != 0:
+        output_word = (
+            config.input_word[: -config.cut_ending_by] + config.new_word_ending
+        )
+    else:
+        output_word = config.input_word + config.new_word_ending
 
-                return words
-
-        elif isinstance(word, list) and len(topo_recipe[case][0]) > 1:
-            words = []
-            for ending in topo_recipe[case][0]:
-                for w in word:
-
-                    word = self._build_case(
-                        w, ending=ending, cutending=topo_recipe[case][1]
-                    )
-                    words.append(word)
-
-                return words
+    return output_word
