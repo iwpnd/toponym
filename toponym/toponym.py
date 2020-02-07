@@ -2,13 +2,14 @@ import itertools
 import logging
 from collections import defaultdict
 
-from toponym import case
+from toponym.case import Case
+from toponym.case import DeclineConfig
 from toponym.topodict import Topodict
 
 logger = logging.getLogger(__name__)
 
 
-class Toponym(case.Case):
+class Toponym(Case):
     def __init__(self, input_term: str, topodict: Topodict) -> None:
 
         self.word = input_term
@@ -20,19 +21,23 @@ class Toponym(case.Case):
         self.topo_recipe = False
 
     def build(self) -> None:
+        decline_config = DeclineConfig()
 
         if isinstance(self.word, list):
 
             self.topo = list()
 
-            for _, w in enumerate(self.word):
-                self.recipe = self.topodict[self._get_longest_word_ending(w)]
+            for _, input_word in enumerate(self.word):
+                self.recipe = self.topodict[self._get_longest_word_ending(input_word)]
+
+                decline_config.input_word = input_word
 
                 temp = dict()
+
                 for grammatical_case in self.recipe:
-                    temp[grammatical_case] = self._constructor(
-                        w, self.recipe, grammatical_case
-                    )
+                    decline_config.recipe = self.recipe[grammatical_case]
+
+                    temp[grammatical_case] = self.decline(decline_config)
 
                 self.topo.append(temp)
 
@@ -40,13 +45,13 @@ class Toponym(case.Case):
 
         else:
             self.recipe = self.topodict[self._get_longest_word_ending(self.word)]
-
             self.topo = dict()
 
+            decline_config.input_word = self.word
+
             for grammatical_case in self.recipe:
-                self.topo[grammatical_case] = self._constructor(
-                    self.word, self.recipe, grammatical_case
-                )
+                decline_config.recipe = self.recipe[grammatical_case]
+                self.topo[grammatical_case] = self.decline(decline_config)
 
     def list_toponyms(self) -> list:
         """ Put all created toponyms in a list
