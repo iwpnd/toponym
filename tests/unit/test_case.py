@@ -1,14 +1,6 @@
 from toponym.case import build_case_from_string
 from toponym.case import build_cases_from_list
 from toponym.case import Case
-from toponym.case import CaseConfig
-
-default_recipe = {
-    "nominative": [[""], 0],
-    "genitive": [[""], 0],
-    "accusative": [[""], 0],
-    "vocative": [[""], 0],
-}
 
 
 def test_case_decline_config(decline_config):
@@ -42,8 +34,7 @@ def test_case_build_from_string_multiple_ending_success(decline_config):
     assert "Teso" in output_words
 
 
-def test_case_decline_multiple_words_multiple_endings():
-    decline_config = CaseConfig()
+def test_case_decline_multiple_words_multiple_endings(decline_config):
     decline_config.input_word = ["Test", "Kest"]
     decline_config.recipe = [["i", "o"], 1]
 
