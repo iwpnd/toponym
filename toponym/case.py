@@ -5,37 +5,42 @@ class Case(object):
     def __init__(self):
         pass
 
-    def _build_case(
-        self, word: str, ending: str, cutending: int = 0
-    ) -> Union[list, str]:
+    def _build_case(self, config: dict) -> Union[list, str]:
         """ Modify a word given an ending and a cutending parameter
         """
-        is_str = isinstance(ending, str)
-        is_list = isinstance(ending, list)
+
+        is_str = isinstance(config["input_word"], str)
+        is_list = isinstance(config["input_word"], list)
 
         if not (is_str or is_list):
             raise TypeError(
-                type(ending), "- is not supported. Either provide str or list of str"
+                type(config["input_word"]),
+                "- is not supported. Either provide str or list of str",
             )
 
         if is_str:
-            if cutending != 0:
-                tmpWord = word[:-cutending] + ending
+            if config["cut_ending_by"] != 0:
+                output_word = (
+                    config["input_word"][: -config["cut_ending_by"]]
+                    + config["new_word_ending"]
+                )
             else:
-                tmpWord = word + ending
-            return tmpWord
+                output_word = config["input_word"] + config["new_word_ending"]
+            return output_word
 
         if is_list:
-            tmpWordList = list()
+            output_words = list()
 
-            for end in ending:
-                if cutending != 0:
-                    tmpWord = word[:-cutending] + end
-                    tmpWordList.append(tmpWord)
+            for ending in config["new_word_ending"]:
+                if config["cut_ending_by"] != 0:
+                    output_word = (
+                        config["input_word"][: -config["cut_ending_by"]] + ending
+                    )
+                    output_words.append(output_word)
                 else:
-                    tmpWord = word + end
-                    tmpWordList.append(tmpWord)
-            return tmpWordList
+                    output_word = config["input_word"] + ending
+                    output_words.append(output_word)
+            return output_words
 
     def _constructor(
         self, word: str, topo_recipe: dict, grammatical_case: str
