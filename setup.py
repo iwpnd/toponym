@@ -2,6 +2,9 @@ from setuptools import setup
 
 packages = ["toponym"]
 
+with open("requirements.txt") as f:
+    required = f.read().splitlines()
+
 setup(
     name="toponym",
     version="0.3.5",
@@ -11,7 +14,7 @@ setup(
     author_email="ahoi@iwpnd.pw",
     license="MIT",
     include_package_data=True,
-    install_requires=[],
+    install_requires=required,
     packages=packages,
     zip_safe=False,
     classifiers=[
