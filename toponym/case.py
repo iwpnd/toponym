@@ -16,47 +16,25 @@ class CaseConfig:
 
 
 class Case(object):
-    def __init__(self):
-        pass
-
-    def _build_case(self, config: CaseConfig) -> Union[list, str]:
-        """ Modify a word given an ending and a cutending parameter
-        """
-
-        is_list = isinstance(config.input_word, list)
-
-        if not is_list:
-            raise TypeError(
-                type(config.input_word), "- is not supported. Provide a list of str"
-            )
-
-        if is_list:
-            output_words = list()
-
-            for ending in config.new_word_ending:
-                if config.cut_ending_by != 0:
-                    output_word = config.input_word[: -config.cut_ending_by] + ending
-                    output_words.append(output_word)
-                else:
-                    output_word = config.input_word + ending
-                    output_words.append(output_word)
-            return output_words
-
     def _constructor(self, config: dict) -> Union[list, str]:
         """Depending on the recipe and input, execute build_case accordingly
         """
 
         case_config = CaseConfig()
-        case_config.input_word = config["input_word"]
         case_config.cut_ending_by = config["recipe"][1]
 
-        if isinstance(case_config.input_word, str) and len(config["recipe"][0]) == 1:
+        if isinstance(config["input_word"], str) and len(config["recipe"][0]) == 1:
+            case_config.input_word = config["input_word"]
             case_config.new_word_ending = config["recipe"][0][0]
+
             output_word = build_case_from_string(config=case_config)
             return output_word
 
-        if isinstance(case_config.input_word, str) and len(config["recipe"][0]) > 1:
+        if isinstance(config["input_word"], str) and len(config["recipe"][0]) > 1:
+            case_config.input_word = config["input_word"]
+
             output_words = []
+
             for new_word_ending in config["recipe"][0]:
                 case_config.new_word_ending = new_word_ending
                 output_word = build_case_from_string(config=case_config)
@@ -65,15 +43,31 @@ class Case(object):
             return output_words
 
         elif isinstance(config["input_word"], list) and len(config["recipe"][0]) > 1:
+
+            case_config.input_word = config["input_word"]
             case_config.new_word_ending = config["recipe"][0]
-            output_words = []
-            for word_ending in config["recipe"][0]:
-                for input_word in config["input_word"]:
 
-                    output_word = self._build_case(case_config)
-                    output_words.append(output_word)
+            list_of_output_words = build_cases_from_list(case_config)
 
-            return output_words
+            return list_of_output_words
+
+
+def build_cases_from_list(config: CaseConfig) -> str:
+    list_of_output_words = []
+
+    for input_word in config.input_word:
+        output_words = []
+        for ending in config.new_word_ending:
+            if config.cut_ending_by != 0:
+                output_word = input_word[: -config.cut_ending_by] + ending
+                output_words.append(output_word)
+            else:
+                output_word = input_word + ending
+                output_words.append(output_word)
+
+        list_of_output_words.append(output_words)
+
+    return list_of_output_words
 
 
 def build_case_from_string(config: CaseConfig) -> str:
