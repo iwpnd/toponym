@@ -42,39 +42,29 @@ class Case(object):
                     output_words.append(output_word)
             return output_words
 
-    def _constructor(
-        self, word: str, topo_recipe: dict, grammatical_case: str
-    ) -> Union[list, str]:
+    def _constructor(self, config: dict) -> Union[list, str]:
         """Depending on the recipe and input, execute build_case accordingly
         """
-        if isinstance(word, str):
-            word = self._build_case(
-                word,
-                ending=topo_recipe[grammatical_case][0],
-                cutending=topo_recipe[grammatical_case][1],
-            )
-            return word
+        case_config = {
+            "input_word": config["input_word"],
+            "new_word_ending": config["recipe"][0],
+            "cut_ending_by": config["recipe"][1],
+        }
 
-        elif isinstance(word, list) and len(topo_recipe[grammatical_case][0]) == 1:
-            words = []
-            for w in word:
-                word = self._build_case(
-                    w,
-                    ending=topo_recipe[grammatical_case][0],
-                    cutending=topo_recipe[grammatical_case][1],
-                )
-                words.append(word)
+        if isinstance(config["input_word"], list) and len(config["recipe"][0]) == 1:
+            output_words = []
+            for input_word in config["input_word"]:
+                output_word = self._build_case(config=case_config)
+                output_words.append(output_word)
 
-                return words
+                return output_words
 
-        elif isinstance(word, list) and len(topo_recipe[grammatical_case][0]) > 1:
-            words = []
-            for ending in topo_recipe[grammatical_case][0]:
-                for w in word:
+        elif isinstance(config["input_word"], list) and len(config["recipe"][0]) > 1:
+            output_words = []
+            for word_ending in config["recipe"][0]:
+                for input_word in config["input_word"]:
 
-                    word = self._build_case(
-                        w, ending=ending, cutending=topo_recipe[grammatical_case][1]
-                    )
-                    words.append(word)
+                    output_word = self._build_case(case_config)
+                    output_words.append(output_word)
 
-                return words
+                return output_words
