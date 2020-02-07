@@ -1,7 +1,4 @@
-import logging
 from typing import Union
-
-logger = logging.getLogger(__name__)
 
 
 class Case(object):
@@ -40,32 +37,38 @@ class Case(object):
                     tmpWordList.append(tmpWord)
             return tmpWordList
 
-    def _constructor(self, word: str, topo_recipe: dict, case: str) -> Union[list, str]:
+    def _constructor(
+        self, word: str, topo_recipe: dict, grammatical_case: str
+    ) -> Union[list, str]:
         """Depending on the recipe and input, execute build_case accordingly
         """
         if isinstance(word, str):
             word = self._build_case(
-                word, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
+                word,
+                ending=topo_recipe[grammatical_case][0],
+                cutending=topo_recipe[grammatical_case][1],
             )
             return word
 
-        elif isinstance(word, list) and len(topo_recipe[case][0]) == 1:
+        elif isinstance(word, list) and len(topo_recipe[grammatical_case][0]) == 1:
             words = []
             for w in word:
                 word = self._build_case(
-                    w, ending=topo_recipe[case][0], cutending=topo_recipe[case][1]
+                    w,
+                    ending=topo_recipe[grammatical_case][0],
+                    cutending=topo_recipe[grammatical_case][1],
                 )
                 words.append(word)
 
                 return words
 
-        elif isinstance(word, list) and len(topo_recipe[case][0]) > 1:
+        elif isinstance(word, list) and len(topo_recipe[grammatical_case][0]) > 1:
             words = []
-            for ending in topo_recipe[case][0]:
+            for ending in topo_recipe[grammatical_case][0]:
                 for w in word:
 
                     word = self._build_case(
-                        w, ending=ending, cutending=topo_recipe[case][1]
+                        w, ending=ending, cutending=topo_recipe[grammatical_case][1]
                     )
                     words.append(word)
 
