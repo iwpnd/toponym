@@ -31,71 +31,38 @@ class Case(object):
         """Declines a word based on
         """
 
-        case_config = CaseConfig()
-        case_config.cut_ending_by = decline_config.recipe[1]
+        case_config: CaseConfig = get_case_config(decline_config=decline_config)
+        output_words = []
 
-        if (
-            isinstance(decline_config.input_word, str)
-            and len(decline_config.recipe[0]) == 1
-        ):
-            case_config.input_word = decline_config.input_word
-            case_config.new_word_ending = decline_config.recipe[0][0]
+        if len(decline_config.recipe[0]) == 1:
+            case_config.new_word_ending: str = decline_config.recipe[0][0]
+            output_word: str = decline_input_word(config=case_config)
+            output_words.append(output_word)
 
-            output_word = build_case_from_string(config=case_config)
-            return [output_word]
-
-        elif (
-            isinstance(decline_config.input_word, str)
-            and len(decline_config.recipe[0]) > 1
-        ):
-            case_config.input_word = decline_config.input_word
-
-            output_words = []
+        elif len(decline_config.recipe[0]) > 1:
 
             for new_word_ending in decline_config.recipe[0]:
-                case_config.new_word_ending = new_word_ending
-                output_word = build_case_from_string(config=case_config)
+                case_config.new_word_ending: str = new_word_ending
+                output_word: str = decline_input_word(config=case_config)
                 output_words.append(output_word)
 
-            return output_words
-
-        elif (
-            isinstance(decline_config.input_word, list)
-            and len(decline_config.recipe[0]) > 1
-        ):
-
-            case_config.input_word = decline_config.input_word
-            case_config.new_word_ending = decline_config.recipe[0]
-
-            list_of_output_words = build_cases_from_list(case_config)
-
-            return list_of_output_words
+        return output_words
 
 
-def build_cases_from_list(config: CaseConfig) -> str:
-    list_of_output_words = []
+def get_case_config(decline_config: DeclineConfig):
+    case_config = CaseConfig()
+    case_config.cut_ending_by: int = decline_config.recipe[1]
+    case_config.input_word: str = decline_config.input_word
 
-    for input_word in config.input_word:
-        output_words = []
-        for ending in config.new_word_ending:
-            if config.cut_ending_by != 0:
-                output_word = input_word[: -config.cut_ending_by] + ending
-                output_words.append(output_word)
-            else:
-                output_word = input_word + ending
-                output_words.append(output_word)
-
-        list_of_output_words.append(output_words)
-
-    return list_of_output_words
+    return case_config
 
 
-def build_case_from_string(config: CaseConfig) -> str:
+def decline_input_word(config: CaseConfig) -> str:
     if config.cut_ending_by != 0:
-        output_word = (
+        output_word: str = (
             config.input_word[: -config.cut_ending_by] + config.new_word_ending
         )
     else:
-        output_word = config.input_word + config.new_word_ending
+        output_word: str = config.input_word + config.new_word_ending
 
     return output_word
