@@ -32,20 +32,21 @@ class Case(object):
         """
 
         case_config: CaseConfig = get_case_config(decline_config=decline_config)
+        output_words = []
 
         if len(decline_config.recipe[0]) == 1:
             case_config.new_word_ending: str = decline_config.recipe[0][0]
             output_word: str = decline_input_word(config=case_config)
-            return [output_word]
+            output_words.append(output_word)
 
         elif len(decline_config.recipe[0]) > 1:
-            output_words = []
+
             for new_word_ending in decline_config.recipe[0]:
                 case_config.new_word_ending: str = new_word_ending
                 output_word: str = decline_input_word(config=case_config)
                 output_words.append(output_word)
 
-            return output_words
+        return output_words
 
 
 def get_case_config(decline_config: DeclineConfig):
