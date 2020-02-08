@@ -1,5 +1,5 @@
-from toponym.case import build_case_from_string
 from toponym.case import Case
+from toponym.case import decline_input_word
 
 
 def test_case_decline_config(decline_config):
@@ -17,7 +17,7 @@ def test_case_build_from_string_single_ending_success(case_config):
     case_config.new_word_ending = "i"
     case_config.cut_ending_by = 1
 
-    output_word = build_case_from_string(case_config)
+    output_word = decline_input_word(case_config)
 
     assert output_word == "Tesi"
 

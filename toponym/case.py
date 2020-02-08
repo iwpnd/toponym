@@ -38,35 +38,29 @@ class Case(object):
             isinstance(decline_config.input_word, str)
             and len(decline_config.recipe[0]) == 1
         ):
-            print(
-                f"input: {decline_config.input_word}, type: {type(decline_config.input_word)}"
-            )
             case_config.input_word = decline_config.input_word
             case_config.new_word_ending = decline_config.recipe[0][0]
 
-            output_word = build_case_from_string(config=case_config)
+            output_word = decline_input_word(config=case_config)
             return [output_word]
 
         elif (
             isinstance(decline_config.input_word, str)
             and len(decline_config.recipe[0]) > 1
         ):
-            print(
-                f"input: {decline_config.input_word}, type: {type(decline_config.input_word)}"
-            )
             case_config.input_word = decline_config.input_word
 
             output_words = []
 
             for new_word_ending in decline_config.recipe[0]:
                 case_config.new_word_ending = new_word_ending
-                output_word = build_case_from_string(config=case_config)
+                output_word = decline_input_word(config=case_config)
                 output_words.append(output_word)
 
             return output_words
 
 
-def build_case_from_string(config: CaseConfig) -> str:
+def decline_input_word(config: CaseConfig) -> str:
     if config.cut_ending_by != 0:
         output_word = (
             config.input_word[: -config.cut_ending_by] + config.new_word_ending
