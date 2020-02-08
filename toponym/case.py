@@ -31,31 +31,37 @@ class Case(object):
         """Declines a word based on
         """
 
-        case_config = CaseConfig()
-        case_config.cut_ending_by = decline_config.recipe[1]
-        case_config.input_word = decline_config.input_word
+        case_config: CaseConfig = get_case_config(decline_config=decline_config)
 
         if len(decline_config.recipe[0]) == 1:
-            case_config.new_word_ending = decline_config.recipe[0][0]
-            output_word = decline_input_word(config=case_config)
+            case_config.new_word_ending: str = decline_config.recipe[0][0]
+            output_word: str = decline_input_word(config=case_config)
             return [output_word]
 
         elif len(decline_config.recipe[0]) > 1:
             output_words = []
             for new_word_ending in decline_config.recipe[0]:
-                case_config.new_word_ending = new_word_ending
-                output_word = decline_input_word(config=case_config)
+                case_config.new_word_ending: str = new_word_ending
+                output_word: str = decline_input_word(config=case_config)
                 output_words.append(output_word)
 
             return output_words
 
 
+def get_case_config(decline_config: DeclineConfig):
+    case_config = CaseConfig()
+    case_config.cut_ending_by: int = decline_config.recipe[1]
+    case_config.input_word: str = decline_config.input_word
+
+    return case_config
+
+
 def decline_input_word(config: CaseConfig) -> str:
     if config.cut_ending_by != 0:
-        output_word = (
+        output_word: str = (
             config.input_word[: -config.cut_ending_by] + config.new_word_ending
         )
     else:
-        output_word = config.input_word + config.new_word_ending
+        output_word: str = config.input_word + config.new_word_ending
 
     return output_word
