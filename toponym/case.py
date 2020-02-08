@@ -33,25 +33,15 @@ class Case(object):
 
         case_config = CaseConfig()
         case_config.cut_ending_by = decline_config.recipe[1]
+        case_config.input_word = decline_config.input_word
 
-        if (
-            isinstance(decline_config.input_word, str)
-            and len(decline_config.recipe[0]) == 1
-        ):
-            case_config.input_word = decline_config.input_word
+        if len(decline_config.recipe[0]) == 1:
             case_config.new_word_ending = decline_config.recipe[0][0]
-
             output_word = decline_input_word(config=case_config)
             return [output_word]
 
-        elif (
-            isinstance(decline_config.input_word, str)
-            and len(decline_config.recipe[0]) > 1
-        ):
-            case_config.input_word = decline_config.input_word
-
+        elif len(decline_config.recipe[0]) > 1:
             output_words = []
-
             for new_word_ending in decline_config.recipe[0]:
                 case_config.new_word_ending = new_word_ending
                 output_word = decline_input_word(config=case_config)
