@@ -1,102 +1,91 @@
-from toponym import topodict
-from toponym import toponym
-
-topodictionary = {
-    "_default": {"nominative": [[""], 0], "genitive": [[""], 0]},
-    "i": {"nominative": [[""], 0], "genitive": [["o"], 1]},
-    "o": {"nominative": [[""], 0], "genitive": [["a"], 1]},
-    "ti": {"nominative": [[""], 0], "genitive": [["o"], 1]},
-    "esti": {"nominative": [[""], 0], "genitive": [["o", "a"], 1]},
-}
-
-td = topodict.Topodict(language="test", file=topodictionary)
-td.load()
+from toponym.recipes import Recipes
+from toponym.toponym import Toponym
 
 
-def test_get_longest_word_ending():
+def test_get_longest_word_ending(test_recipes):
     word = "Testi"
-    tn = toponym.Toponym(word, td)
-    assert tn._get_longest_word_ending(word) == "esti"
+    toponym = Toponym(word, test_recipes)
+    assert toponym._get_longest_word_ending(word) == "esti"
 
 
-def test_all_cases_created():
-    tn = toponym.Toponym("Testi", td)
-    tn.build()
-    assert tn.recipe.keys() == tn.topo.keys()
+def test_all_cases_created(test_recipes):
+    toponym = Toponym("Testi", test_recipes)
+    toponym.build()
+    assert toponym.recipe.keys() == toponym.topo.keys()
 
 
-def test_get_single_word_toponym():
-    tn = toponym.Toponym("Katzi", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Katzi"]
-    assert tn.topo["genitive"] == ["Katzo"]
+def test_get_single_word_toponym(test_recipes):
+    toponym = Toponym("Katzi", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Katzi"]
+    assert toponym.topo["genitive"] == ["Katzo"]
 
 
-def test_get_single_word_toponym_from_multi_word_recipe():
-    tn = toponym.Toponym("Testi", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Testi"]
-    assert tn.topo["genitive"] == ["Testo", "Testa"]
+def test_get_single_word_toponym_from_multi_word_recipe(test_recipes):
+    toponym = Toponym("Testi", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Testi"]
+    assert toponym.topo["genitive"] == ["Testo", "Testa"]
 
 
-def test_get_multi_word_toponym_single_ending():
-    tn = toponym.Toponym("Katzi Katzo", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Katzi Katzo"]
-    assert tn.topo["genitive"] == ["Katzo Katza"]
+def test_get_multi_word_toponym_single_ending(test_recipes):
+    toponym = Toponym("Katzi Katzo", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Katzi Katzo"]
+    assert toponym.topo["genitive"] == ["Katzo Katza"]
 
 
-def test_get_multi_word_toponym_multi_ending():
-    tn = toponym.Toponym("Testi Testi", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Testi Testi"]
-    assert set(tn.topo["genitive"]) == set(
+def test_get_multi_word_toponym_multi_ending(test_recipes):
+    toponym = Toponym("Testi Testi", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Testi Testi"]
+    assert set(toponym.topo["genitive"]) == set(
         ["Testo Testo", "Testa Testa", "Testa Testo", "Testo Testa"]
     )
 
 
-def test_get_multi_word_toponym_multi_ending_single_ending():
-    tn = toponym.Toponym("Testi Teto", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Testi Teto"]
-    assert set(tn.topo["genitive"]) == set(["Testo Teta", "Testa Teta"])
+def test_get_multi_word_toponym_multi_ending_single_ending(test_recipes):
+    toponym = Toponym("Testi Teto", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Testi Teto"]
+    assert set(toponym.topo["genitive"]) == set(["Testo Teta", "Testa Teta"])
 
 
-def test_get_multi_word_toponym_multi_ending_single_ending_revers():
-    tn = toponym.Toponym("Teto Testi", td)
-    tn.build()
-    assert tn.topo["nominative"] == ["Teto Testi"]
-    assert set(tn.topo["genitive"]) == set(["Teta Testo", "Teta Testa"])
+def test_get_multi_word_toponym_multi_ending_single_ending_revers(test_recipes):
+    toponym = Toponym("Teto Testi", test_recipes)
+    toponym.build()
+    assert toponym.topo["nominative"] == ["Teto Testi"]
+    assert set(toponym.topo["genitive"]) == set(["Teta Testo", "Teta Testa"])
 
 
 def test_toponym_for_unknown_ending():
-    td = topodict.Topodict(language="russian")
-    td.load()
+    recipes_russian = Recipes(language="russian")
+    recipes_russian.load()
 
-    word = ""
+    input_word = ""
 
-    tn = toponym.Toponym(word, td)
-    tn.build()
-    assert tn.topo["nominative"] == [""]
-
-
-def test_toponym_multiword_unknown_ending_known_ending():
-    word = "Testa Tesi"
-
-    tn = toponym.Toponym(word, td)
-    tn.build()
-    assert tn.topo["genitive"] == ["Testa Teso"]
+    toponym = Toponym(input_word, recipes_russian)
+    toponym.build()
+    assert toponym.topo["nominative"] == [""]
 
 
-def test_toponym_list_toponyms_multiword():
-    word = "Testa Tesi"
-    tn = toponym.Toponym(word, td)
-    tn.build()
-    assert isinstance(tn.list_toponyms(), list)
+def test_toponym_multiword_unknown_ending_known_ending(test_recipes):
+    input_word = "Testa Tesi"
+
+    toponym = Toponym(input_word, test_recipes)
+    toponym.build()
+    assert toponym.topo["genitive"] == ["Testa Teso"]
 
 
-def test_toponym_list_toponyms_singleword():
-    word = "Tesi"
-    tn = toponym.Toponym(word, td)
-    tn.build()
-    assert isinstance(tn.list_toponyms(), list)
+def test_toponym_list_toponyms_multiword(test_recipes):
+    input_word = "Testa Tesi"
+    toponym = Toponym(input_word, test_recipes)
+    toponym.build()
+    assert isinstance(toponym.list_toponyms(), list)
+
+
+def test_toponym_list_toponyms_singleword(test_recipes):
+    input_word = "Tesi"
+    toponym = Toponym(input_word, test_recipes)
+    toponym.build()
+    assert isinstance(toponym.list_toponyms(), list)

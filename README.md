@@ -29,43 +29,40 @@ So when you want to eg. know if:
 ```
 
 ## Solution
-This is where Toponym comes in. Utilizing pre-defined recipes (topodictionaries) it naivly creates grammatical cases depending on the ending of the input word that the user wants to create Toponyms from. The recipe looks as follows:
+This is where Toponym comes in. Utilizing pre-defined recipes it naively creates grammatical cases depending on the ending of the input word that the user wants to create Toponyms from. The recipe looks as follows:
 
 ### Recipe
 ```python
 recipe = {
     "а": { # ending of the input-word
-        "nominative": [
-            [""], 0
-            ],
+        "nominative": [[""], 0],
         "genitive": [ # case that we need
             ["ы","и"], # ending of the output-word
             1 # chars to be deleted, before ending of output is added
             ],
-        "dative": [
-            ["е"], 1
-            ],
-        "accusative": [
-            ["у"], 1
-            ],
+        "dative": [["е"], 1],
+        "accusative": [["у"], 1],
         "instrumental": [...]
 }
 ```
 
-If multiple endings are given, multiple toponyms with that ending will be created. Some of those created toponyms do not make sense, or are not used in the wild. If you have an idea on how to remove those that are unreal please contact me.
+If multiple endings are given, multiple toponyms with that ending will be created. Some of those created toponyms do not make sense, or are not used in the wild. If you have an idea about how to remove those that are unreal please contact me.
 
-With the built toponyms for your can now check:
+With the built toponyms for you can now check:
 
 ```python
-td = topodict.Topodict(language='russian')
-td.load()
+from toponym.recipes import Recipes
+from toponym.toponym import Toponym
+
+recipes_russian = Recipes(language='russian')
+recipes_russian.load()
 
 city = "Москва"
 
-tn = toponym.Toponym(city, td)
-tn.build()
+toponym = Toponym(city, recipes_russian)
+toponym.build()
 
-print(tn.list_toponyms())
+print(toponym.list_toponyms())
 >> ['Москвой', 'Москвы', 'Москви', 'Москве', 'Москву', 'Москва']
 
 any([word in "В Москве с начала года отремонтировали 3 тысячи подъездов" for word in tn.list_toponyms()])
@@ -99,12 +96,15 @@ python -m pytest toponym/tests/unit
 
 ### 1. Load Topodict
 
-At first you instantiate the topodictionary. You can either use one of our pre-built ones, or use your own.
+At first, you instantiate the Recipes. You can either use one of our pre-built ones or use your own.
 
-#### Load pre-built topodictionaries
+#### Load pre-built Recipes
 ```python
-topodictionary = topodict.Topodict(language='russian')
-print(topodictionary)
+from toponym.recipes import Recipes
+from toponym.toponym import Toponym
+
+recipes_russian = Recipes(language='russian')
+print(recipes_russian)
 >> Topodict(
     language='russian',
     filepath='False',
@@ -113,12 +113,14 @@ print(topodictionary)
     )
 ```
 
-#### Load your (topo)dictionaries
+#### Load your custom Recipes
 
-Your (topo)dictionaries must atleast contain _default for Toponym to work.
+Your Recipes must at least contain _default for Toponym to work.
 
 ```python
-_dictionary = {
+from toponym.recipes import Recipes
+
+custom_recipes = {
      "_default": {
         "nominative": [[""], 0],
         "genitive": [[""], 0],
@@ -126,10 +128,10 @@ _dictionary = {
         }
     }
 
-topodictionary = topodict.Topodict(language='your_language', file=_dictionary)
-print(topodictionary)
+recipes = Recipes(language='your_language', file=custom_recipes)
+print(recipes)
 
->> Topodict(
+>> Recipes(
     language='your_language',
     filepath='True',
     loaded=True,
@@ -137,7 +139,7 @@ print(topodictionary)
     )
 ```
 
-#### Load your (topo)dictionaries from .json file
+#### Load your custom Recipes from .json file
 
 ```
 # ././your_file.json
@@ -151,10 +153,12 @@ print(topodictionary)
 ```
 
 ```python
-topodictionary = topodict.Topodict(language='your_language', file="path/to/your_file.json")
-print(topodictionary)
+from toponym.recipes import Recipes
 
->> Topodict(
+recipes = Recipes(language='your_language', file="path/to/your_file.json")
+print(recipes)
+
+>> Recipes(
     language='your_language',
     filepath='path/to/your_file.json',
     loaded=True,
@@ -166,16 +170,18 @@ print(topodictionary)
 ### Input string with a single word
 
 ```python
+from toponym.recipes import Recipes
+from toponym.toponym import Toponym
 
-td = topodict.Topodict(language='russian')
-td.load()
+recipes_russian = Recipes(language='russian')
+recipes_russian.load()
 
 city = "Москва"
 
-tn = toponym.Toponym(city, td)
-tn.build()
+toponyms = Toponym(city, td)
+toponyms.build()
 
-print(tn.topo)
+print(toponyms.topo)
 
 >> {
     'nominative': ['Москва'],
@@ -190,15 +196,18 @@ print(tn.topo)
 ### Input string with multiple words
 
 ```python
-td = topodict.Topodict(language='russian')
-td.load()
+from toponym.recipes import Recipes
+from toponym.toponym import Toponym
+
+recipes_russian = Recipes(language='russian')
+recipes_russian.load()
 
 city = "Москва Ломоносовский"
 
-tn = toponym.Toponym(city, td)
-tn.build()
+toponyms = Toponym(city, td)
+toponyms.build()
 
-print(tn.topo)
+print(toponyms.topo)
 
 {
     'nominative': [
