@@ -27,7 +27,7 @@ def get_available_language_codes() -> str:
 
 def get_language_code(language: str) -> str:
     if language not in settings.LANGUAGE_DICT.keys():
-        raise LanguageNotFoundError(f"Language  '{language}' not found")
+        raise LanguageNotFoundError(f"Language '{language}' not found")
 
     return settings.LANGUAGE_DICT[language]
 
@@ -43,7 +43,7 @@ def print_available_languages() -> None:
     print()
 
 
-def load_recipes(language_code: str) -> dict:
+def get_recipes(language_code: str) -> dict:
     """
     Loads language-specific stopwords for keyword selection
     """
@@ -60,5 +60,5 @@ def load_recipes(language_code: str) -> dict:
         return recipes_file
 
 
-def load_recipes_from_file():
+def get_recipes_from_file():
     pass

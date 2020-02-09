@@ -3,21 +3,21 @@ import json
 from loguru import logger
 
 from .utils import get_language_code
-from .utils import load_recipes
+from .utils import get_recipes
 
 
 class Recipes:
     """Loads and provides access to recipes
     """
 
-    def __init__(self, language: str, file=False) -> None:
+    def __init__(self, language: str, file: bool = False) -> None:
         self.language = language
         self.file = file
         self.is_loaded = False
 
     def __getitem__(self, word_ending: str) -> str:
         if not self.is_loaded:
-            raise NameError("load topodict first")
+            raise NameError("load recipes first")
         elif word_ending in self._dict.keys():
             return self._dict[word_ending]
         elif not word_ending:
@@ -27,7 +27,7 @@ class Recipes:
     def load(self) -> None:
         if not self.file:
             self._language_code = get_language_code(self.language)
-            self._dict = load_recipes(self._language_code)
+            self._dict = get_recipes(self._language_code)
             self.is_loaded = True
             logger.info("Recipes loaded for {}".format(self.language))
 

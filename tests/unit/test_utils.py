@@ -5,9 +5,9 @@ import pytest
 from toponym import settings
 from toponym.utils import get_available_language_codes
 from toponym.utils import get_language_code
+from toponym.utils import get_recipes
+from toponym.utils import get_recipes_from_file
 from toponym.utils import LanguageNotFoundError
-from toponym.utils import load_recipes
-from toponym.utils import load_recipes_from_file
 
 
 def test_get_available_languages():
@@ -56,18 +56,18 @@ def test_parent_directory():
     )
 
 
-def test_load_recipe_success():
-    recipes_test = load_recipes("ru")
+def test_get_recipe_success():
+    recipes_test = get_recipes("ru")
 
     assert isinstance(recipes_test, dict)
 
 
-def test_load_recipe_fails():
+def test_get_recipe_fails():
     with pytest.raises(LanguageNotFoundError):
-        recipes_test = load_recipes("de")
+        recipes_test = get_recipes("de")
         assert isinstance(recipes_test, dict)
 
 
-def test_load_recipes_from_file():
-    recipes_test = load_recipes_from_file()
+def test_get_recipes_from_file():
+    recipes_test = get_recipes_from_file()
     assert not recipes_test

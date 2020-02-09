@@ -5,6 +5,7 @@ import pytest
 
 from toponym import settings
 from toponym.recipes import Recipes
+from toponym.utils import LanguageNotFoundError
 
 
 def is_json(myjson):
@@ -89,7 +90,7 @@ def test_recipes_load_failed_language_not_supported():
     """test load
     """
 
-    with pytest.raises(KeyError):
+    with pytest.raises(LanguageNotFoundError):
         recipes_german = Recipes("german")
         recipes_german.load()
 
