@@ -4,21 +4,19 @@ from collections import defaultdict
 
 from toponym.case import Case
 from toponym.case import DeclineConfig
-from toponym.topodict import Topodict
+from toponym.recipes import Recipes
 
 logger = logging.getLogger(__name__)
 
 
 class Toponym(Case):
-    def __init__(self, input_term: str, topodict: Topodict) -> None:
+    def __init__(self, input_term: str, recipes: Recipes) -> None:
 
         self.word = input_term
-        self.topodict = topodict
+        self.recipes = recipes
 
         if len(input_term.split()) > 1:
             self.word = input_term.split()
-
-        self.topo_recipe = False
 
     def build(self) -> None:
         decline_config = DeclineConfig()
@@ -28,7 +26,7 @@ class Toponym(Case):
             self.topo = list()
 
             for _, input_word in enumerate(self.word):
-                self.recipe = self.topodict[self._get_longest_word_ending(input_word)]
+                self.recipe = self.recipes[self._get_longest_word_ending(input_word)]
 
                 decline_config.input_word = input_word
 
@@ -44,7 +42,7 @@ class Toponym(Case):
             self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
-            self.recipe = self.topodict[self._get_longest_word_ending(self.word)]
+            self.recipe = self.recipes[self._get_longest_word_ending(self.word)]
             self.topo = dict()
 
             decline_config.input_word = self.word
@@ -70,7 +68,7 @@ class Toponym(Case):
         # TODO: write TIL about max(list, key=len)
         possible_endings = [word[i:] for i in range(len(word))]
         matching_endings = [
-            x for x in possible_endings if x in self.topodict._dict.keys()
+            x for x in possible_endings if x in self.recipes._dict.keys()
         ]
 
         if matching_endings:
