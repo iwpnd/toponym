@@ -26,13 +26,10 @@ def get_available_language_codes() -> str:
 
 
 def get_language_code(language: str) -> str:
+    if language not in settings.LANGUAGE_DICT.keys():
+        raise LanguageNotFoundError(f"Language  '{language}' not found")
 
-    try:
-        return settings.LANGUAGE_DICT[language]
-    except KeyError:
-        raise KeyError(
-            "{} not supported - check print_available_languages()".format(language)
-        )
+    return settings.LANGUAGE_DICT[language]
 
 
 def print_available_languages() -> None:

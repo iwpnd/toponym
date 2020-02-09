@@ -25,7 +25,7 @@ def test_get_language_code_success():
 
 
 def test_get_language_code_fails():
-    with pytest.raises(KeyError):
+    with pytest.raises(LanguageNotFoundError):
         language_code = get_language_code("kaudawelsh")
         assert language_code
 
