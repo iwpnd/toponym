@@ -4,6 +4,7 @@ from loguru import logger
 
 from .utils import get_language_code
 from .utils import get_recipes
+from .utils import get_recipes_from_dict
 
 
 class Recipes:
@@ -29,16 +30,14 @@ class Recipes:
             self._language_code = get_language_code(self.language)
             self._dict = get_recipes(self._language_code)
             self.is_loaded = True
-            logger.info("Recipes loaded for {}".format(self.language))
+            logger.info(f"Recipes loaded for {self.language}")
 
         else:
             if isinstance(self.file, dict):
-                self._dict = self.file
-                self.is_loaded = True
+                self._dict, self.is_loaded = get_recipes_from_dict(input_dict=self.file)
+
                 logger.info(
-                    "Recipes loaded from dictionary for language {}".format(
-                        self.language
-                    )
+                    f"Recipes loaded from dictionary for language {self.language}"
                 )
 
             elif isinstance(self.file, str):
@@ -47,10 +46,9 @@ class Recipes:
                         self._dict = json.loads(f.read())
                         self.is_loaded = True
                         logger.info(
-                            "Recipes loaded from file ({}) for language {}".format(
-                                self.file, self.language
-                            )
+                            f"Recipes loaded from file ({self.file}) for language {self.language}"
                         )
+
                 except FileNotFoundError:
                     raise FileNotFoundError("File not found or not in os.getcwd()")
 

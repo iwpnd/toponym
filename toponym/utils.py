@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Tuple
 
 from . import settings
 
@@ -58,6 +59,13 @@ def get_recipes(language_code: str) -> dict:
     with open(recipes_file_path, "r", encoding="utf-8") as f:
         recipes_file = json.loads(f.read())
         return recipes_file
+
+
+def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
+
+    is_loaded = True
+
+    return input_dict, is_loaded
 
 
 def get_recipes_from_file():
