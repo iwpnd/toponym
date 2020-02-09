@@ -10,8 +10,8 @@ def test_get_available_languages():
     """get available languages as ISO 639-1
     """
 
-    lg = utils.get_available_language_codes()
-    assert lg
+    languages = utils.get_available_language_codes()
+    assert languages
 
 
 def test_get_language_code_success():
@@ -27,7 +27,7 @@ def test_get_language_code_fails():
 
 
 def test_topodict_dir():
-    list_dir = os.listdir(settings.TOPODICT_DIR)
+    list_dir = os.listdir(settings.RECIPES_DIR)
 
     assert "hr.json" in list_dir
     assert "ru.json" in list_dir
