@@ -44,7 +44,7 @@ def print_available_languages() -> None:
     print()
 
 
-def get_recipes(language_code: str) -> dict:
+def get_recipes(language_code: str) -> Tuple[dict, bool]:
     """
     Loads language-specific stopwords for keyword selection
     """
@@ -57,8 +57,10 @@ def get_recipes(language_code: str) -> dict:
     )
 
     with open(recipes_file_path, "r", encoding="utf-8") as f:
-        recipes_file = json.loads(f.read())
-        return recipes_file
+        recipes = json.loads(f.read())
+
+    is_loaded = True
+    return recipes, is_loaded
 
 
 def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
@@ -68,5 +70,14 @@ def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
     return input_dict, is_loaded
 
 
-def get_recipes_from_file():
-    pass
+def get_recipes_from_file(file_input: str):
+    try:
+        with open(file_input, "r") as file:
+            recipes = json.loads(file.read())
+
+    except FileNotFoundError:
+        raise FileNotFoundError("File not found or not in os.getcwd()")
+
+    is_loaded = True
+
+    return recipes, is_loaded

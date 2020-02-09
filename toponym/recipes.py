@@ -1,10 +1,9 @@
-import json
-
 from loguru import logger
 
 from .utils import get_language_code
 from .utils import get_recipes
 from .utils import get_recipes_from_dict
+from .utils import get_recipes_from_file
 
 
 class Recipes:
@@ -16,7 +15,7 @@ class Recipes:
         self.file = file
         self.is_loaded = False
 
-    def __getitem__(self, word_ending: str) -> str:
+    def __getitem__(self, word_ending: str) -> dict:
         if not self.is_loaded:
             raise NameError("load recipes first")
         elif word_ending in self._dict.keys():
@@ -28,8 +27,7 @@ class Recipes:
     def load(self) -> None:
         if not self.file:
             self._language_code = get_language_code(self.language)
-            self._dict = get_recipes(self._language_code)
-            self.is_loaded = True
+            self._dict, self.is_loaded = get_recipes(self._language_code)
             logger.info(f"Recipes loaded for {self.language}")
 
         else:
@@ -41,16 +39,10 @@ class Recipes:
                 )
 
             elif isinstance(self.file, str):
-                try:
-                    with open(self.file, "r") as f:
-                        self._dict = json.loads(f.read())
-                        self.is_loaded = True
-                        logger.info(
-                            f"Recipes loaded from file ({self.file}) for language {self.language}"
-                        )
-
-                except FileNotFoundError:
-                    raise FileNotFoundError("File not found or not in os.getcwd()")
+                self._dict, self.is_loaded = get_recipes_from_file(file_input=self.file)
+                logger.info(
+                    f"Recipes loaded from file ({self.file}) for language {self.language}"
+                )
 
             else:
                 raise TypeError("Input file can either be filepath or dictionary")
