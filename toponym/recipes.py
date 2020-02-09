@@ -24,10 +24,14 @@ class Recipes:
             logger.warning("No word_ending found. Using _default")
             return self._dict["_default"]
 
+    def __repr__(self) -> str:
+        if self.is_loaded:
+            return f"Recipes(language='{self.language}', filepath='{self.file}', is_loaded={self.is_loaded}, word_endings={list(self._dict.keys())})"
+
     def load(self) -> None:
         if not self.file:
-            self._language_code = get_language_code(self.language)
-            self._dict, self.is_loaded = get_recipes(self._language_code)
+            self._language_code = get_language_code(language=self.language)
+            self._dict, self.is_loaded = get_recipes(language_code=self._language_code)
             logger.info(f"Recipes loaded for {self.language}")
 
         else:
