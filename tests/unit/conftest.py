@@ -21,14 +21,14 @@ def decline_config():
 
 @pytest.fixture
 def test_recipes():
-    topodictionary = {
+    recipes = {
         "_default": {"nominative": [[""], 0], "genitive": [[""], 0]},
         "i": {"nominative": [[""], 0], "genitive": [["o"], 1]},
         "o": {"nominative": [[""], 0], "genitive": [["a"], 1]},
         "ti": {"nominative": [[""], 0], "genitive": [["o"], 1]},
         "esti": {"nominative": [[""], 0], "genitive": [["o", "a"], 1]},
     }
-    recipes_test = Recipes(language="test", file=topodictionary)
+    recipes_test = Recipes(language="test", file=recipes)
     recipes_test.load()
 
     yield recipes_test

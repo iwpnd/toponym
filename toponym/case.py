@@ -27,7 +27,8 @@ class CaseConfig(DeclineConfig):
 
 
 class Case(object):
-    def decline(self, decline_config: DeclineConfig) -> Union[list, str]:
+    @staticmethod
+    def decline(decline_config: DeclineConfig) -> Union[list, str]:
         """Declines a word based on
         """
 
