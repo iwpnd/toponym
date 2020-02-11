@@ -26,10 +26,9 @@ class Toponym(Case):
             self.topo = list()
 
             for _, word in enumerate(self.input_word):
-                self.recipe = self.recipes[
-                    get_longest_word_ending(input_word=word, recipes=self.recipes)
-                ]
-
+                self.recipe = get_recipe_for_input_word(
+                    input_word=word, recipes=self.recipes
+                )
                 decline_config.input_word = word
 
                 temp = dict()
@@ -44,11 +43,9 @@ class Toponym(Case):
             self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
-            self.recipe = self.recipes[
-                get_longest_word_ending(
-                    input_word=self.input_word, recipes=self.recipes
-                )
-            ]
+            self.recipe = self.recipe = get_recipe_for_input_word(
+                input_word=self.input_word, recipes=self.recipes
+            )
             self.topo = dict()
 
             decline_config.input_word = self.input_word
@@ -92,6 +89,11 @@ class Toponym(Case):
                 dd[key] = permutation
 
         return dd
+
+
+def get_recipe_for_input_word(input_word: str, recipes: Recipes) -> dict:
+    recipe = recipes[get_longest_word_ending(input_word=input_word, recipes=recipes)]
+    return recipe
 
 
 def get_longest_word_ending(input_word: str, recipes: Recipes) -> str:
