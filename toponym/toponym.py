@@ -1,6 +1,7 @@
 import itertools
 import logging
 from collections import defaultdict
+from typing import Generator
 
 from toponym.case import Case
 from toponym.case import DeclineConfig
@@ -50,7 +51,7 @@ class Toponym:
 
     def _build_toponym_for_multiple_input_words(
         self, decline_config: DeclineConfig
-    ) -> dict:
+    ) -> Generator:
 
         for _, input_word in enumerate(self.input_words):
             recipe = get_recipe_for_input_word(
@@ -62,7 +63,6 @@ class Toponym:
 
             for grammatical_case in recipe:
                 decline_config.recipe = recipe[grammatical_case]
-
                 temp[grammatical_case] = Case.decline(decline_config=decline_config)
 
             yield temp
@@ -81,7 +81,7 @@ class Toponym:
             raise Exception(".build() first")
 
 
-def concat_case_dictionaries(list_of_dictionaries: list) -> dict:
+def concat_case_dictionaries(list_of_dictionaries: Generator) -> dict:
     """ Concate list of dictionaries
     """
     dd = defaultdict(list)
@@ -90,21 +90,13 @@ def concat_case_dictionaries(list_of_dictionaries: list) -> dict:
         for key, value in dictionary.items():
             dd[key].append(value)
 
-    print("dd:", dd)
-
     for key, value in dd.items():
-
-        if all([isinstance(x, str) for x in value]):
-            dd[key] = " ".join([x for x in dd[key]])
-
-        elif any([isinstance(x, list) for x in value]):
-            value = [
-                [element] if not isinstance(element, list) else element
-                for element in value
-            ]
-            product = list(itertools.product(*value))
-            permutation = [" ".join([y for y in x]) for x in product]
-            dd[key] = permutation
+        value = [
+            [element] if not isinstance(element, list) else element for element in value
+        ]
+        product = list(itertools.product(*value))
+        permutation = [" ".join([y for y in x]) for x in product]
+        dd[key] = permutation
 
     return dd
 
