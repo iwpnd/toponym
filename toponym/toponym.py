@@ -26,7 +26,9 @@ class Toponym(Case):
             self.topo = list()
 
             for _, word in enumerate(self.input_word):
-                self.recipe = self.recipes[self._get_longest_word_ending(word)]
+                self.recipe = self.recipes[
+                    get_longest_word_ending(input_word=word, recipes=self.recipes)
+                ]
 
                 decline_config.input_word = word
 
@@ -42,7 +44,11 @@ class Toponym(Case):
             self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
-            self.recipe = self.recipes[self._get_longest_word_ending(self.input_word)]
+            self.recipe = self.recipes[
+                get_longest_word_ending(
+                    input_word=self.input_word, recipes=self.recipes
+                )
+            ]
             self.topo = dict()
 
             decline_config.input_word = self.input_word
@@ -61,22 +67,6 @@ class Toponym(Case):
 
         else:
             raise Exception(".build() first")
-
-    def _get_longest_word_ending(self, input_word: str) -> str:
-        """Disect word into differnet size shifs
-        """
-
-        matching_endings = [
-            input_word[i:]
-            for i in range(len(input_word))
-            if input_word[i:] in self.recipes._dict.keys()
-        ]
-
-        if matching_endings:
-            return max(matching_endings, key=len)
-        else:
-            logger.debug("No word ending found for: {word}".format(word=input_word))
-            return ""
 
     def _concat_case_dictionaries(self, list_of_dictionaries: list) -> dict:
         """ Concate list of dictionaries
@@ -102,3 +92,20 @@ class Toponym(Case):
                 dd[key] = permutation
 
         return dd
+
+
+def get_longest_word_ending(input_word: str, recipes: Recipes) -> str:
+    """Disect word into differnet size shifs
+    """
+
+    matching_endings = [
+        input_word[i:]
+        for i in range(len(input_word))
+        if input_word[i:] in recipes._dict.keys()
+    ]
+
+    if matching_endings:
+        return max(matching_endings, key=len)
+    else:
+        logger.debug("No word ending found for: {word}".format(word=input_word))
+        return ""

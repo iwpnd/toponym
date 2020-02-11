@@ -1,11 +1,11 @@
 from toponym.recipes import Recipes
+from toponym.toponym import get_longest_word_ending
 from toponym.toponym import Toponym
 
 
 def test_get_longest_word_ending(test_recipes):
     word = "Testi"
-    toponym = Toponym(word, test_recipes)
-    assert toponym._get_longest_word_ending(word) == "esti"
+    assert get_longest_word_ending(word, test_recipes) == "esti"
 
 
 def test_all_cases_created(test_recipes):
