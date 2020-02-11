@@ -90,10 +90,8 @@ def concat_case_dictionaries(list_of_dictionaries: Generator) -> dict:
         for key, value in dictionary.items():
             dd[key].append(value)
 
+    print(dd)
     for key, value in dd.items():
-        value = [
-            [element] if not isinstance(element, list) else element for element in value
-        ]
         product = list(itertools.product(*value))
         permutation = [" ".join([y for y in x]) for x in product]
         dd[key] = permutation
