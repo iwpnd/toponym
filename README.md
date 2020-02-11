@@ -12,7 +12,7 @@ full name		iso code
   romanian		ro
   latvian		lv
   hungarian		hu
-  greek		    el
+  greek		        el
   polish		pl
 ```
 
@@ -59,10 +59,10 @@ recipes_russian.load()
 
 city = "Москва"
 
-toponym = Toponym(city, recipes_russian)
-toponym.build()
+t = Toponym(input_word=city, recipies=recipes_russian)
+t.build()
 
-print(toponym.list_toponyms())
+print(t.list_toponyms())
 >> ['Москвой', 'Москвы', 'Москви', 'Москве', 'Москву', 'Москва']
 
 any([word in "В Москве с начала года отремонтировали 3 тысячи подъездов" for word in tn.list_toponyms()])
@@ -178,10 +178,10 @@ recipes_russian.load()
 
 city = "Москва"
 
-toponyms = Toponym(city, td)
-toponyms.build()
+t = Toponym(city, recipes_russian)
+t.build()
 
-print(toponyms.topo)
+print(t.toponyms)
 
 >> {
     'nominative': ['Москва'],
@@ -204,10 +204,10 @@ recipes_russian.load()
 
 city = "Москва Ломоносовский"
 
-toponyms = Toponym(city, td)
-toponyms.build()
+t = Toponym(city, recipes_russian)
+t.build()
 
-print(toponyms.topo)
+print(t.toponyms)
 
 {
     'nominative': [
