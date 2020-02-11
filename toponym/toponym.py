@@ -62,19 +62,20 @@ class Toponym(Case):
         else:
             raise Exception(".build() first")
 
-    def _get_longest_word_ending(self, word: str) -> str:
+    def _get_longest_word_ending(self, input_word: str) -> str:
         """Disect word into differnet size shifs
         """
-        # TODO: write TIL about max(list, key=len)
-        possible_endings = [word[i:] for i in range(len(word))]
+
         matching_endings = [
-            x for x in possible_endings if x in self.recipes._dict.keys()
+            input_word[i:]
+            for i in range(len(input_word))
+            if input_word[i:] in self.recipes._dict.keys()
         ]
 
         if matching_endings:
             return max(matching_endings, key=len)
         else:
-            logger.debug("No word ending found for: {word}".format(word=word))
+            logger.debug("No word ending found for: {word}".format(word=input_word))
             return ""
 
     def _concat_case_dictionaries(self, list_of_dictionaries: list) -> dict:
