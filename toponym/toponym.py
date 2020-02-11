@@ -92,7 +92,7 @@ def concat_case_dictionaries(list_of_dictionaries: Generator) -> dict:
 
     print(dd)
     for key, value in dd.items():
-        product = list(itertools.product(*value))
+        product = itertools.product(*value)
         permutation = [" ".join([y for y in x]) for x in product]
         dd[key] = permutation
 
