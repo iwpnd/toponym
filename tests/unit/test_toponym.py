@@ -1,6 +1,8 @@
 from toponym.recipes import Recipes
+from toponym.toponym import concat_case_dictionaries
 from toponym.toponym import get_longest_word_ending
 from toponym.toponym import get_recipe_for_input_word
+from toponym.toponym import merge_list_of_case_dictionaries
 from toponym.toponym import Toponym
 
 
@@ -14,6 +16,32 @@ def test_get_recipe_for_input_word(test_recipes):
     recipe = get_recipe_for_input_word(input_word=input_word, recipes=test_recipes)
 
     assert recipe
+
+
+def test_merge_list_of_case_dictionaries():
+    test_list_of_dict = [
+        {"nominative": ["Beograd"], "genitive": ["Beograda"]},
+        {"nominative": ["Beograf"], "genitive": ["Beografa"]},
+    ]
+
+    merged_dict = merge_list_of_case_dictionaries(
+        list_of_case_dictionaries=test_list_of_dict
+    )
+
+    assert isinstance(merged_dict, dict)
+    assert test_list_of_dict[0].keys() == merged_dict.keys()
+
+
+def test_concat_case_dictionaries():
+    merged_dict = {
+        "nominative": [["Beograd"], ["Beograf"]],
+        "genitive": [["Beograda"], ["Beografa"]],
+    }
+
+    concated_dict = concat_case_dictionaries(merged_dict)
+
+    assert merged_dict.keys() == concated_dict.keys()
+    assert all([isinstance(concated_dict.get(x)[0], str) for x in concated_dict])
 
 
 def test_get_single_word_toponym(test_recipes):
