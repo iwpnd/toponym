@@ -14,22 +14,23 @@ class Toponym(Case):
 
         self.input_word = input_word
         self.recipes = recipes
+        self.input_is_multiple_words = len(input_word.split()) > 1
 
-        if len(input_word.split()) > 1:
-            self.input_word = input_word.split()
+        if self.input_is_multiple_words:
+            self.input_words = input_word.split()
 
     def build(self) -> None:
         decline_config = DeclineConfig()
 
-        if isinstance(self.input_word, list):
+        if self.input_is_multiple_words:
 
             self.topo = list()
 
-            for _, word in enumerate(self.input_word):
+            for _, input_word in enumerate(self.input_words):
                 self.recipe = get_recipe_for_input_word(
-                    input_word=word, recipes=self.recipes
+                    input_word=input_word, recipes=self.recipes
                 )
-                decline_config.input_word = word
+                decline_config.input_word = input_word
 
                 temp = dict()
 
