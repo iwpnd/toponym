@@ -10,25 +10,25 @@ logger = logging.getLogger(__name__)
 
 
 class Toponym(Case):
-    def __init__(self, input_term: str, recipes: Recipes) -> None:
+    def __init__(self, input_word: str, recipes: Recipes) -> None:
 
-        self.word = input_term
+        self.input_word = input_word
         self.recipes = recipes
 
-        if len(input_term.split()) > 1:
-            self.word = input_term.split()
+        if len(input_word.split()) > 1:
+            self.input_word = input_word.split()
 
     def build(self) -> None:
         decline_config = DeclineConfig()
 
-        if isinstance(self.word, list):
+        if isinstance(self.input_word, list):
 
             self.topo = list()
 
-            for _, input_word in enumerate(self.word):
-                self.recipe = self.recipes[self._get_longest_word_ending(input_word)]
+            for _, word in enumerate(self.input_word):
+                self.recipe = self.recipes[self._get_longest_word_ending(word)]
 
-                decline_config.input_word = input_word
+                decline_config.input_word = word
 
                 temp = dict()
 
@@ -42,10 +42,10 @@ class Toponym(Case):
             self.topo = self._concat_case_dictionaries(self.topo)
 
         else:
-            self.recipe = self.recipes[self._get_longest_word_ending(self.word)]
+            self.recipe = self.recipes[self._get_longest_word_ending(self.input_word)]
             self.topo = dict()
 
-            decline_config.input_word = self.word
+            decline_config.input_word = self.input_word
 
             for grammatical_case in self.recipe:
                 decline_config.recipe = self.recipe[grammatical_case]
