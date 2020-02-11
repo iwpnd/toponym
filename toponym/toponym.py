@@ -23,8 +23,10 @@ class Toponym:
         decline_config = DeclineConfig()
 
         if self.input_is_multiple_words:
-            self.toponyms = self._build_toponym_for_multiple_input_words(
-                decline_config=decline_config
+            self.toponyms = concat_case_dictionaries(
+                self._build_toponym_for_multiple_input_words(
+                    decline_config=decline_config
+                )
             )
 
         else:
@@ -49,7 +51,6 @@ class Toponym:
     def _build_toponym_for_multiple_input_words(
         self, decline_config: DeclineConfig
     ) -> dict:
-        toponyms = list()
 
         for _, input_word in enumerate(self.input_words):
             recipe = get_recipe_for_input_word(
@@ -64,9 +65,7 @@ class Toponym:
 
                 temp[grammatical_case] = Case.decline(decline_config=decline_config)
 
-            toponyms.append(temp)
-
-        return _concat_case_dictionaries(toponyms)
+            yield temp
 
     def list_toponyms(self) -> list:
         """ Put all created toponyms in a list
@@ -82,7 +81,7 @@ class Toponym:
             raise Exception(".build() first")
 
 
-def _concat_case_dictionaries(list_of_dictionaries: list) -> dict:
+def concat_case_dictionaries(list_of_dictionaries: list) -> dict:
     """ Concate list of dictionaries
     """
     dd = defaultdict(list)
@@ -90,6 +89,8 @@ def _concat_case_dictionaries(list_of_dictionaries: list) -> dict:
     for dictionary in list_of_dictionaries:
         for key, value in dictionary.items():
             dd[key].append(value)
+
+    print("dd:", dd)
 
     for key, value in dd.items():
 
