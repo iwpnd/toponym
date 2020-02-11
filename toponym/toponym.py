@@ -81,22 +81,31 @@ class Toponym:
             raise Exception(".build() first")
 
 
-def concat_case_dictionaries(list_of_dictionaries: Generator) -> dict:
+def concat_case_dictionaries(list_of_case_dictionaries: Generator) -> dict:
     """ Concate list of dictionaries
     """
-    dd = defaultdict(list)
+    merged_toponym_dictionaries = merge_list_of_case_dictionaries(
+        list_of_case_dictionaries
+    )
 
-    for dictionary in list_of_dictionaries:
-        for key, value in dictionary.items():
-            dd[key].append(value)
+    for case, toponym_word in merged_toponym_dictionaries.items():
 
-    print(dd)
-    for key, value in dd.items():
-        product = itertools.product(*value)
+        product = itertools.product(*toponym_word)
         permutation = [" ".join([y for y in x]) for x in product]
-        dd[key] = permutation
+        merged_toponym_dictionaries[case] = permutation
 
-    return dd
+    return merged_toponym_dictionaries
+
+
+def merge_list_of_case_dictionaries(list_of_case_dictionaries: Generator) -> dict:
+
+    merged_toponym_dictionaries = defaultdict(list)
+
+    for case_dictionary in list_of_case_dictionaries:
+        for case, toponym_word in case_dictionary.items():
+            merged_toponym_dictionaries[case].append(toponym_word)
+
+    return merged_toponym_dictionaries
 
 
 def get_recipe_for_input_word(input_word: str, recipes: Recipes) -> dict:
