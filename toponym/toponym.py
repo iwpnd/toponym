@@ -9,7 +9,7 @@ from toponym.recipes import Recipes
 logger = logging.getLogger(__name__)
 
 
-class Toponym(Case):
+class Toponym:
     def __init__(self, input_word: str, recipes: Recipes) -> None:
 
         self.input_word = input_word
@@ -23,73 +23,89 @@ class Toponym(Case):
         decline_config = DeclineConfig()
 
         if self.input_is_multiple_words:
-
-            self.topo = list()
-
-            for _, input_word in enumerate(self.input_words):
-                self.recipe = get_recipe_for_input_word(
-                    input_word=input_word, recipes=self.recipes
-                )
-                decline_config.input_word = input_word
-
-                temp = dict()
-
-                for grammatical_case in self.recipe:
-                    decline_config.recipe = self.recipe[grammatical_case]
-
-                    temp[grammatical_case] = self.decline(decline_config)
-
-                self.topo.append(temp)
-
-            self.topo = self._concat_case_dictionaries(self.topo)
+            self.toponyms = self._build_toponym_for_multiple_input_words(
+                decline_config=decline_config
+            )
 
         else:
-            self.recipe = self.recipe = get_recipe_for_input_word(
-                input_word=self.input_word, recipes=self.recipes
+            self.toponyms = self._build_toponym_for_input_word(
+                decline_config=decline_config
             )
-            self.topo = dict()
 
-            decline_config.input_word = self.input_word
+    def _build_toponym_for_input_word(self, decline_config: DeclineConfig) -> dict:
+        recipe = get_recipe_for_input_word(
+            input_word=self.input_word, recipes=self.recipes
+        )
+        toponyms = dict()
 
-            for grammatical_case in self.recipe:
-                decline_config.recipe = self.recipe[grammatical_case]
-                self.topo[grammatical_case] = self.decline(decline_config)
+        decline_config.input_word = self.input_word
+
+        for grammatical_case in recipe:
+            decline_config.recipe = recipe[grammatical_case]
+            toponyms[grammatical_case] = Case.decline(decline_config=decline_config)
+
+        return toponyms
+
+    def _build_toponym_for_multiple_input_words(
+        self, decline_config: DeclineConfig
+    ) -> dict:
+        toponyms = list()
+
+        for _, input_word in enumerate(self.input_words):
+            recipe = get_recipe_for_input_word(
+                input_word=input_word, recipes=self.recipes
+            )
+            decline_config.input_word = input_word
+
+            temp = dict()
+
+            for grammatical_case in recipe:
+                decline_config.recipe = recipe[grammatical_case]
+
+                temp[grammatical_case] = Case.decline(decline_config=decline_config)
+
+            toponyms.append(temp)
+
+        return _concat_case_dictionaries(toponyms)
 
     def list_toponyms(self) -> list:
         """ Put all created toponyms in a list
         """
 
-        if self.topo:
-            all_toponyms_all_cases = list(map(self.topo.__getitem__, self.topo.keys()))
+        if self.toponyms:
+            all_toponyms_all_cases = list(
+                map(self.toponyms.__getitem__, self.toponyms.keys())
+            )
             return list(set(itertools.chain.from_iterable(all_toponyms_all_cases)))
 
         else:
             raise Exception(".build() first")
 
-    def _concat_case_dictionaries(self, list_of_dictionaries: list) -> dict:
-        """ Concate list of dictionaries
-        """
-        dd = defaultdict(list)
 
-        for dictionary in list_of_dictionaries:
-            for key, value in dictionary.items():
-                dd[key].append(value)
+def _concat_case_dictionaries(list_of_dictionaries: list) -> dict:
+    """ Concate list of dictionaries
+    """
+    dd = defaultdict(list)
 
-        for key, value in dd.items():
+    for dictionary in list_of_dictionaries:
+        for key, value in dictionary.items():
+            dd[key].append(value)
 
-            if all([isinstance(x, str) for x in value]):
-                dd[key] = " ".join([x for x in dd[key]])
+    for key, value in dd.items():
 
-            elif any([isinstance(x, list) for x in value]):
-                value = [
-                    [element] if not isinstance(element, list) else element
-                    for element in value
-                ]
-                product = list(itertools.product(*value))
-                permutation = [" ".join([y for y in x]) for x in product]
-                dd[key] = permutation
+        if all([isinstance(x, str) for x in value]):
+            dd[key] = " ".join([x for x in dd[key]])
 
-        return dd
+        elif any([isinstance(x, list) for x in value]):
+            value = [
+                [element] if not isinstance(element, list) else element
+                for element in value
+            ]
+            product = list(itertools.product(*value))
+            permutation = [" ".join([y for y in x]) for x in product]
+            dd[key] = permutation
+
+    return dd
 
 
 def get_recipe_for_input_word(input_word: str, recipes: Recipes) -> dict:
