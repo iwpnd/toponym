@@ -7,7 +7,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="toponym",
-    version="0.4.0",
+    version="0.4.1",
     description="build grammatical cases for words in slavic languages",
     url="http://github.com/iwpnd/toponym",
     author="Benjamin Ramser",
