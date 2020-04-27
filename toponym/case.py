@@ -50,7 +50,7 @@ class Case(object):
         return output_words
 
 
-def get_case_config(decline_config: DeclineConfig):
+def get_case_config(decline_config: DeclineConfig) -> CaseConfig:
     case_config = CaseConfig()
     case_config.cut_ending_by: int = decline_config.recipe[1]
     case_config.input_word: str = decline_config.input_word
