@@ -1,7 +1,10 @@
 from typing import Union
 
+from pydantic import BaseModel
+from pydantic import StrictStr
 
-class DeclineConfig:
+
+class DeclineConfig(BaseModel):
     """A configuration to handle declinsion
 
     Attributes:
@@ -9,8 +12,8 @@ class DeclineConfig:
     recipe: topodictionary recipe by grammatical_case
     """
 
-    input_word = Union[list, str]
-    recipe: dict
+    input_word: Union[list, StrictStr] = None
+    recipe: list = None
 
 
 class CaseConfig(DeclineConfig):
@@ -22,8 +25,8 @@ class CaseConfig(DeclineConfig):
     cut_ending_by: amount of characters cut from input_word before new_word_ending is added
     """
 
-    new_word_ending: Union[list, str]
-    cut_ending_by: int
+    new_word_ending: Union[list, StrictStr] = None
+    cut_ending_by: int = None
 
 
 class Case(object):
