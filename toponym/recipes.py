@@ -1,3 +1,5 @@
+from typing import Union
+
 from loguru import logger
 
 from .utils import get_language_code
@@ -8,9 +10,15 @@ from .utils import get_recipes_from_file
 
 class Recipes:
     """Loads and provides access to recipes
+
+    Load Recipes from either file, dictionary or from stored default Recipes
+
+    Attributes:
+        language (str): language the recipe is for
+        file (Union[bool, str, dict]): if str load from file, if dict load from dict, defaults to bool
     """
 
-    def __init__(self, language: str, file: bool = False) -> None:
+    def __init__(self, language: str, file: Union[bool, dict, str] = False) -> None:
         self.language = language
         self.file = file
         self.is_loaded = False
