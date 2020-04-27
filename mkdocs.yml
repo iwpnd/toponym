@@ -9,7 +9,7 @@ theme:
         accent: 'yellow'
 
 repo_name: iwpnd/toponym
-repo_url: https://github.com/iwpnd/flashgeotext
+repo_url: https://github.com/iwpnd/toponym
 edit_uri: ''
 # google_analytics:
 #     - 'UA-156087226-2'
