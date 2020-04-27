@@ -89,8 +89,8 @@ def test_get_multi_word_toponym_multi_ending_single_ending_revers(test_recipes):
 
 
 def test_toponym_for_unknown_ending():
-    recipes_russian = Recipes(language="russian")
-    recipes_russian.load()
+    recipes_russian = Recipes()
+    recipes_russian.load_from_language(language="russian")
 
     input_word = ""
 

@@ -29,7 +29,6 @@ def test_get_language_code_success():
 def test_get_language_code_fails():
     with pytest.raises(LanguageNotFoundError):
         language_code = get_language_code("kaudawelsh")
-        assert language_code
 
 
 def test_topodict_dir():
@@ -67,7 +66,6 @@ def test_get_recipe_success():
 def test_get_recipe_fails():
     with pytest.raises(LanguageNotFoundError):
         recipes_test = get_recipes("de")
-        assert isinstance(recipes_test, dict)
 
 
 def test_get_recipes_from_dict():

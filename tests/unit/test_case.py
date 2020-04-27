@@ -28,7 +28,6 @@ def test_case_decline_config(decline_config_test_case):
 def test_case_decline_config_fails(input_word, case, recipe, expectation):
     with expectation:
         decline_config = DeclineConfig(input_word=input_word, recipe=recipe, case=case)
-        return decline_config
 
 
 def test_case_build_from_string_multiple_ending_success(decline_config_test_case):
@@ -79,5 +78,3 @@ def test_case_caseconfig_fails(input_word, cut_ending_by, new_word_ending, expec
             cut_ending_by=cut_ending_by,
             new_word_ending=new_word_ending,
         )
-
-        return case_config

@@ -1,6 +1,5 @@
 import json
 import os
-from typing import Tuple
 
 from . import settings
 
@@ -58,13 +57,13 @@ def print_available_languages() -> None:
 
 
 def get_recipes(language_code: str) -> dict:
-    """Get a recipes for a specific ISO_639_1 language code
+    """Get recipes for a specific ISO_639_1 language code
 
     Attributes:
         language_code (str): ISO_639_1 language code
 
     Returns:
-
+        recipes (dict): collection of recipes for input language
     """
 
     if language_code not in settings.LANGUAGE_DICT.values():
@@ -80,13 +79,32 @@ def get_recipes(language_code: str) -> dict:
     return recipes
 
 
-def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
-    recipes = input_dict
+def get_recipes_from_dict(input_dict: dict) -> dict:
+    """Get recipes from dict
 
+    Attributes:
+        input_dict (dict): ISO_639_1 language code
+
+    Returns:
+        recipes (dict): collection of recipes for input language
+    """
+
+    if not isinstance(input_dict, dict):
+        raise TypeError("Input is not type dict")
+
+    recipes = input_dict
     return recipes
 
 
-def get_recipes_from_file(file_input: str):
+def get_recipes_from_file(file_input: str) -> dict:
+    """Get recipes from file
+
+    Attributes:
+        file_input (str): filepath
+
+    Returns:
+        recipes (dict): collection of recipes for input language
+    """
     try:
         with open(file_input, "r") as file:
             recipes = json.loads(file.read())
@@ -95,3 +113,45 @@ def get_recipes_from_file(file_input: str):
         raise FileNotFoundError("File not found or not in os.getcwd()")
 
     return recipes
+
+
+def is_consistent_recipes(filepath: str):
+    """validate if recipes in /resources/*.json are valid
+
+    Attributes:
+        filepath (str): filepath
+
+    Returns:
+        bool
+    """
+    with open(filepath, "r", encoding="utf8") as f:
+        recipes_check = json.loads(f.read())
+
+    recipes_consistent = list()
+
+    for word_ending in recipes_check:
+        for case in recipes_check[word_ending]:
+            if isinstance(recipes_check[word_ending][case][0], list):
+                recipes_consistent.append(True)
+            else:
+                print(filepath, word_ending)
+                recipes_consistent.append(False)
+
+    if all([x for x in recipes_consistent]):
+        return True
+
+
+def is_json(myjson: dict):
+    """ validate if input is json serializable
+
+    Attributes:
+        myjson (dict): input to validate
+
+    Returns:
+        bool
+    """
+    try:
+        json.loads(myjson)
+    except ValueError:
+        return False
+    return True

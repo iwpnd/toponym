@@ -22,7 +22,7 @@ def test_recipes():
         "ti": {"nominative": [[""], 0], "genitive": [["o"], 1]},
         "esti": {"nominative": [[""], 0], "genitive": [["o", "a"], 1]},
     }
-    recipes_test = Recipes(language="test", file=recipes)
-    recipes_test.load()
+    recipes_test = Recipes()
+    recipes_test.load_from_dict(language="test", input_dict=recipes)
 
     yield recipes_test
