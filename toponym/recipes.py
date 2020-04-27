@@ -39,22 +39,24 @@ class Recipes:
     def load(self) -> None:
         if not self.file:
             self._language_code = get_language_code(language=self.language)
-            self._dict, self.is_loaded = get_recipes(language_code=self._language_code)
+            self._dict = get_recipes(language_code=self._language_code)
             logger.info(f"Recipes loaded for {self.language}")
 
         else:
             if isinstance(self.file, dict):
-                self._dict, self.is_loaded = get_recipes_from_dict(input_dict=self.file)
+                self._dict = get_recipes_from_dict(input_dict=self.file)
 
                 logger.info(
                     f"Recipes loaded from dictionary for language {self.language}"
                 )
 
             elif isinstance(self.file, str):
-                self._dict, self.is_loaded = get_recipes_from_file(file_input=self.file)
+                self._dict = get_recipes_from_file(file_input=self.file)
                 logger.info(
                     f"Recipes loaded from file ({self.file}) for language {self.language}"
                 )
 
             else:
                 raise TypeError("Input file can either be filepath or dictionary")
+
+        self.is_loaded = True

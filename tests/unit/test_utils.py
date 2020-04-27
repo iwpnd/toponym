@@ -59,31 +59,27 @@ def test_parent_directory():
 
 
 def test_get_recipe_success():
-    recipes_test, is_loaded = get_recipes("ru")
+    recipes_test = get_recipes("ru")
 
     assert isinstance(recipes_test, dict)
-    assert is_loaded
 
 
 def test_get_recipe_fails():
     with pytest.raises(LanguageNotFoundError):
-        recipes_test, is_loaded = get_recipes("de")
+        recipes_test = get_recipes("de")
         assert isinstance(recipes_test, dict)
-        assert not is_loaded
 
 
 def test_get_recipes_from_dict():
     recipes_dict = {}
 
-    recipes, is_loaded = get_recipes_from_dict(input_dict=recipes_dict)
+    recipes = get_recipes_from_dict(input_dict=recipes_dict)
 
     assert isinstance(recipes, dict)
-    assert is_loaded
 
 
 def test_get_recipes_from_file():
     file = "./toponym/resources/_test.json"
-    recipes, is_loaded = get_recipes_from_file(file_input=file)
+    recipes = get_recipes_from_file(file_input=file)
 
     assert isinstance(recipes, dict)
-    assert is_loaded

@@ -14,7 +14,6 @@ def get_available_language_codes() -> list:
 
     Return
         ISO_639_1_codes (list): all available/supported languages
-
     """
     recipes_filespaths = os.listdir(os.path.join(settings.RECIPES_DIR))
     ISO_639_1_codes = [
@@ -32,6 +31,15 @@ def get_available_language_codes() -> list:
 
 
 def get_language_code(language: str) -> str:
+    """Get a single ISO_639_1 language code
+
+    Attributes:
+        language (str): language to get a code for
+
+    Return
+        ISO_639_1_codes (list): all available/supported languages
+    """
+
     if language not in settings.LANGUAGE_DICT.keys():
         raise LanguageNotFoundError(f"Language '{language}' not found")
 
@@ -49,9 +57,14 @@ def print_available_languages() -> None:
     print()
 
 
-def get_recipes(language_code: str) -> Tuple[dict, bool]:
-    """
-    Loads language-specific stopwords for keyword selection
+def get_recipes(language_code: str) -> dict:
+    """Get a recipes for a specific ISO_639_1 language code
+
+    Attributes:
+        language_code (str): ISO_639_1 language code
+
+    Returns:
+
     """
 
     if language_code not in settings.LANGUAGE_DICT.values():
@@ -64,15 +77,13 @@ def get_recipes(language_code: str) -> Tuple[dict, bool]:
     with open(recipes_file_path, "r", encoding="utf-8") as f:
         recipes = json.loads(f.read())
 
-    is_loaded = True
-    return recipes, is_loaded
+    return recipes
 
 
 def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
+    recipes = input_dict
 
-    is_loaded = True
-
-    return input_dict, is_loaded
+    return recipes
 
 
 def get_recipes_from_file(file_input: str):
@@ -83,6 +94,4 @@ def get_recipes_from_file(file_input: str):
     except FileNotFoundError:
         raise FileNotFoundError("File not found or not in os.getcwd()")
 
-    is_loaded = True
-
-    return recipes, is_loaded
+    return recipes
