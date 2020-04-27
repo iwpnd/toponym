@@ -17,6 +17,7 @@ def test_get_available_languages():
 
     languages = get_available_language_codes()
     assert languages
+    assert isinstance(languages, list)
 
 
 def test_get_language_code_success():

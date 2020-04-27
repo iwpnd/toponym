@@ -9,21 +9,26 @@ class LanguageNotFoundError(Exception):
     pass
 
 
-def get_available_language_codes() -> str:
-    """Returns a list of available languages and their 2 char input codes
+def get_available_language_codes() -> list:
+    """Get available/supported language codes
+
+    Return
+        ISO_639_1_codes (list): all available/supported languages
+
     """
     recipes_filespaths = os.listdir(os.path.join(settings.RECIPES_DIR))
-    ISO_639_1_code = [
+    ISO_639_1_codes = [
         filepath.split(".")[0]
         for filepath in recipes_filespaths
         if filepath.endswith(".json")
     ]
 
-    for code in ISO_639_1_code:
+    for code in ISO_639_1_codes:
         if not code == "_test":
             assert len(code) == 2
-    ISO_639_1_code.sort()
-    return ISO_639_1_code
+    ISO_639_1_codes.sort()
+
+    return ISO_639_1_codes
 
 
 def get_language_code(language: str) -> str:
