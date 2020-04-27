@@ -3,8 +3,10 @@ repos:
         rev: v2.3.0
         hooks:
         -   id: check-yaml
+            exclude: mkdocs.yml
         -   id: end-of-file-fixer
         -   id: trailing-whitespace
+            args: ['--markdown-linebreak-ext=md']
         -   id: check-json
         -   id: check-added-large-files
         -   id: check-ast
@@ -16,7 +18,7 @@ repos:
       rev: v1.2.3
       hooks:
           - id: flake8
-            args: ["--ignore=E203,W503,E501"]
+            args: ["--ignore=E203,W503,E501,F841"]
     -   repo: https://github.com/asottile/reorder_python_imports
         rev: v1.4.0
         hooks:

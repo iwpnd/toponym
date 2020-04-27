@@ -1,0 +1,60 @@
+site_name: toponym
+site_description: Build grammatical cases for words in slavic languages asick implementation.
+site_url: https://toponym.iwpnd.pw/
+
+theme:
+    name: 'material'
+    palette:
+        primary: 'white'
+        accent: 'yellow'
+
+repo_name: iwpnd/toponym
+repo_url: https://github.com/iwpnd/flashgeotext
+edit_uri: ''
+# google_analytics:
+#     - 'UA-156087226-2'
+#     - 'auto'
+
+nav:
+    - toponym: 'index.md'
+    - usage: 'usage.md'
+    - reference:
+        - toponym: 'toponym.md'
+        - case: 'case.md'
+        - utils: 'utils.md'
+        - recipes: 'recipes.md'
+        - settings: 'settings.md'
+
+markdown_extensions:
+    - toc:
+        permalink: true
+    - markdown.extensions.codehilite:
+        guess_lang: false
+    - markdown_include.include:
+        base_path: docs
+    - admonition
+    - codehilite
+    - extra
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_div_format
+    - pymdownx.emoji:
+        emoji_index: !!python/name:pymdownx.emoji.twemoji
+        emoji_generator: !!python/name:pymdownx.emoji.to_png
+
+extra:
+    social:
+        - type: 'github'
+          link: 'https://github.com/iwpnd/'
+        - type: 'twitter'
+          link: 'https://twitter.com/imwithpanda'
+        - type: 'linkedin'
+          link: 'https://www.linkedin.com/in/benjamin-ramser'
+
+extra_css:
+    - 'css/custom.css'
+
+extra_javascript:
+    - 'https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js'

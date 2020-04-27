@@ -1,22 +1,16 @@
 import pytest
 
-from toponym.case import CaseConfig
 from toponym.case import DeclineConfig
 from toponym.recipes import Recipes
 
 
 @pytest.fixture
-def case_config():
-    case_config = CaseConfig()
+def decline_config_test_case():
+    decline_config = DeclineConfig(
+        input_word="Test", case="genitive", recipe=[["i", "o"], 1]
+    )
 
-    yield case_config
-
-
-@pytest.fixture
-def decline_config():
-    decline_config = DeclineConfig()
-
-    yield decline_config
+    return decline_config
 
 
 @pytest.fixture
@@ -28,7 +22,7 @@ def test_recipes():
         "ti": {"nominative": [[""], 0], "genitive": [["o"], 1]},
         "esti": {"nominative": [[""], 0], "genitive": [["o", "a"], 1]},
     }
-    recipes_test = Recipes(language="test", file=recipes)
-    recipes_test.load()
+    recipes_test = Recipes()
+    recipes_test.load_from_dict(language="test", input_dict=recipes)
 
     yield recipes_test

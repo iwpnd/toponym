@@ -1,6 +1,5 @@
 import json
 import os
-from typing import Tuple
 
 from . import settings
 
@@ -9,24 +8,37 @@ class LanguageNotFoundError(Exception):
     pass
 
 
-def get_available_language_codes() -> str:
-    """Returns a list of available languages and their 2 char input codes
+def get_available_language_codes() -> list:
+    """Get available/supported language codes
+
+    Return
+        ISO_639_1_codes (list): all available/supported languages
     """
     recipes_filespaths = os.listdir(os.path.join(settings.RECIPES_DIR))
-    ISO_639_1_code = [
+    ISO_639_1_codes = [
         filepath.split(".")[0]
         for filepath in recipes_filespaths
         if filepath.endswith(".json")
     ]
 
-    for code in ISO_639_1_code:
+    for code in ISO_639_1_codes:
         if not code == "_test":
             assert len(code) == 2
-    ISO_639_1_code.sort()
-    return ISO_639_1_code
+    ISO_639_1_codes.sort()
+
+    return ISO_639_1_codes
 
 
 def get_language_code(language: str) -> str:
+    """Get a single ISO_639_1 language code
+
+    Attributes:
+        language (str): language to get a code for
+
+    Return
+        ISO_639_1_codes (list): all available/supported languages
+    """
+
     if language not in settings.LANGUAGE_DICT.keys():
         raise LanguageNotFoundError(f"Language '{language}' not found")
 
@@ -44,9 +56,14 @@ def print_available_languages() -> None:
     print()
 
 
-def get_recipes(language_code: str) -> Tuple[dict, bool]:
-    """
-    Loads language-specific stopwords for keyword selection
+def get_recipes(language_code: str) -> dict:
+    """Get recipes for a specific ISO_639_1 language code
+
+    Attributes:
+        language_code (str): ISO_639_1 language code
+
+    Returns:
+        recipes (dict): collection of recipes for input language
     """
 
     if language_code not in settings.LANGUAGE_DICT.values():
@@ -59,18 +76,35 @@ def get_recipes(language_code: str) -> Tuple[dict, bool]:
     with open(recipes_file_path, "r", encoding="utf-8") as f:
         recipes = json.loads(f.read())
 
-    is_loaded = True
-    return recipes, is_loaded
+    return recipes
 
 
-def get_recipes_from_dict(input_dict: dict) -> Tuple[dict, bool]:
+def get_recipes_from_dict(input_dict: dict) -> dict:
+    """Get recipes from dict
 
-    is_loaded = True
+    Attributes:
+        input_dict (dict): ISO_639_1 language code
 
-    return input_dict, is_loaded
+    Returns:
+        recipes (dict): collection of recipes for input language
+    """
+
+    if not isinstance(input_dict, dict):
+        raise TypeError("Input is not type dict")
+
+    recipes = input_dict
+    return recipes
 
 
-def get_recipes_from_file(file_input: str):
+def get_recipes_from_file(file_input: str) -> dict:
+    """Get recipes from file
+
+    Attributes:
+        file_input (str): filepath
+
+    Returns:
+        recipes (dict): collection of recipes for input language
+    """
     try:
         with open(file_input, "r") as file:
             recipes = json.loads(file.read())
@@ -78,6 +112,46 @@ def get_recipes_from_file(file_input: str):
     except FileNotFoundError:
         raise FileNotFoundError("File not found or not in os.getcwd()")
 
-    is_loaded = True
+    return recipes
 
-    return recipes, is_loaded
+
+def is_consistent_recipes(filepath: str):
+    """validate if recipes in /resources/*.json are valid
+
+    Attributes:
+        filepath (str): filepath
+
+    Returns:
+        bool
+    """
+    with open(filepath, "r", encoding="utf8") as f:
+        recipes_check = json.loads(f.read())
+
+    recipes_consistent = list()
+
+    for word_ending in recipes_check:
+        for case in recipes_check[word_ending]:
+            if isinstance(recipes_check[word_ending][case][0], list):
+                recipes_consistent.append(True)
+            else:
+                print(filepath, word_ending)
+                recipes_consistent.append(False)
+
+    if all([x for x in recipes_consistent]):
+        return True
+
+
+def is_json(myjson: dict):
+    """ validate if input is json serializable
+
+    Attributes:
+        myjson (dict): input to validate
+
+    Returns:
+        bool
+    """
+    try:
+        json.loads(myjson)
+    except ValueError:
+        return False
+    return True

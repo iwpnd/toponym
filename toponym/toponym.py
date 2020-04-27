@@ -20,43 +20,38 @@ class Toponym:
             self.input_words = input_word.split()
 
     def build(self) -> None:
-        decline_config = DeclineConfig()
 
         if self.input_is_multiple_words:
             self.merged_toponym_dictionaries = merge_list_of_case_dictionaries(
-                self._build_toponym_for_multiple_input_words(
-                    decline_config=decline_config
-                )
+                self._build_toponym_for_multiple_input_words()
             )
-            print(self.merged_toponym_dictionaries)
 
             self.toponyms = concat_case_dictionaries(self.merged_toponym_dictionaries)
 
         else:
-            self.toponyms = self._build_toponym_for_input_word(
-                decline_config=decline_config
-            )
+            self.toponyms = self._build_toponym_for_input_word()
 
-    def _build_toponym_for_input_word(self, decline_config: DeclineConfig) -> dict:
+    def _build_toponym_for_input_word(self) -> dict:
         """ builds a toponym from a single input_word
         """
 
-        recipe = get_recipe_for_input_word(
+        recipe = get_recipes_for_input_word(
             input_word=self.input_word, recipes=self.recipes
         )
         toponyms = dict()
 
-        decline_config.input_word = self.input_word
-
         for grammatical_case in recipe:
-            decline_config.recipe = recipe[grammatical_case]
-            toponyms[grammatical_case] = Case.decline(decline_config=decline_config)
+            decline_config = DeclineConfig(
+                input_word=self.input_word,
+                case=grammatical_case,
+                recipe=recipe[grammatical_case],
+            )
+            case = Case(decline_config=decline_config)
+            toponyms[grammatical_case] = case.decline()
 
         return toponyms
 
-    def _build_toponym_for_multiple_input_words(
-        self, decline_config: DeclineConfig
-    ) -> Generator:
+    def _build_toponym_for_multiple_input_words(self) -> Generator:
         """builds toponyms if self.input_is_multiple_words == True
 
         Since there is more than one word, there should be a toponym for
@@ -64,16 +59,20 @@ class Toponym:
         """
 
         for _, input_word in enumerate(self.input_words):
-            recipe = get_recipe_for_input_word(
+            recipe = get_recipes_for_input_word(
                 input_word=input_word, recipes=self.recipes
             )
-            decline_config.input_word = input_word
 
             temp = dict()
 
             for grammatical_case in recipe:
-                decline_config.recipe = recipe[grammatical_case]
-                temp[grammatical_case] = Case.decline(decline_config=decline_config)
+                decline_config = DeclineConfig(
+                    input_word=input_word,
+                    case=grammatical_case,
+                    recipe=recipe[grammatical_case],
+                )
+                case = Case(decline_config=decline_config)
+                temp[grammatical_case] = case.decline()
 
             yield temp
 
@@ -151,7 +150,7 @@ def concat_case_dictionaries(merged_toponym_dictionaries: defaultdict) -> dict:
     return merged_toponym_dictionaries
 
 
-def get_recipe_for_input_word(input_word: str, recipes: Recipes) -> dict:
+def get_recipes_for_input_word(input_word: str, recipes: Recipes) -> dict:
     """Get a recipe from a list of recipes based on the longest matching
     character sequence found in the input_word that is also in Recipes.keys()
 
