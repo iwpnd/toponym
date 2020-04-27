@@ -51,3 +51,24 @@ def test_case_build_from_string_single_ending_success():
     output_word = decline_input_word(case_config)
 
     assert output_word == "Tesi"
+
+
+@pytest.mark.parametrize(
+    "input_word, cut_ending_by, new_word_ending, expectation",
+    [
+        ["test", 1, 1, pytest.raises(ValidationError)],
+        ["test", "1", "e", pytest.raises(ValidationError)],
+        ["test", "1", "e", pytest.raises(ValidationError)],
+        [1, 1, "e", pytest.raises(ValidationError)],
+        ["test", -10, "e", pytest.raises(ValidationError)],
+    ],
+)
+def test_case_caseconfig_fails(input_word, cut_ending_by, new_word_ending, expectation):
+    with expectation:
+        case_config = CaseConfig(
+            input_word=input_word,
+            cut_ending_by=cut_ending_by,
+            new_word_ending=new_word_ending,
+        )
+
+        return case_config
