@@ -1,6 +1,14 @@
 import pytest
 
+from toponym.case import DeclineConfig
 from toponym.recipes import Recipes
+
+
+@pytest.fixture
+def decline_config_test_case():
+    decline_config = DeclineConfig(input_word="Test", recipe=[["i", "o"], 1])
+
+    return decline_config
 
 
 @pytest.fixture
