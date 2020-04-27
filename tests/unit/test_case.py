@@ -1,6 +1,10 @@
+import pytest
+from pydantic import ValidationError
+
 from toponym.case import Case
 from toponym.case import CaseConfig
 from toponym.case import decline_input_word
+from toponym.case import DeclineConfig
 from toponym.case import get_case_config
 
 
@@ -10,6 +14,20 @@ def test_case_decline_config(decline_config_test_case):
     output = test_case.decline(decline_config_test_case)
 
     assert output
+
+
+@pytest.mark.parametrize(
+    "input_word, recipe, expectation",
+    [
+        ["test", {"test": ["i", "o"]}, pytest.raises(ValidationError)],
+        [1, [["i", "o"], 1], pytest.raises(ValidationError)],
+        [[1, 1], [1, 2, 3], pytest.raises(ValidationError)],
+    ],
+)
+def test_case_decline_config_fails(input_word, recipe, expectation):
+    with expectation:
+        decline_config = DeclineConfig(input_word=input_word, recipe=recipe)
+        return decline_config
 
 
 def test_case_build_from_string_multiple_ending_success(decline_config_test_case):

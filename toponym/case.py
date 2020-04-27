@@ -12,7 +12,7 @@ class DeclineConfig(BaseModel):
     recipe: topodictionary recipe by grammatical_case
     """
 
-    input_word: Union[list, StrictStr] = None
+    input_word: StrictStr = None
     recipe: list = None
 
 
