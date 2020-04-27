@@ -20,24 +20,19 @@ class Toponym:
             self.input_words = input_word.split()
 
     def build(self) -> None:
-        decline_config = DeclineConfig()
 
         if self.input_is_multiple_words:
             self.merged_toponym_dictionaries = merge_list_of_case_dictionaries(
-                self._build_toponym_for_multiple_input_words(
-                    decline_config=decline_config
-                )
+                self._build_toponym_for_multiple_input_words()
             )
             print(self.merged_toponym_dictionaries)
 
             self.toponyms = concat_case_dictionaries(self.merged_toponym_dictionaries)
 
         else:
-            self.toponyms = self._build_toponym_for_input_word(
-                decline_config=decline_config
-            )
+            self.toponyms = self._build_toponym_for_input_word()
 
-    def _build_toponym_for_input_word(self, decline_config: DeclineConfig) -> dict:
+    def _build_toponym_for_input_word(self) -> dict:
         """ builds a toponym from a single input_word
         """
 
@@ -46,17 +41,15 @@ class Toponym:
         )
         toponyms = dict()
 
-        decline_config.input_word = self.input_word
-
         for grammatical_case in recipe:
-            decline_config.recipe = recipe[grammatical_case]
+            decline_config = DeclineConfig(
+                input_word=self.input_word, recipe=recipe[grammatical_case]
+            )
             toponyms[grammatical_case] = Case.decline(decline_config=decline_config)
 
         return toponyms
 
-    def _build_toponym_for_multiple_input_words(
-        self, decline_config: DeclineConfig
-    ) -> Generator:
+    def _build_toponym_for_multiple_input_words(self) -> Generator:
         """builds toponyms if self.input_is_multiple_words == True
 
         Since there is more than one word, there should be a toponym for
@@ -67,12 +60,13 @@ class Toponym:
             recipe = get_recipe_for_input_word(
                 input_word=input_word, recipes=self.recipes
             )
-            decline_config.input_word = input_word
 
             temp = dict()
 
             for grammatical_case in recipe:
-                decline_config.recipe = recipe[grammatical_case]
+                decline_config = DeclineConfig(
+                    input_word=input_word, recipe=recipe[grammatical_case]
+                )
                 temp[grammatical_case] = Case.decline(decline_config=decline_config)
 
             yield temp

@@ -27,7 +27,7 @@ class CaseConfig(BaseModel):
     """
 
     input_word: StrictStr
-    cut_ending_by: conint(strict=True, gt=0)
+    cut_ending_by: conint(strict=True, ge=0)
     new_word_ending: StrictStr = None
 
 

@@ -53,6 +53,13 @@ def test_case_build_from_string_single_ending_success():
     assert output_word == "Tesi"
 
 
+def test_case_build_from_string_single_ending_success_zero():
+    case_config = CaseConfig(input_word="Test", new_word_ending="i", cut_ending_by=0)
+    output_word = decline_input_word(case_config)
+
+    assert output_word == "Testi"
+
+
 @pytest.mark.parametrize(
     "input_word, cut_ending_by, new_word_ending, expectation",
     [
