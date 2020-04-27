@@ -1,7 +1,7 @@
 from toponym.recipes import Recipes
 from toponym.toponym import concat_case_dictionaries
 from toponym.toponym import get_longest_word_ending
-from toponym.toponym import get_recipe_for_input_word
+from toponym.toponym import get_recipes_for_input_word
 from toponym.toponym import merge_list_of_case_dictionaries
 from toponym.toponym import Toponym
 
@@ -13,7 +13,7 @@ def test_get_longest_word_ending(test_recipes):
 
 def test_get_recipe_for_input_word(test_recipes):
     input_word = "Testi"
-    recipe = get_recipe_for_input_word(input_word=input_word, recipes=test_recipes)
+    recipe = get_recipes_for_input_word(input_word=input_word, recipes=test_recipes)
 
     assert recipe
 

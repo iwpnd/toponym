@@ -25,7 +25,6 @@ class Toponym:
             self.merged_toponym_dictionaries = merge_list_of_case_dictionaries(
                 self._build_toponym_for_multiple_input_words()
             )
-            print(self.merged_toponym_dictionaries)
 
             self.toponyms = concat_case_dictionaries(self.merged_toponym_dictionaries)
 
@@ -36,16 +35,19 @@ class Toponym:
         """ builds a toponym from a single input_word
         """
 
-        recipe = get_recipe_for_input_word(
+        recipe = get_recipes_for_input_word(
             input_word=self.input_word, recipes=self.recipes
         )
         toponyms = dict()
 
         for grammatical_case in recipe:
             decline_config = DeclineConfig(
-                input_word=self.input_word, recipe=recipe[grammatical_case]
+                input_word=self.input_word,
+                case=grammatical_case,
+                recipe=recipe[grammatical_case],
             )
-            toponyms[grammatical_case] = Case.decline(decline_config=decline_config)
+            case = Case(decline_config=decline_config)
+            toponyms[grammatical_case] = case.decline()
 
         return toponyms
 
@@ -57,7 +59,7 @@ class Toponym:
         """
 
         for _, input_word in enumerate(self.input_words):
-            recipe = get_recipe_for_input_word(
+            recipe = get_recipes_for_input_word(
                 input_word=input_word, recipes=self.recipes
             )
 
@@ -65,9 +67,12 @@ class Toponym:
 
             for grammatical_case in recipe:
                 decline_config = DeclineConfig(
-                    input_word=input_word, recipe=recipe[grammatical_case]
+                    input_word=input_word,
+                    case=grammatical_case,
+                    recipe=recipe[grammatical_case],
                 )
-                temp[grammatical_case] = Case.decline(decline_config=decline_config)
+                case = Case(decline_config=decline_config)
+                temp[grammatical_case] = case.decline()
 
             yield temp
 
@@ -145,7 +150,7 @@ def concat_case_dictionaries(merged_toponym_dictionaries: defaultdict) -> dict:
     return merged_toponym_dictionaries
 
 
-def get_recipe_for_input_word(input_word: str, recipes: Recipes) -> dict:
+def get_recipes_for_input_word(input_word: str, recipes: Recipes) -> dict:
     """Get a recipe from a list of recipes based on the longest matching
     character sequence found in the input_word that is also in Recipes.keys()
 

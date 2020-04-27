@@ -10,31 +10,33 @@ from toponym.case import get_case_config
 
 def test_case_decline_config(decline_config_test_case):
 
-    test_case = Case()
-    output = test_case.decline(decline_config_test_case)
+    test_case = Case(decline_config=decline_config_test_case)
+    output = test_case.decline()
 
     assert output
 
 
 @pytest.mark.parametrize(
-    "input_word, recipe, expectation",
+    "input_word, recipe, case, expectation",
     [
-        ["test", {"test": ["i", "o"]}, pytest.raises(ValidationError)],
-        [1, [["i", "o"], 1], pytest.raises(ValidationError)],
-        [[1, 1], [1, 2, 3], pytest.raises(ValidationError)],
+        ["test", {"test": ["i", "o"]}, "genitive", pytest.raises(ValidationError)],
+        [1, [["i", "o"], 1], "genitive", pytest.raises(ValidationError)],
+        [[1, 1], [1, 2, 3], "genitive", pytest.raises(ValidationError)],
+        ["test", [1, 2, 3], 1, pytest.raises(ValidationError)],
     ],
 )
-def test_case_decline_config_fails(input_word, recipe, expectation):
+def test_case_decline_config_fails(input_word, case, recipe, expectation):
     with expectation:
-        decline_config = DeclineConfig(input_word=input_word, recipe=recipe)
+        decline_config = DeclineConfig(input_word=input_word, recipe=recipe, case=case)
         return decline_config
 
 
 def test_case_build_from_string_multiple_ending_success(decline_config_test_case):
 
-    test_case = Case()
-    output_words = test_case.decline(decline_config_test_case)
+    test_case = Case(decline_config=decline_config_test_case)
+    output_words = test_case.decline()
 
+    assert test_case.name == decline_config_test_case.case
     assert "Tesi" in output_words
     assert "Teso" in output_words
 
