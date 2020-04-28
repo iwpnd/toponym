@@ -7,7 +7,6 @@
 </a>
 </p>
 
-
 # Toponym
 
 Build grammatical cases for words in Slavic languages from pre-defined recipes.
