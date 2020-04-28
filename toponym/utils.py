@@ -1,5 +1,8 @@
+import csv
 import json
 import os
+from os import path
+from typing import Generator
 
 from . import settings
 
@@ -155,3 +158,21 @@ def is_json(myjson: dict):
     except ValueError:
         return False
     return True
+
+
+def lazy_load_csv(csvfile: str) -> Generator:
+    with open(csvfile, "r") as f:
+        r = csv.reader(f)
+        for row in r:
+            yield row
+
+
+def file_exists(filename: str) -> bool:
+    """Check if filename exists
+
+        Argument:
+                filename (str): filename to check
+        Returns:
+                bool
+    """
+    return path.exists(filename)

@@ -1,14 +1,18 @@
 import os
+from os import path
+from typing import Generator
 
 import pytest
 
 from toponym import settings
+from toponym.utils import file_exists
 from toponym.utils import get_available_language_codes
 from toponym.utils import get_language_code
 from toponym.utils import get_recipes
 from toponym.utils import get_recipes_from_dict
 from toponym.utils import get_recipes_from_file
 from toponym.utils import LanguageNotFoundError
+from toponym.utils import lazy_load_csv
 
 
 def test_get_available_languages():
@@ -81,3 +85,28 @@ def test_get_recipes_from_file():
     recipes = get_recipes_from_file(file_input=file)
 
     assert isinstance(recipes, dict)
+
+
+def test_file_exists_true(monkeypatch):
+    def mock_path_exists(filename: str):
+        return True
+
+    monkeypatch.setattr(path, "exists", mock_path_exists)
+
+    assert file_exists("test.csv") is True
+
+
+def test_file_exists_false(monkeypatch):
+    def mock_path_exists(filename: str):
+        return False
+
+    monkeypatch.setattr(path, "exists", mock_path_exists)
+
+    assert file_exists("test.csv") is False
+
+
+def test_lazy_load(tmpdir):
+    file = tmpdir.join("test.csv")
+
+    assert lazy_load_csv(file)
+    assert isinstance(lazy_load_csv(file), Generator)
