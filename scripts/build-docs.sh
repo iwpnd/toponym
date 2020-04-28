@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bash cp README.md docs/index.md
+cp README.md docs/index.md
 diff --brief README.md docs/index.md
 
 python -m mkdocs build
