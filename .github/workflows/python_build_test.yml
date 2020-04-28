@@ -19,12 +19,9 @@ jobs:
         pip install flit
         flit install --symlink --extras test
         python -c "from toponym.toponym import Toponym"
-    - name: Test with pytest
+    - name: Test with pytest with cov report
       run: |
-        pytest . -v
-    - name: Generate coverage report
-      run: |
-        pytest --cov=toponym/tests/unit --cov-report=xml
+        pytest . -v --cov=toponym/tests --cov-report=xml
     - name: Upload coverage to codecov
       uses: codecov/codecov-action@v1
       with:
