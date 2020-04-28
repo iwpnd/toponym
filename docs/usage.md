@@ -1,23 +1,16 @@
 # Usage
 
-## 1. Load Topodict
+## Load Recipes
 
 At first, you instantiate the Recipes. You can either use one of our pre-built ones or use your own.
 
-### Load pre-built Recipes
+### Pre-built Recipes
 ```python
 from toponym.recipes import Recipes
 from toponym.toponym import Toponym
 
-recipes_russian = Recipes(language='russian')
-print(recipes_russian)
->> Topodict(
-    language='russian',
-    filepath='False',
-    loaded=True,
-    word_endings=['_default', 'й', 'б', 'в', 'г', 'д', ...]
-    )
-```
+recipes_russian = Recipes()
+recipes.load_from_language(language='russian')
 
 ### Load your custom Recipes
 
@@ -39,13 +32,12 @@ print(recipes)
 
 >> Recipes(
     language='your_language',
-    filepath='True',
     loaded=True,
-    word_endings=['_default']
+    word_endings=['_default',]
     )
 ```
 
-### Load your custom Recipes from .json file
+### Custom Recipes from .json file
 
 ```
 # ././your_file.json
@@ -61,17 +53,46 @@ print(recipes)
 ```python
 from toponym.recipes import Recipes
 
-recipes = Recipes(language='your_language', file="path/to/your_file.json")
+recipes = Recipes()
+recipes.load_from_file(language='your_language', filepath="path/to/your_file.json")
+
 print(recipes)
 
 >> Recipes(
     language='your_language',
-    filepath='path/to/your_file.json',
     loaded=True,
     word_endings=['_default']
     )
 ```
-## 2. Create toponyms
+
+### Custom Recipes from dictionary
+
+```
+your_dictionary = {
+    "_default": {
+        "nominative": [[""], 0],
+        "genitive": [[""], 0],
+        "your_case": [[""], 0]
+        }
+    }
+```
+
+```python
+from toponym.recipes import Recipes
+
+recipes = Recipes()
+recipes.load_from_dict(language='your_language', input_dict=your_dictionary)
+
+print(recipes)
+
+>> Recipes(
+    language='your_language',
+    loaded=True,
+    word_endings=['_default']
+    )
+```
+
+## Create toponyms
 
 ### Input string with a single word
 
@@ -79,8 +100,8 @@ print(recipes)
 from toponym.recipes import Recipes
 from toponym.toponym import Toponym
 
-recipes_russian = Recipes(language='russian')
-recipes_russian.load()
+recipes_russian = Recipes()
+recipes_russian.load_from_language(language='russian')
 
 city = "Москва"
 
@@ -105,8 +126,8 @@ print(t.toponyms)
 from toponym.recipes import Recipes
 from toponym.toponym import Toponym
 
-recipes_russian = Recipes(language='russian')
-recipes_russian.load()
+recipes_russian = Recipes()
+recipes_russian.load_from_language(language='russian')
 
 city = "Москва Ломоносовский"
 

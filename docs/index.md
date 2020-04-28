@@ -1,25 +1,21 @@
+<p align="center">
+<a href="https://github.com/iwpnd/toponym/actions" target="_blank">
+    <img src="https://github.com/iwpnd/toponym/workflows/build/badge.svg?branch=master" alt="Build Status">
+</a>
+<a href="https://codecov.io/gh/iwpnd/toponym" target="_blank">
+    <img src="https://codecov.io/gh/iwpnd/toponym/branch/master/graph/badge.svg" alt="Coverage">
+</a>
+</p>
+
+
 # Toponym
 
-Build grammatical cases for words in slavic languages from pre-defined recipes.
-
-### supported languages:
-
-```
-full name		iso code
-  croatian		hr
-  russian		ru
-  ukrainian		uk
-  romanian		ro
-  latvian		lv
-  hungarian		hu
-  greek		        el
-  polish		pl
-```
+Build grammatical cases for words in Slavic languages from pre-defined recipes.
 
 # Description
 
 ## Problem
-In slavic languages a word can change, depending on how and where it is used within a sentence. The city Moscow (`Москва`) changes to `Москве` when used prepositional.
+In Slavic languages a word can change, depending on how and where it is used within a sentence. The city Moscow (`Москва`) changes to `Москве` when used prepositional.
 So when you want to eg. know if:
 
 ```python
@@ -54,12 +50,12 @@ With the built toponyms for you can now check:
 from toponym.recipes import Recipes
 from toponym.toponym import Toponym
 
-recipes_russian = Recipes(language='russian')
-recipes_russian.load()
+recipes_russian = Recipes()
+recipes_russian.load_from_language(language='russian')
 
 city = "Москва"
 
-t = Toponym(input_word=city, recipies=recipes_russian)
+t = Toponym(input_word=city, recipes=recipes_russian)
 t.build()
 
 print(t.list_toponyms())
@@ -67,6 +63,21 @@ print(t.list_toponyms())
 
 any([word in "В Москве с начала года отремонтировали 3 тысячи подъездов" for word in tn.list_toponyms()])
 >> True
+```
+
+
+### supported languages:
+
+```
+full name		iso code
+croatian		hr
+russian		    ru
+ukrainian		uk
+romanian		ro
+latvian		    lv
+hungarian		hu
+greek		    el
+polish		    pl
 ```
 
 ## Getting Started
@@ -77,7 +88,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 for usage:
 ```
-pip install git+https://github.com/iwpnd/toponym.git
+pip install toponym
 ```
 
 for development:

@@ -5,8 +5,8 @@ site_url: https://toponym.iwpnd.pw/
 theme:
     name: 'material'
     palette:
-        primary: 'white'
-        accent: 'yellow'
+        primary: 'pink'
+        accent: 'deep purple'
 
 repo_name: iwpnd/toponym
 repo_url: https://github.com/iwpnd/toponym
