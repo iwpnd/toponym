@@ -4,9 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -21,7 +19,7 @@ jobs:
         python -c "from toponym.toponym import Toponym"
     - name: Test with pytest with cov report
       run: |
-        pytest . -v --cov=toponym/tests --cov-report=xml
+        pytest . -v --cov=tests/unit/ --cov-report=xml
     - name: Upload coverage to codecov
       uses: codecov/codecov-action@v1
       with:
