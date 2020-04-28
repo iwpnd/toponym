@@ -11,6 +11,8 @@
 
 Build grammatical cases for words in Slavic languages from pre-defined recipes.
 
+**documentation**: [https://toponym.iwpnd.pw/](https://toponym.iwpnd.pw/)  
+
 # Description
 
 ## Problem
