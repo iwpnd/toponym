@@ -1,5 +1,3 @@
-from os import path
-
 from typer.testing import CliRunner
 
 from toponym.main import app
@@ -13,29 +11,7 @@ def test_app():
     assert result.exit_code == 0
 
 
-def test_app_integration(tmpdir):
-    file = tmpdir.join("test.csv")
-
-    result = runner.invoke(
-        app,
-        [
-            "build",
-            "--language",
-            "russian",
-            "--inputfile",
-            "test.csv",
-            "--outputfile",
-            "test.json",
-        ],
-    )
-
-    assert result.exit_code == 0
-    assert path.exists("test.json")
-    assert "Done" in result.stdout
-    assert "Saved to" in result.stdout
-
-
-def test_app_integration_language_fails(tmpdir):
+def test_app_integration_language_fails(tmpdir, monkeypatch):
     file = tmpdir.join("test.csv")
 
     result = runner.invoke(
