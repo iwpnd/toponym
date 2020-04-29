@@ -1,4 +1,5 @@
 import csv
+import json
 from os import path
 
 from typer.testing import CliRunner
@@ -39,6 +40,13 @@ def test_app_integration(tmpdir):
         assert path.exists("test.json")
         assert "Done" in result.stdout
         assert "Saved to" in result.stdout
+
+        with open("test.json") as f:
+            output = json.loads(f.read())
+
+        assert "Москва" in output.keys()
+        assert isinstance(output["Москва"], list)
+        assert "Москве" in output["Москва"]
 
 
 def test_app_integration_language_fails():
