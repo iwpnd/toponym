@@ -2,7 +2,7 @@
 
 ## Toponym
 ```python
-Toponym(self, input_word:str, recipes:toponym.recipes.Recipes) -> None
+Toponym(self, input_word: str, recipes: toponym.recipes.Recipes) -> None
 ```
 
 ### list_toponyms
@@ -13,7 +13,7 @@ Put all created toponyms in a list
 
 ## merge_list_of_case_dictionaries
 ```python
-merge_list_of_case_dictionaries(list_of_case_dictionaries:Generator) -> dict
+merge_list_of_case_dictionaries(list_of_case_dictionaries: Generator) -> dict
 ```
 Take a generator of case dictionaries and hash them into a
 defaultdict.
@@ -38,7 +38,7 @@ Example:
 
 ## concat_case_dictionaries
 ```python
-concat_case_dictionaries(merged_toponym_dictionaries:collections.defaultdict) -> dict
+concat_case_dictionaries(merged_toponym_dictionaries: collections.defaultdict) -> dict
 ```
 Take a defaultdict and create products from the dicts values.
 
@@ -59,7 +59,7 @@ Example:
 
 ## get_recipes_for_input_word
 ```python
-get_recipes_for_input_word(input_word:str, recipes:toponym.recipes.Recipes) -> dict
+get_recipes_for_input_word(input_word: str, recipes: toponym.recipes.Recipes) -> dict
 ```
 Get a recipe from a list of recipes based on the longest matching
 character sequence found in the input_word that is also in Recipes.keys()
@@ -77,7 +77,7 @@ returns recipe
 
 ## get_longest_word_ending
 ```python
-get_longest_word_ending(input_word:str, recipes:toponym.recipes.Recipes) -> str
+get_longest_word_ending(input_word: str, recipes: toponym.recipes.Recipes) -> str
 ```
 Disect word into differnet size shifs and return the longest shif that
 is also within recipes.keys()

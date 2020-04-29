@@ -11,7 +11,7 @@ Return
 
 ## get_language_code
 ```python
-get_language_code(language:str) -> str
+get_language_code(language: str) -> str
 ```
 Get a single ISO_639_1 language code
 
@@ -29,7 +29,7 @@ Prints available languages with their full names
 
 ## get_recipes
 ```python
-get_recipes(language_code:str) -> dict
+get_recipes(language_code: str) -> dict
 ```
 Get recipes for a specific ISO_639_1 language code
 
@@ -41,7 +41,7 @@ Returns:
 
 ## get_recipes_from_dict
 ```python
-get_recipes_from_dict(input_dict:dict) -> dict
+get_recipes_from_dict(input_dict: dict) -> dict
 ```
 Get recipes from dict
 
@@ -53,7 +53,7 @@ Returns:
 
 ## get_recipes_from_file
 ```python
-get_recipes_from_file(file_input:str) -> dict
+get_recipes_from_file(file_input: str) -> dict
 ```
 Get recipes from file
 
@@ -65,7 +65,7 @@ Returns:
 
 ## is_consistent_recipes
 ```python
-is_consistent_recipes(filepath:str)
+is_consistent_recipes(filepath: str)
 ```
 validate if recipes in /resources/*.json are valid
 
@@ -77,7 +77,7 @@ Returns:
 
 ## is_json
 ```python
-is_json(myjson:dict)
+is_json(myjson: dict)
 ```
 validate if input is json serializable
 
@@ -86,3 +86,14 @@ Attributes:
 
 Returns:
     bool
+
+## file_exists
+```python
+file_exists(filename: str) -> bool
+```
+Check if filename exists
+
+Argument:
+        filename (str): filename to check
+Returns:
+        bool

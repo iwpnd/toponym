@@ -2,7 +2,7 @@
 
 ## DeclineConfig
 ```python
-DeclineConfig(__pydantic_self__, **data:Any) -> None
+DeclineConfig(__pydantic_self__, **data: Any) -> None
 ```
 A configuration to handle declinsion
 
@@ -12,7 +12,7 @@ Attributes:
 
 ## CaseConfig
 ```python
-CaseConfig(__pydantic_self__, **data:Any) -> None
+CaseConfig(__pydantic_self__, **data: Any) -> None
 ```
 A configuration for a case
 
@@ -23,7 +23,7 @@ Attributes:
 
 ## Case
 ```python
-Case(self, decline_config:toponym.case.DeclineConfig)
+Case(self, decline_config: toponym.case.DeclineConfig)
 ```
 grammatical case up for declinsion
 
@@ -42,7 +42,7 @@ Returns:
 
 ## get_case_config
 ```python
-get_case_config(decline_config:toponym.case.DeclineConfig) -> toponym.case.CaseConfig
+get_case_config(decline_config: toponym.case.DeclineConfig) -> toponym.case.CaseConfig
 ```
 Get a CaseConfig object from a DeclineConfig object
 
@@ -54,7 +54,7 @@ Returns:
 
 ## decline_input_word
 ```python
-decline_input_word(config:toponym.case.CaseConfig) -> str
+decline_input_word(config: toponym.case.CaseConfig) -> str
 ```
 Use config to construct a word after declinsion
 
