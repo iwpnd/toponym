@@ -26,9 +26,11 @@ def callback():
 
 @app.command()
 def build(
-    language: str = typer.Option(...),
-    inputfile: str = typer.Option(...),
-    outputfile: str = typer.Option(...),
+    language: str = typer.Option(..., help="language to build toponyms for"),
+    inputfile: str = typer.Option(
+        ..., help="input csv with list of words to create toponyms for"
+    ),
+    outputfile: str = typer.Option(..., help="output file to store resulting toponyms"),
 ):
 
     if language not in LANGUAGE_DICT.keys():
