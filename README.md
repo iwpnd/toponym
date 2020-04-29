@@ -13,6 +13,24 @@ Build grammatical cases for words in Slavic languages from pre-defined recipes.
 
 **documentation**: [https://toponym.iwpnd.pw/](https://toponym.iwpnd.pw/)  
 
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installing
+
+for usage:
+```
+pip install toponym
+```
+
+for development:
+```
+git clone https://github.com/iwpnd/toponym.git
+pip install flit
+flit install toponym --symlink
+```
+
 # Description
 
 ## Problem
@@ -81,25 +99,8 @@ greek		    el
 polish		    pl
 ```
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-
-### Installing
-
-for usage:
-```
-pip install toponym
-```
-
-for development:
-```
-git clone https://github.com/iwpnd/toponym.git
-pip install -e toponym/
-```
-
 ## Running the tests
 
 ```
-python -m pytest toponym/tests/unit
+pytest toponym/tests/
 ```
