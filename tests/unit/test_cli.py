@@ -1,3 +1,6 @@
+import csv
+from os import path
+
 from typer.testing import CliRunner
 
 from toponym.main import app
@@ -11,24 +14,55 @@ def test_app():
     assert result.exit_code == 0
 
 
-def test_app_integration_language_fails(tmpdir, monkeypatch):
-    file = tmpdir.join("test.csv")
+def test_app_integration(tmpdir):
 
-    result = runner.invoke(
-        app,
-        [
-            "build",
-            "--language",
-            "test",
-            "--inputfile",
-            "test.csv",
-            "--outputfile",
-            "test.json",
-        ],
-    )
+    with runner.isolated_filesystem():
+        with open("test.csv", "w") as f:
+            writer = csv.writer(f)
+            writer.writerow(["Москва"])
+            writer.writerow(["Москва Ломоносовский"])
 
-    assert result.exit_code == 11
-    assert "not supported" in result.stdout
+        result = runner.invoke(
+            app,
+            [
+                "build",
+                "--language",
+                "russian",
+                "--inputfile",
+                "test.csv",
+                "--outputfile",
+                "test.json",
+            ],
+        )
+
+        assert result.exit_code == 0
+        assert path.exists("test.json")
+        assert "Done" in result.stdout
+        assert "Saved to" in result.stdout
+
+
+def test_app_integration_language_fails():
+    with runner.isolated_filesystem():
+        with open("test.csv", "w") as f:
+            writer = csv.writer(f)
+            writer.writerow(["Москва"])
+            writer.writerow(["Москва Ломоносовский"])
+
+        result = runner.invoke(
+            app,
+            [
+                "build",
+                "--language",
+                "kaudawelsh",
+                "--inputfile",
+                "test.csv",
+                "--outputfile",
+                "test.json",
+            ],
+        )
+
+        assert result.exit_code == 11
+        assert "not supported" in result.stdout
 
 
 def test_app_integration_input_fails(tmpdir):
