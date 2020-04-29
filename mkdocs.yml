@@ -5,8 +5,12 @@ site_url: https://toponym.iwpnd.pw/
 theme:
     name: 'material'
     palette:
-        primary: 'pink'
+        primary: 'white'
         accent: 'deep purple'
+    icon:
+        logo: material/death-star
+    features:
+        - tabs
 
 repo_name: iwpnd/toponym
 repo_url: https://github.com/iwpnd/toponym
@@ -17,8 +21,10 @@ edit_uri: ''
 
 nav:
     - toponym: 'index.md'
-    - usage: 'usage.md'
-    - reference:
+    - examples:
+        - usage: 'usage.md'
+        - cli: 'usage_cli.md'
+    - api:
         - toponym: 'toponym.md'
         - case: 'case.md'
         - utils: 'utils.md'
@@ -46,11 +52,11 @@ markdown_extensions:
 
 extra:
     social:
-        - type: 'github'
+        - icon: fontawesome/brands/github-alt
           link: 'https://github.com/iwpnd/'
-        - type: 'twitter'
+        - icon: fontawesome/brands/twitter
           link: 'https://twitter.com/imwithpanda'
-        - type: 'linkedin'
+        - icon: fontawesome/brands/linkedin
           link: 'https://www.linkedin.com/in/benjamin-ramser'
 
 extra_css:
