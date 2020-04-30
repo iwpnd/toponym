@@ -22,8 +22,10 @@ edit_uri: ''
 nav:
     - toponym: 'index.md'
     - examples:
-        - usage: 'usage.md'
+        - library: 'usage.md'
         - cli: 'usage_cli.md'
+    - tutorial:
+        - flashgeotext: 'tut_flashgeotext.md'
     - api:
         - toponym: 'toponym.md'
         - case: 'case.md'
